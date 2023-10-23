@@ -1,0 +1,295 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Lab8\Tudo\Sinalizador\simulation\modelsim
+Ebcd_7seg
+Z1 w1697477478
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Lab8\Tudo\Sinalizador\simulation\modelsim
+Z5 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/BCD_7seg/BCD_7seg.vhd
+Z6 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/BCD_7seg/BCD_7seg.vhd
+l0
+L4
+V`o6UecCXXcKXh[NWIfEzD0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1697998427.478000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/BCD_7seg/BCD_7seg.vhd|
+Z10 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/BCD_7seg/BCD_7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Mj?kZhT<CDN2m7femMXLG1
+!i10b 1
+Awith_select_bcd7seg
+R2
+R3
+DEx4 work 8 bcd_7seg 0 22 `o6UecCXXcKXh[NWIfEzD0
+l12
+L11
+V68SOUlK];EB9_6D`f82`R3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 m5lPj[nI>=i7UWd9WO7_L0
+!i10b 1
+Ecomparador
+Z13 w1697476615
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Comparador/Comparador.vhd
+Z16 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Comparador/Comparador.vhd
+l0
+L5
+V2SVz;cgSKcI93>7[N_mN83
+R7
+31
+Z17 !s108 1697998426.637000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Comparador/Comparador.vhd|
+Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Comparador/Comparador.vhd|
+R11
+R12
+!s100 BY2N2`cMd7K_TSfM`QY341
+!i10b 1
+Acomp
+R14
+R2
+R3
+DEx4 work 10 comparador 0 22 2SVz;cgSKcI93>7[N_mN83
+l24
+L23
+V_biA3LWI^4IRSanjZNz?a0
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 AAY=69917KgY5`2<Ck0^S0
+!i10b 1
+Econtroladora
+Z20 w1697995352
+R2
+R3
+R4
+Z21 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Controladora/Controladora.vhd
+Z22 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Controladora/Controladora.vhd
+l0
+L4
+VOZlI^f4T;[:bMRZTQHJji2
+R7
+31
+Z23 !s108 1697998426.143000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Controladora/Controladora.vhd|
+Z25 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Controladora/Controladora.vhd|
+R11
+R12
+!s100 ZKKl;C0n@NL:@mh8^B=WK0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 12 controladora 0 22 OZlI^f4T;[:bMRZTQHJji2
+l26
+L21
+VMIF7JN@3bS36LGAI1c;<b2
+R7
+31
+R23
+R24
+R25
+R11
+R12
+!s100 C7J3;@Oc`Rm^zk2f8TiS?0
+!i10b 1
+Edatapath
+Z26 w1697815157
+R14
+R2
+R3
+R4
+Z27 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Datapath/Datapath.vhd
+Z28 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Datapath/Datapath.vhd
+l0
+L5
+VV1j5DBY:1J5dz@MW`MK6R2
+R7
+31
+Z29 !s108 1697998425.678000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Datapath/Datapath.vhd|
+Z31 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Datapath/Datapath.vhd|
+R11
+R12
+!s100 eBobU9k4jL@H`;L3o9d8z0
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 8 datapath 0 22 V1j5DBY:1J5dz@MW`MK6R2
+l84
+L25
+V]>Q=_SizlQ3A24=hI>UG>0
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 jo:FE[M^0BMCjK^5PaiDj1
+!i10b 1
+Ereg_ma
+Z32 w1697813634
+R14
+R2
+R3
+R4
+Z33 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Reg_MA/Reg_MA.vhd
+Z34 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Reg_MA/Reg_MA.vhd
+l0
+L5
+VP;5U55QDT3AVkEf<PHa8>0
+R7
+31
+Z35 !s108 1697998425.120000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Reg_MA/Reg_MA.vhd|
+Z37 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Reg_MA/Reg_MA.vhd|
+R11
+R12
+!s100 a>_OSPe`TU[QZX4n0i`Po2
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 6 reg_ma 0 22 P;5U55QDT3AVkEf<PHa8>0
+l24
+L23
+VOSW[X7[cYX9n948Y?7l?42
+R7
+31
+R35
+R36
+R37
+R11
+R12
+!s100 _iKoE_=@1ZJQBTDn;L3GK0
+!i10b 1
+Eregw
+Z38 w1697644776
+R2
+R3
+R4
+Z39 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/RegW/RegW.vhd
+Z40 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/RegW/RegW.vhd
+l0
+L4
+V89S5:_Ii56PkDM]e6oa>M2
+R7
+31
+Z41 !s108 1697998424.637000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/RegW/RegW.vhd|
+Z43 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/RegW/RegW.vhd|
+R11
+R12
+!s100 EWHh==6YBfmU0I=QFD_>X2
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 4 regw 0 22 89S5:_Ii56PkDM]e6oa>M2
+l20
+L19
+Vc3eZ>dzdL^z@5Z:h5;1n@0
+R7
+31
+R41
+R42
+R43
+R11
+R12
+!s100 75aUIh_23W0VnWS`gAD3z0
+!i10b 1
+Esinalizador
+Z44 w1697998328
+R14
+R2
+R3
+R4
+Z45 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/Sinalizador.vhd
+Z46 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/Sinalizador.vhd
+l0
+L5
+VlmN60zMhTjj1Vc6`Xz3O:3
+R7
+31
+Z47 !s108 1697998427.993000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/Sinalizador.vhd|
+Z49 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/Sinalizador.vhd|
+R11
+R12
+!s100 bXDcW@DL`bI0NZV[a@J6A3
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 11 sinalizador 0 22 lmN60zMhTjj1Vc6`Xz3O:3
+l62
+L17
+VRnRT_?mlZEiRzD0P]=H8B0
+R7
+31
+R47
+R48
+R49
+R11
+R12
+!s100 ^aI^F:ERC4PeKcL[hZZ@z0
+!i10b 1
+Etb_sinalizador
+Z50 w1697998330
+R14
+R2
+R3
+R4
+Z51 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/tb_Sinalizador.vhd
+Z52 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/tb_Sinalizador.vhd
+l0
+L5
+VEfAc7W^B[iKQ1dI8gLBLW0
+!s100 [3kkklVE^mX]QURdcc_<j3
+R7
+31
+!i10b 1
+Z53 !s108 1697998428.554000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/tb_Sinalizador.vhd|
+Z55 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/tb_Sinalizador.vhd|
+R11
+R12
+Ateste
+R14
+R2
+R3
+DEx4 work 14 tb_sinalizador 0 22 EfAc7W^B[iKQ1dI8gLBLW0
+l28
+L8
+VDNf<QkXVzKF<HFGkHAbBD0
+!s100 ldQm543GM@jz]ceUolbTB1
+R7
+31
+!i10b 1
+R53
+R54
+R55
+R11
+R12

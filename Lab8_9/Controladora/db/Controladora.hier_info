@@ -1,0 +1,19 @@
+|Controladora
+Clock => estado~1.DATAIN
+Reset => estado~3.DATAIN
+Fio_Maior => process_0.IN0
+Fio_Maior => process_0.IN0
+Fio_Maior => process_0.IN0
+Fio_Igual => process_0.IN1
+Fio_Igual => process_0.IN1
+Fio_Igual => process_0.IN1
+Fio_Menor => process_0.IN1
+Fio_Menor => process_0.IN1
+Fio_Menor => process_0.IN1
+Fio_Load_E <= Fio_Atualizar.DB_MAX_OUTPUT_PORT_TYPE
+Reset_MA <= Reset_MA.DB_MAX_OUTPUT_PORT_TYPE
+Fio_Descendo <= Fio_Descendo.DB_MAX_OUTPUT_PORT_TYPE
+Fio_Subindo <= Fio_Subindo.DB_MAX_OUTPUT_PORT_TYPE
+Fio_Atualizar <= Fio_Atualizar.DB_MAX_OUTPUT_PORT_TYPE
+
+

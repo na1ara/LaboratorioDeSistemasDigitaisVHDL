@@ -1,0 +1,209 @@
+|Sinalizador
+Reset => ~NO_FANOUT~
+E[0] => ~NO_FANOUT~
+E[1] => ~NO_FANOUT~
+E[2] => ~NO_FANOUT~
+E[3] => ~NO_FANOUT~
+Subindo <= Subindo.DB_MAX_OUTPUT_PORT_TYPE
+Descendo <= Descendo.DB_MAX_OUTPUT_PORT_TYPE
+Display[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= Display[1].DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= Display[2].DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= Display[3].DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= Display[4].DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= Display[5].DB_MAX_OUTPUT_PORT_TYPE
+Display[6] <= Display[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Datapath:instance_datapath
+Clock => RegW:instance_Reg_E.clock
+Clock => Reg_MA:instance_MA.CLK
+Clock => RegW:instance_Sobe.clock
+Clock => RegW:instance_Desce.clock
+Fio_Load_E => RegW:instance_Reg_E.load
+Reset_MA => Reg_MA:instance_MA.RESET
+Fio_Descendo => RegW:instance_Desce.D[0]
+Fio_Subindo => RegW:instance_Sobe.D[0]
+Fio_Atualizar => RegW:instance_Sobe.load
+Fio_Atualizar => RegW:instance_Desce.load
+E[0] => RegW:instance_Reg_E.D[0]
+E[1] => RegW:instance_Reg_E.D[1]
+E[2] => RegW:instance_Reg_E.D[2]
+E[3] => RegW:instance_Reg_E.D[3]
+Fio_Maior <= Comparador:instance_Comp.maior
+Fio_Igual <= Comparador:instance_Comp.igual
+Fio_Menor <= Comparador:instance_Comp.menor
+Subindo <= RegW:instance_Sobe.Q[0]
+Descendo <= RegW:instance_Desce.Q[0]
+Display[0] <= BCD_7seg:instance_BCD.saida[0]
+Display[1] <= BCD_7seg:instance_BCD.saida[1]
+Display[2] <= BCD_7seg:instance_BCD.saida[2]
+Display[3] <= BCD_7seg:instance_BCD.saida[3]
+Display[4] <= BCD_7seg:instance_BCD.saida[4]
+Display[5] <= BCD_7seg:instance_BCD.saida[5]
+Display[6] <= BCD_7seg:instance_BCD.saida[6]
+
+
+|Sinalizador|Datapath:instance_datapath|RegW:instance_Reg_E
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+load => Q[0]~reg0.ENA
+load => Q[1]~reg0.ENA
+load => Q[2]~reg0.ENA
+load => Q[3]~reg0.ENA
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Datapath:instance_datapath|comparador:instance_Comp
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[0] => Equal0.IN3
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[1] => Equal0.IN2
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[2] => Equal0.IN1
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+a[3] => Equal0.IN0
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[0] => Equal0.IN7
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[1] => Equal0.IN6
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[2] => Equal0.IN5
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+b[3] => Equal0.IN4
+maior <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+menor <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Datapath:instance_datapath|Reg_MA:instance_MA
+CLK => var4[0].CLK
+CLK => var4[1].CLK
+CLK => var4[2].CLK
+CLK => var4[3].CLK
+CLK => var3[0].CLK
+CLK => var3[1].CLK
+CLK => var3[2].CLK
+CLK => var3[3].CLK
+CLK => var2[0].CLK
+CLK => var2[1].CLK
+CLK => var2[2].CLK
+CLK => var2[3].CLK
+CLK => var1[0].CLK
+CLK => var1[1].CLK
+CLK => var1[2].CLK
+CLK => var1[3].CLK
+RESET => var4[0].ACLR
+RESET => var4[1].ACLR
+RESET => var4[2].ACLR
+RESET => var4[3].ACLR
+RESET => var3[0].ACLR
+RESET => var3[1].ACLR
+RESET => var3[2].ACLR
+RESET => var3[3].ACLR
+RESET => var2[0].ACLR
+RESET => var2[1].ACLR
+RESET => var2[2].ACLR
+RESET => var2[3].ACLR
+RESET => var1[0].ACLR
+RESET => var1[1].ACLR
+RESET => var1[2].ACLR
+RESET => var1[3].ACLR
+INPUT[0] => var1[0].DATAIN
+INPUT[1] => var1[1].DATAIN
+INPUT[2] => var1[2].DATAIN
+INPUT[3] => var1[3].DATAIN
+OUTPUT[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Datapath:instance_datapath|Bcd_7seg:instance_BCD
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Datapath:instance_datapath|RegW:instance_Sobe
+clock => Q[0]~reg0.CLK
+load => Q[0]~reg0.ENA
+D[0] => Q[0]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Datapath:instance_datapath|RegW:instance_Desce
+clock => Q[0]~reg0.CLK
+load => Q[0]~reg0.ENA
+D[0] => Q[0]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sinalizador|Controladora:instance_controladora
+Clock => estado~1.DATAIN
+Reset => estado~3.DATAIN
+Fio_Maior => process_0.IN0
+Fio_Maior => process_0.IN0
+Fio_Maior => process_0.IN0
+Fio_Igual => process_0.IN1
+Fio_Igual => process_0.IN1
+Fio_Igual => process_0.IN1
+Fio_Menor => process_0.IN1
+Fio_Menor => process_0.IN1
+Fio_Menor => process_0.IN1
+Fio_Load_E <= Fio_Atualizar.DB_MAX_OUTPUT_PORT_TYPE
+Reset_MA <= Reset_MA.DB_MAX_OUTPUT_PORT_TYPE
+Fio_Descendo <= Fio_Descendo.DB_MAX_OUTPUT_PORT_TYPE
+Fio_Subindo <= Fio_Subindo.DB_MAX_OUTPUT_PORT_TYPE
+Fio_Atualizar <= Fio_Atualizar.DB_MAX_OUTPUT_PORT_TYPE
+
+

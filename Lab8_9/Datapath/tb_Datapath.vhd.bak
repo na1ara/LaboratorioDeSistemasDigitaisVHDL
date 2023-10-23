@@ -1,0 +1,62 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity tb_Datapath is
+end tb_Datapath;
+
+architecture teste of tb_Datapath is
+
+	component Datapath is
+		port
+		(
+			Clock :  in  std_logic;
+			Fio_Load_E :  in  std_logic;
+			Reset_MA :  in  std_logic;
+			Fio_Descendo :  in  std_logic;
+			Fio_Subindo :  in  std_logic;
+			Fio_Atualizar :  in  std_logic;
+			E :  in  std_logic_vector(3 DOWNTO 0);
+			
+			Fio_Maior :  out  std_logic;
+			Fio_Igual :  out  std_logic;
+			Fio_Menor :  out  std_logic;
+			Subindo :  out  std_logic;
+			Descendo :  out  std_logic;
+			Display :  out  std_logic_vector(6 DOWNTO 0)
+		);
+	end component;
+	
+	signal clk, fioAtualizar, fioReset, fioLoad: std_logic:= '0';
+	signal fioSubindo, fioDescendo: std_logic:= '0'; 
+	signal fioE: std_logic_vector (3 downto 0);
+	
+	signal fioMaior, fioMenor, fioIgual, subindo, descendo: std_logic;
+	signal display: std_logic_vector (6 downto 0);
+	
+	begin
+
+		instance_datapath: Datapath 
+			port map 
+			(
+				Clock => clk, 
+				Fio_Load_E => fioLoad, 
+				Reset_MA => fioReset, 
+				Fio_Descendo => fioDescendo, 
+				Fio_Subindo => fioSubindo, 
+				Fio_Atualizar => fioAtualizar,
+				E => fioE,  
+				
+				Fio_Maior => fioMaior, 
+				Fio_Igual => fioIgual, 
+				Fio_Menor => fioMenor, 
+				Descendo => descendo,
+				Subindo => subindo,
+				Display => display
+			);
+		
+		clk <= not clk after 1 ns;
+		fioAtualizar <= not fioAtualizar after 6 ns;
+		fioDescendo <= not fioDescendo after 4 ns;
+		fioSubindo <= not fioSubindo after 4 ns;
+		
+end teste;

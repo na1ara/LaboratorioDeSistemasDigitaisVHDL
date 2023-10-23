@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Controladora is 
+end Controladora;
+
+architecture teste of Controladora is
+
+	component Controladora is
+		port
+		(
+			Clock :  in  std_logic;
+			Reset: in  std_logic;
+			Fio_Maior :  in  std_logic;
+			Fio_Igual :  in  std_logic;
+			Fio_Menor :  in  std_logic;
+			
+			Fio_Load_E :  out  std_logic;
+			Reset_MA :  out  std_logic;
+			Fio_Descendo :  out  std_logic;
+			Fio_Subindo :  out  std_logic;
+			Fio_Atualizar :  out  std_logic
+		);
+	end component;
+	
+	signal fioLoad, fioResetMA, fioDescendo, fioSubindo, fioAtualizar,  : std_logic;
+	signal clk, fioReset, fioMaior, fioMenor, fioIgual: std_logic := '0';
+	
+begin
+
+		instance_datapath: Controladora 
+			port map 
+			(
+				Clock => clk,
+				Reset => fioReset,
+				Fio_Maior => fioMaior, 
+				Fio_Igual => fioIgual, 
+				Fio_Menor => fioMenor,
+				
+				Fio_Load_E => fioLoad, 
+				Reset_MA => fioResetMA, 
+				Fio_Descendo => fioDescendo, 
+				Fio_Subindo => fioSubindo, 
+				Fio_Atualizar => fioAtualizar
+			);
+		
+		clk <= not clk after 1 ns;
+		
+		fioReset <= '1' after 10 ns;
+		Fio_Maior <= '1' after 2 ns, '0' after 4 ns;
+		Fio_Menor <= '1' after 4 ns, '0' after 6 ns;
+		Fio_Igual <= '1' after 6 ns, '0' after 8 ns;
+		
+end teste;

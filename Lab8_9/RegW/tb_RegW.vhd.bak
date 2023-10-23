@@ -1,0 +1,35 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity tb_RegW is
+end tb_RegW;
+
+architecture teste of tb_RegW is
+
+	component RegW is
+	
+		generic
+	(
+		DATA_WIDTH : integer:= 4
+	);
+	port
+	( 
+		clock: in std_logic;
+		load: in std_logic;
+		D: in std_logic_vector ((DATA_WIDTH-1) downto 0);
+	   Q: out std_logic_vector ((DATA_WIDTH-1) downto 0)
+	 );
+	
+	end component;
+	
+	signal fio_clock: std_logic = '0';
+	signal fio_L: std_logic;
+	signal fio_D, fio_Q: std_logic_vector(3 downto 0);
+	
+	begin
+		instance_regw: RegW generic map (DATA_WIDTH = 4) port map (clock => fio_clock, D => fio_D, load => fio_L, Q => fio_Q);
+		fio_clock = not fio_clock after 1ns;
+		fio_D = '0', x"3" after 5ns, x"8" after 7ns, x"F" after 8ns
+		fio_L = '0', '1' after 5ns, '0' after 7ns, '1' after 10ns, '0', after 12ns
+		
+end teste;
