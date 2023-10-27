@@ -15,7 +15,7 @@ L4
 V`o6UecCXXcKXh[NWIfEzD0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1698421748.497000
+Z8 !s108 1698438308.466000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/BCD_7seg/BCD_7seg.vhd|
 Z10 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/BCD_7seg/BCD_7seg.vhd|
 Z11 o-93 -work work -O0
@@ -51,7 +51,7 @@ L5
 V2SVz;cgSKcI93>7[N_mN83
 R7
 31
-Z17 !s108 1698421748.167000
+Z17 !s108 1698438307.979000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Comparador/Comparador.vhd|
 Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Comparador/Comparador.vhd|
 R11
@@ -87,7 +87,7 @@ L4
 VOZlI^f4T;[:bMRZTQHJji2
 R7
 31
-Z23 !s108 1698421747.838000
+Z23 !s108 1698438307.665000
 Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Controladora/Controladora.vhd|
 Z25 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Controladora/Controladora.vhd|
 R11
@@ -123,7 +123,7 @@ L5
 VV1j5DBY:1J5dz@MW`MK6R2
 R7
 31
-Z29 !s108 1698421747.351000
+Z29 !s108 1698438307.178000
 Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Datapath/Datapath.vhd|
 Z31 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Datapath/Datapath.vhd|
 R11
@@ -160,7 +160,7 @@ L5
 VP;5U55QDT3AVkEf<PHa8>0
 R7
 31
-Z35 !s108 1698421746.865000
+Z35 !s108 1698438306.833000
 Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Reg_MA/Reg_MA.vhd|
 Z37 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Reg_MA/Reg_MA.vhd|
 R11
@@ -196,7 +196,7 @@ L4
 V89S5:_Ii56PkDM]e6oa>M2
 R7
 31
-Z41 !s108 1698421746.206000
+Z41 !s108 1698438306.488000
 Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/RegW/RegW.vhd|
 Z43 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/RegW/RegW.vhd|
 R11
@@ -220,7 +220,7 @@ R12
 !s100 75aUIh_23W0VnWS`gAD3z0
 !i10b 1
 Esinalizador
-Z44 w1698421673
+Z44 w1698438242
 R14
 R2
 R3
@@ -232,7 +232,7 @@ L5
 VmS_H_UTEBgJIJkDnc>_9J0
 R7
 31
-Z47 !s108 1698421748.826000
+Z47 !s108 1698438311.655000
 Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Sinalizador/Sinalizador.vhd|
 Z49 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Sinalizador/Sinalizador.vhd|
 R11
@@ -246,7 +246,7 @@ R3
 DEx4 work 11 sinalizador 0 22 mS_H_UTEBgJIJkDnc>_9J0
 l59
 L17
-V@e0bBc8FOkIhz[EJhoJ[]3
+VAc?Hd^0mK1FFM]_8K^I>j0
 R7
 31
 R47
@@ -254,10 +254,10 @@ R48
 R49
 R11
 R12
-!s100 ?J2JP3_Lo7URd=h105GoJ2
+!s100 >_kQ<BQiTTLJFf8jcKk`83
 !i10b 1
 Etb_sinalizador
-Z50 w1698421248
+Z50 w1698438182
 R14
 R2
 R3
@@ -271,7 +271,7 @@ VEfAc7W^B[iKQ1dI8gLBLW0
 R7
 31
 !i10b 1
-Z53 !s108 1698421749.440000
+Z53 !s108 1698438312.958000
 Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Sinalizador/tb_Sinalizador.vhd|
 Z55 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Sinalizador/tb_Sinalizador.vhd|
 R11
@@ -283,8 +283,8 @@ R3
 DEx4 work 14 tb_sinalizador 0 22 EfAc7W^B[iKQ1dI8gLBLW0
 l29
 L8
-VXc?m2A<1RXRDWVIN8jJH00
-!s100 <?6]mABoGe4oAdi]FUc7a3
+VVmMbbFb;kN1b_j@^S;KMi3
+!s100 Mb79I>Kc3dZRFm:V7j^iB1
 R7
 31
 !i10b 1

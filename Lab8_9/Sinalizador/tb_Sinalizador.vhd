@@ -36,7 +36,8 @@ begin
 				E => fioE,
 				
 				Descendo => fioDescendo, 
-				Subindo => fioSubindo
+				Subindo => fioSubindo,
+				Display => display
 			);
 		
 		

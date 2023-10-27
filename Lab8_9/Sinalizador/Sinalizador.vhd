@@ -61,7 +61,7 @@ architecture arch of Sinalizador is
 		instance_datapath: Datapath port map 
 				(
 					Clock, fioLoad, resetMA, fioDescendo, fioSubindo, fioAtualizar, E,
-					fioMaior, fioIgual, fioMenor, Subindo, Descendo, Display
+					fioMaior, fioIgual, fioMenor, Subindo, Descendo, Display 
 				);
 		instance_controladora: Controladora port map
 				(
