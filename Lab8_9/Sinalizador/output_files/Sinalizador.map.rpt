@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Sinalizador
-Sun Oct 22 15:25:51 2023
+Fri Oct 27 12:50:33 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,17 +15,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Sinalizador|Controladora:instance_controladora|estado
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instance_Reg_E
  13. Parameter Settings for User Entity Instance: Datapath:instance_datapath|comparador:instance_Comp
  14. Parameter Settings for User Entity Instance: Datapath:instance_datapath|Reg_MA:instance_MA
  15. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instance_Sobe
  16. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instance_Desce
- 17. Port Connectivity Checks: "Controladora:instance_controladora"
- 18. Port Connectivity Checks: "Datapath:instance_datapath"
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 22 15:25:51 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 27 12:50:33 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Sinalizador                                     ;
 ; Top-level Entity Name              ; Sinalizador                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 14                                              ;
+; Total logic elements               ; 59                                              ;
+;     Total combinational functions  ; 38                                              ;
+;     Dedicated logic registers      ; 26                                              ;
+; Total registers                    ; 26                                              ;
+; Total pins                         ; 15                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -164,19 +162,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; ../RegW/RegW.vhd                 ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/RegW/RegW.vhd                 ;         ;
-; ../Reg_MA/Reg_MA.vhd             ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Reg_MA/Reg_MA.vhd             ;         ;
-; ../Datapath/Datapath.vhd         ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Datapath/Datapath.vhd         ;         ;
-; ../Controladora/Controladora.vhd ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Controladora/Controladora.vhd ;         ;
-; ../Comparador/Comparador.vhd     ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Comparador/Comparador.vhd     ;         ;
-; ../BCD_7seg/BCD_7seg.vhd         ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/BCD_7seg/BCD_7seg.vhd         ;         ;
-; Sinalizador.vhd                  ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8/Tudo/Sinalizador/Sinalizador.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; ../RegW/RegW.vhd                 ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/RegW/RegW.vhd                 ;         ;
+; ../Reg_MA/Reg_MA.vhd             ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Reg_MA/Reg_MA.vhd             ;         ;
+; ../Datapath/Datapath.vhd         ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Datapath/Datapath.vhd         ;         ;
+; ../Controladora/Controladora.vhd ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Controladora/Controladora.vhd ;         ;
+; ../Comparador/Comparador.vhd     ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Comparador/Comparador.vhd     ;         ;
+; ../BCD_7seg/BCD_7seg.vhd         ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/BCD_7seg/BCD_7seg.vhd         ;         ;
+; Sinalizador.vhd                  ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Lab8_9/Sinalizador/Sinalizador.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -184,33 +182,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 59    ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 38    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 17    ;
+;     -- 3 input functions                    ; 15    ;
+;     -- <=2 input functions                  ; 6     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 25    ;
+;     -- arithmetic mode                      ; 13    ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 26    ;
+;     -- Dedicated logic registers            ; 26    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 14    ;
+; I/O pins                                    ; 15    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; Clock ;
+; Maximum fan-out                             ; 26    ;
+; Total fan-out                               ; 205   ;
+; Average fan-out                             ; 2.59  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Sinalizador               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Sinalizador        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |Sinalizador                            ; 38 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |Sinalizador                                                     ; work         ;
+;    |Controladora:instance_controladora| ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Controladora:instance_controladora                  ; work         ;
+;    |Datapath:instance_datapath|         ; 33 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath                          ; work         ;
+;       |Bcd_7seg:instance_BCD|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath|Bcd_7seg:instance_BCD    ; work         ;
+;       |RegW:instance_Desce|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath|RegW:instance_Desce      ; work         ;
+;       |RegW:instance_Reg_E|             ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath|RegW:instance_Reg_E      ; work         ;
+;       |RegW:instance_Sobe|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath|RegW:instance_Sobe       ; work         ;
+;       |Reg_MA:instance_MA|              ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath|Reg_MA:instance_MA       ; work         ;
+;       |comparador:instance_Comp|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Sinalizador|Datapath:instance_datapath|comparador:instance_Comp ; work         ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -228,42 +239,14 @@ Encoding Type:  One-Hot
 +-----------+-----------+-----------+-----------+-----------+------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                              ;
-+----------------------------------------------------------+--------------------------------------+
-; Register name                                            ; Reason for Removal                   ;
-+----------------------------------------------------------+--------------------------------------+
-; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0..3] ; Stuck at GND due to stuck port clock ;
-; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0..3] ; Stuck at GND due to stuck port clock ;
-; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0..3] ; Stuck at GND due to stuck port clock ;
-; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0..3] ; Stuck at GND due to stuck port clock ;
-; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0..3]   ; Stuck at GND due to stuck port clock ;
-; Controladora:instance_controladora|estado.s0             ; Lost fanout                          ;
-; Controladora:instance_controladora|estado.s2             ; Lost fanout                          ;
-; Controladora:instance_controladora|estado.s3             ; Lost fanout                          ;
-; Controladora:instance_controladora|estado.s4             ; Lost fanout                          ;
-; Controladora:instance_controladora|estado.s1             ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 25                   ;                                      ;
-+----------------------------------------------------------+--------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+-------------------------------------------------------+-------------------------+--------------------------------------------------------+
-; Register name                                         ; Reason for Removal      ; Registers Removed due to This Register                 ;
-+-------------------------------------------------------+-------------------------+--------------------------------------------------------+
-; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Stuck at GND            ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3], ;
-;                                                       ; due to stuck port clock ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0],   ;
-;                                                       ;                         ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1],   ;
-;                                                       ;                         ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2],   ;
-;                                                       ;                         ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]    ;
-; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Stuck at GND            ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2], ;
-;                                                       ; due to stuck port clock ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2]  ;
-; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Stuck at GND            ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1], ;
-;                                                       ; due to stuck port clock ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1]  ;
-; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Stuck at GND            ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0], ;
-;                                                       ; due to stuck port clock ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0]  ;
-+-------------------------------------------------------+-------------------------+--------------------------------------------------------+
++-------------------------------------------------------------------+
+; Registers Removed During Synthesis                                ;
++----------------------------------------------+--------------------+
+; Register name                                ; Reason for Removal ;
++----------------------------------------------+--------------------+
+; Controladora:instance_controladora|estado.s4 ; Lost fanout        ;
+; Total Number of Removed Registers = 1        ;                    ;
++----------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -271,14 +254,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 26    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Sinalizador|Controladora:instance_controladora|estado ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -331,27 +323,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------+
-; Port Connectivity Checks: "Controladora:instance_controladora" ;
-+-------+-------+----------+-------------------------------------+
-; Port  ; Type  ; Severity ; Details                             ;
-+-------+-------+----------+-------------------------------------+
-; clock ; Input ; Info     ; Stuck at GND                        ;
-+-------+-------+----------+-------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:instance_datapath"                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; clock    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; subindo  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; descendo ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; display  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -367,25 +338,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 22 15:25:43 2023
+    Info: Processing started: Fri Oct 27 12:50:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Sinalizador -c Sinalizador
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8/tudo/regw/regw.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8_9/regw/regw.vhd
     Info (12022): Found design unit 1: RegW-RTL
     Info (12023): Found entity 1: RegW
-Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8/tudo/reg_ma/reg_ma.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8_9/reg_ma/reg_ma.vhd
     Info (12022): Found design unit 1: Reg_MA-arch
     Info (12023): Found entity 1: Reg_MA
-Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8/tudo/datapath/datapath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8_9/datapath/datapath.vhd
     Info (12022): Found design unit 1: Datapath-arch
     Info (12023): Found entity 1: Datapath
-Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8/tudo/controladora/controladora.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8_9/controladora/controladora.vhd
     Info (12022): Found design unit 1: Controladora-arch
     Info (12023): Found entity 1: Controladora
-Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8/tudo/comparador/comparador.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8_9/comparador/comparador.vhd
     Info (12022): Found design unit 1: comparador-comp
     Info (12023): Found entity 1: comparador
-Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8/tudo/bcd_7seg/bcd_7seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/lab8_9/bcd_7seg/bcd_7seg.vhd
     Info (12022): Found design unit 1: Bcd_7seg-with_select_bcd7seg
     Info (12023): Found entity 1: Bcd_7seg
 Info (12021): Found 2 design units, including 1 entities, in source file sinalizador.vhd
@@ -395,15 +366,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_sina
     Info (12022): Found design unit 1: tb_Sinalizador-teste
     Info (12023): Found entity 1: tb_Sinalizador
 Info (12127): Elaborating entity "Sinalizador" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Sinalizador.vhd(11): used implicit default value for signal "Subindo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Sinalizador.vhd(12): used implicit default value for signal "Descendo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Sinalizador.vhd(13): used implicit default value for signal "Display" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10540): VHDL Signal Declaration warning at Sinalizador.vhd(56): used explicit default value for signal "clk" because signal was never assigned a value
-Warning (10541): VHDL Signal Declaration warning at Sinalizador.vhd(57): used implicit default value for signal "fioReset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Sinalizador.vhd(58): object "saidaSubindo" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Sinalizador.vhd(58): object "saidaDescendo" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at Sinalizador.vhd(59): used implicit default value for signal "fioE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Sinalizador.vhd(60): object "saidaDisplay" assigned a value but never read
 Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:instance_datapath"
 Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:instance_datapath|RegW:instance_Reg_E"
 Info (12128): Elaborating entity "comparador" for hierarchy "Datapath:instance_datapath|comparador:instance_Comp"
@@ -411,32 +373,17 @@ Info (12128): Elaborating entity "Reg_MA" for hierarchy "Datapath:instance_datap
 Info (12128): Elaborating entity "Bcd_7seg" for hierarchy "Datapath:instance_datapath|Bcd_7seg:instance_BCD"
 Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:instance_datapath|RegW:instance_Sobe"
 Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:instance_controladora"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Subindo" is stuck at GND
-    Warning (13410): Pin "Descendo" is stuck at GND
-    Warning (13410): Pin "Display[0]" is stuck at GND
-    Warning (13410): Pin "Display[1]" is stuck at GND
-    Warning (13410): Pin "Display[2]" is stuck at GND
-    Warning (13410): Pin "Display[3]" is stuck at GND
-    Warning (13410): Pin "Display[4]" is stuck at GND
-    Warning (13410): Pin "Display[5]" is stuck at GND
-    Warning (13410): Pin "Display[6]" is stuck at GND
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Reset"
-    Warning (15610): No output dependent on input pin "E[0]"
-    Warning (15610): No output dependent on input pin "E[1]"
-    Warning (15610): No output dependent on input pin "E[2]"
-    Warning (15610): No output dependent on input pin "E[3]"
-Info (21057): Implemented 14 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 9 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4624 megabytes
-    Info: Processing ended: Sun Oct 22 15:25:51 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 59 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4634 megabytes
+    Info: Processing ended: Fri Oct 27 12:50:33 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

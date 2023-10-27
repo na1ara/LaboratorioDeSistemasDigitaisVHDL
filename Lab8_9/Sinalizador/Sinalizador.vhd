@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity Sinalizador is
   port
 	(
-		Reset :  in  std_logic;
+		Reset, Clock :  in  std_logic;
 		E :  in  std_logic_vector(3 DOWNTO 0);
 		
 		Subindo :  out  std_logic;
@@ -53,22 +53,19 @@ architecture arch of Sinalizador is
 		);
 	end component;
 	
-	signal clk: std_logic:= '0';
-	signal fioReset, fioMaior, fioMenor, fioIgual,fioLoad, resetMA, fioDescendo,
-			 fioSubindo, fioAtualizar, saidaSubindo, saidaDescendo: std_logic;
-	signal fioE: std_logic_vector (3 downto 0);
-	signal saidaDisplay: std_logic_vector (6 downto 0);
+	signal fioMaior, fioMenor, fioIgual,fioLoad, resetMA, fioDescendo,
+			 fioSubindo, fioAtualizar: std_logic;
 	
 	begin
 	
 		instance_datapath: Datapath port map 
 				(
-					clk, fioLoad, resetMA, fioDescendo, fioSubindo, fioAtualizar, fioE,
-					fioMaior, fioIgual, fioMenor, saidaSubindo, saidaDescendo, saidaDisplay
+					Clock, fioLoad, resetMA, fioDescendo, fioSubindo, fioAtualizar, E,
+					fioMaior, fioIgual, fioMenor, Subindo, Descendo, Display
 				);
 		instance_controladora: Controladora port map
 				(
-					clk, fioReset, fioMaior, fioIgual, fioMenor, 
+					Clock, Reset, fioMaior, fioIgual, fioMenor, 
 					fioLoad, resetMA, fioDescendo, fioSubindo, fioAtualizar
 				);	
 end arch;

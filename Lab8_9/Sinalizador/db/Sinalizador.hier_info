@@ -1,18 +1,20 @@
 |Sinalizador
-Reset => ~NO_FANOUT~
-E[0] => ~NO_FANOUT~
-E[1] => ~NO_FANOUT~
-E[2] => ~NO_FANOUT~
-E[3] => ~NO_FANOUT~
-Subindo <= Subindo.DB_MAX_OUTPUT_PORT_TYPE
-Descendo <= Descendo.DB_MAX_OUTPUT_PORT_TYPE
-Display[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-Display[1] <= Display[1].DB_MAX_OUTPUT_PORT_TYPE
-Display[2] <= Display[2].DB_MAX_OUTPUT_PORT_TYPE
-Display[3] <= Display[3].DB_MAX_OUTPUT_PORT_TYPE
-Display[4] <= Display[4].DB_MAX_OUTPUT_PORT_TYPE
-Display[5] <= Display[5].DB_MAX_OUTPUT_PORT_TYPE
-Display[6] <= Display[6].DB_MAX_OUTPUT_PORT_TYPE
+Reset => Controladora:instance_controladora.Reset
+Clock => Datapath:instance_datapath.Clock
+Clock => Controladora:instance_controladora.Clock
+E[0] => Datapath:instance_datapath.E[0]
+E[1] => Datapath:instance_datapath.E[1]
+E[2] => Datapath:instance_datapath.E[2]
+E[3] => Datapath:instance_datapath.E[3]
+Subindo <= Datapath:instance_datapath.Subindo
+Descendo <= Datapath:instance_datapath.Descendo
+Display[0] <= Datapath:instance_datapath.Display[0]
+Display[1] <= Datapath:instance_datapath.Display[1]
+Display[2] <= Datapath:instance_datapath.Display[2]
+Display[3] <= Datapath:instance_datapath.Display[3]
+Display[4] <= Datapath:instance_datapath.Display[4]
+Display[5] <= Datapath:instance_datapath.Display[5]
+Display[6] <= Datapath:instance_datapath.Display[6]
 
 
 |Sinalizador|Datapath:instance_datapath

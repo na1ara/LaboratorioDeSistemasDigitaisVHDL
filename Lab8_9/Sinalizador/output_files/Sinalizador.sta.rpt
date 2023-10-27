@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Sinalizador
-Sun Oct 22 15:26:22 2023
+Fri Oct 27 12:50:52 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,19 +16,42 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Datasheet Report
- 12. Fast Model Setup Summary
- 13. Fast Model Hold Summary
- 14. Fast Model Recovery Summary
- 15. Fast Model Removal Summary
- 16. Fast Model Minimum Pulse Width Summary
- 17. Fast Model Datasheet Report
- 18. Multicorner Timing Analysis Summary
- 19. Clock Transfers
- 20. Report TCCS
- 21. Report RSKM
- 22. Unconstrained Paths
- 23. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Setup: 'Clock'
+ 12. Slow Model Hold: 'Clock'
+ 13. Slow Model Recovery: 'Clock'
+ 14. Slow Model Removal: 'Clock'
+ 15. Slow Model Minimum Pulse Width: 'Clock'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'Clock'
+ 26. Fast Model Hold: 'Clock'
+ 27. Fast Model Recovery: 'Clock'
+ 28. Fast Model Removal: 'Clock'
+ 29. Fast Model Minimum Pulse Width: 'Clock'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
 
 
 
@@ -75,104 +98,1051 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
----------------------------
-; Slow Model Fmax Summary ;
----------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 185.19 MHz ; 185.19 MHz      ; Clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-----------------------------
-; Slow Model Setup Summary ;
-----------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Clock ; -4.400 ; -17.864       ;
++-------+--------+---------------+
 
 
----------------------------
-; Slow Model Hold Summary ;
----------------------------
-No paths to report.
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 0.391 ; 0.000         ;
++-------+-------+---------------+
 
 
--------------------------------
-; Slow Model Recovery Summary ;
--------------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Clock ; -0.435 ; -6.352        ;
++-------+--------+---------------+
 
 
-------------------------------
-; Slow Model Removal Summary ;
-------------------------------
-No paths to report.
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 1.053 ; 0.000         ;
++-------+-------+---------------+
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Clock ; -1.380 ; -27.380               ;
++-------+--------+-----------------------+
 
 
--------------------------------
-; Slow Model Datasheet Report ;
--------------------------------
-Nothing to report.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Clock'                                                                                                                                                                    ;
++--------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                             ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.400 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.436      ;
+; -4.399 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.435      ;
+; -4.380 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.417      ;
+; -4.379 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.416      ;
+; -4.378 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.415      ;
+; -4.377 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.414      ;
+; -4.350 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.386      ;
+; -4.330 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.367      ;
+; -4.328 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.365      ;
+; -4.174 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.211      ;
+; -4.173 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.210      ;
+; -4.161 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.198      ;
+; -4.160 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.197      ;
+; -4.130 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.167      ;
+; -4.129 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.166      ;
+; -4.124 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.161      ;
+; -4.118 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.154      ;
+; -4.117 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.153      ;
+; -4.111 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.148      ;
+; -4.103 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.140      ;
+; -4.102 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.139      ;
+; -4.080 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.117      ;
+; -4.068 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.104      ;
+; -4.053 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 5.090      ;
+; -4.011 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.047      ;
+; -4.010 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 5.046      ;
+; -3.961 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 4.997      ;
+; -3.897 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 4.933      ;
+; -3.897 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 4.933      ;
+; -3.897 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 4.933      ;
+; -3.886 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.923      ;
+; -3.885 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.922      ;
+; -3.855 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.892      ;
+; -3.854 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.891      ;
+; -3.836 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.873      ;
+; -3.834 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.871      ;
+; -3.833 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.870      ;
+; -3.805 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.842      ;
+; -3.784 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.821      ;
+; -3.735 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.772      ;
+; -3.735 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.772      ;
+; -3.735 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.772      ;
+; -3.713 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.750      ;
+; -3.713 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.750      ;
+; -3.713 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.750      ;
+; -3.669 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.706      ;
+; -3.669 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.706      ;
+; -3.669 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 4.706      ;
+; -1.984 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 3.020      ;
+; -1.966 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 3.002      ;
+; -1.966 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 3.002      ;
+; -1.966 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 3.002      ;
+; -1.876 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.912      ;
+; -1.827 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.863      ;
+; -1.779 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.815      ;
+; -1.778 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.814      ;
+; -1.729 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.765      ;
+; -1.703 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.739      ;
+; -1.702 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.738      ;
+; -1.653 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.689      ;
+; -0.569 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.605      ;
+; -0.569 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.605      ;
+; -0.569 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.605      ;
+; -0.569 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.605      ;
+; -0.409 ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.444      ;
+; -0.405 ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.440      ;
+; -0.372 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.407      ;
+; -0.372 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.407      ;
+; -0.357 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.393      ;
+; -0.331 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.366      ;
+; -0.319 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.355      ;
+; -0.192 ; Controladora:instance_controladora|estado.s3          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.227      ;
+; -0.109 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.145      ;
+; -0.108 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.144      ;
+; -0.103 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.139      ;
+; -0.092 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.127      ;
+; -0.083 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.119      ;
+; -0.080 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.116      ;
+; -0.071 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.107      ;
+; -0.043 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.079      ;
+; -0.043 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.079      ;
+; 0.045  ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.990      ;
+; 0.051  ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.984      ;
+; 0.051  ; Controladora:instance_controladora|estado.s2          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.984      ;
+; 0.095  ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.941      ;
+; 0.100  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.936      ;
+; 0.102  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.934      ;
+; 0.237  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.799      ;
+; 0.379  ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.657      ;
++--------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-----------------------------
-; Fast Model Setup Summary ;
-----------------------------
-No paths to report.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Clock'                                                                                                                                                                    ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                             ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.533 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.799      ;
+; 0.668 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.934      ;
+; 0.670 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.936      ;
+; 0.675 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.941      ;
+; 0.719 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.984      ;
+; 0.719 ; Controladora:instance_controladora|estado.s2          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.984      ;
+; 0.725 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.990      ;
+; 0.813 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.079      ;
+; 0.813 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.079      ;
+; 0.841 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.107      ;
+; 0.850 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.116      ;
+; 0.853 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.119      ;
+; 0.862 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.127      ;
+; 0.873 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.139      ;
+; 0.878 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.144      ;
+; 0.879 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.145      ;
+; 0.962 ; Controladora:instance_controladora|estado.s3          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.227      ;
+; 1.089 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.355      ;
+; 1.101 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.366      ;
+; 1.127 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.393      ;
+; 1.142 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.407      ;
+; 1.142 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.407      ;
+; 1.175 ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.440      ;
+; 1.179 ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.444      ;
+; 1.339 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.605      ;
+; 1.339 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.605      ;
+; 1.339 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.605      ;
+; 1.339 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.605      ;
+; 1.417 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.683      ;
+; 1.417 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.683      ;
+; 1.734 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.000      ;
+; 1.963 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.229      ;
+; 1.963 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.229      ;
+; 2.046 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.312      ;
+; 2.046 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.312      ;
+; 2.046 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.312      ;
+; 2.169 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.435      ;
+; 2.218 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.484      ;
+; 2.219 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.485      ;
+; 2.228 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.494      ;
+; 3.368 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.635      ;
+; 3.368 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.635      ;
+; 3.381 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.648      ;
+; 3.381 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.648      ;
+; 3.411 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.678      ;
+; 3.411 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.678      ;
+; 3.434 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.701      ;
+; 3.434 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.701      ;
+; 3.503 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.770      ;
+; 3.503 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.770      ;
+; 3.510 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.777      ;
+; 3.510 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.777      ;
+; 3.512 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.779      ;
+; 3.527 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.793      ;
+; 3.527 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.793      ;
+; 3.529 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.796      ;
+; 3.538 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.805      ;
+; 3.538 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.805      ;
+; 3.552 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.819      ;
+; 3.552 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.819      ;
+; 3.560 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.827      ;
+; 3.583 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.850      ;
+; 3.610 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.876      ;
+; 3.610 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.876      ;
+; 3.647 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.914      ;
+; 3.666 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.933      ;
+; 3.666 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.933      ;
+; 3.671 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 3.937      ;
+; 3.696 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 3.963      ;
+; 3.749 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.015      ;
+; 3.749 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.015      ;
+; 3.758 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.024      ;
+; 3.763 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.030      ;
+; 3.763 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.030      ;
+; 3.789 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.055      ;
+; 3.789 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.055      ;
+; 3.792 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.059      ;
+; 3.792 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.059      ;
+; 3.810 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.077      ;
+; 3.838 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.105      ;
+; 3.872 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.139      ;
+; 3.872 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.139      ;
+; 3.983 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.250      ;
+; 4.052 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.318      ;
+; 4.063 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.330      ;
+; 4.089 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 4.355      ;
+; 4.095 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.362      ;
+; 4.189 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 4.456      ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
----------------------------
-; Fast Model Hold Summary ;
----------------------------
-No paths to report.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'Clock'                                                                                                                                                        ;
++--------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.435 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 1.470      ;
+; -0.283 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.319      ;
++--------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
--------------------------------
-; Fast Model Recovery Summary ;
--------------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'Clock'                                                                                                                                                        ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.053 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.319      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
+; 1.205 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 1.470      ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-------------------------------
-; Fast Model Removal Summary ;
-------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Clock'                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Clock ; Rise       ; Clock                                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s1          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s1          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s2          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s2          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s3          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s3          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; Clock|combout                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; Clock|combout                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; Clock~clkctrl|inclk[0]                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; Clock~clkctrl|inclk[0]                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; Clock~clkctrl|outclk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; Clock~clkctrl|outclk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s0|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s0|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s1|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s1|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s2|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s2|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s3|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s3|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_Desce|Q[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_Desce|Q[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var4[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var4[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var4[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[3]|clk             ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
 
 
-------------------------------------------
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; Clock      ; 3.137  ; 3.137  ; Rise       ; Clock           ;
+;  E[0]     ; Clock      ; 3.137  ; 3.137  ; Rise       ; Clock           ;
+;  E[1]     ; Clock      ; -0.648 ; -0.648 ; Rise       ; Clock           ;
+;  E[2]     ; Clock      ; -0.631 ; -0.631 ; Rise       ; Clock           ;
+;  E[3]     ; Clock      ; 3.131  ; 3.131  ; Rise       ; Clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; Clock      ; 0.878  ; 0.878  ; Rise       ; Clock           ;
+;  E[0]     ; Clock      ; -2.907 ; -2.907 ; Rise       ; Clock           ;
+;  E[1]     ; Clock      ; 0.878  ; 0.878  ; Rise       ; Clock           ;
+;  E[2]     ; Clock      ; 0.861  ; 0.861  ; Rise       ; Clock           ;
+;  E[3]     ; Clock      ; -2.901 ; -2.901 ; Rise       ; Clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; Descendo    ; Clock      ; 6.592  ; 6.592  ; Rise       ; Clock           ;
+; Display[*]  ; Clock      ; 10.715 ; 10.715 ; Rise       ; Clock           ;
+;  Display[0] ; Clock      ; 10.711 ; 10.711 ; Rise       ; Clock           ;
+;  Display[1] ; Clock      ; 10.693 ; 10.693 ; Rise       ; Clock           ;
+;  Display[2] ; Clock      ; 10.495 ; 10.495 ; Rise       ; Clock           ;
+;  Display[3] ; Clock      ; 10.715 ; 10.715 ; Rise       ; Clock           ;
+;  Display[4] ; Clock      ; 10.521 ; 10.521 ; Rise       ; Clock           ;
+;  Display[5] ; Clock      ; 10.500 ; 10.500 ; Rise       ; Clock           ;
+;  Display[6] ; Clock      ; 10.526 ; 10.526 ; Rise       ; Clock           ;
+; Subindo     ; Clock      ; 6.595  ; 6.595  ; Rise       ; Clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Descendo    ; Clock      ; 6.592 ; 6.592 ; Rise       ; Clock           ;
+; Display[*]  ; Clock      ; 9.012 ; 9.012 ; Rise       ; Clock           ;
+;  Display[0] ; Clock      ; 9.229 ; 9.229 ; Rise       ; Clock           ;
+;  Display[1] ; Clock      ; 9.203 ; 9.203 ; Rise       ; Clock           ;
+;  Display[2] ; Clock      ; 9.012 ; 9.012 ; Rise       ; Clock           ;
+;  Display[3] ; Clock      ; 9.258 ; 9.258 ; Rise       ; Clock           ;
+;  Display[4] ; Clock      ; 9.043 ; 9.043 ; Rise       ; Clock           ;
+;  Display[5] ; Clock      ; 9.018 ; 9.018 ; Rise       ; Clock           ;
+;  Display[6] ; Clock      ; 9.035 ; 9.035 ; Rise       ; Clock           ;
+; Subindo     ; Clock      ; 6.595 ; 6.595 ; Rise       ; Clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Clock ; -1.314 ; -3.936        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 0.214 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 0.592 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Clock ; -1.380 ; -27.380               ;
++-------+--------+-----------------------+
 
 
--------------------------------
-; Fast Model Datasheet Report ;
--------------------------------
-Nothing to report.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Clock'                                                                                                                                                                    ;
++--------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                             ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.314 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.346      ;
+; -1.312 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.344      ;
+; -1.310 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.342      ;
+; -1.303 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.336      ;
+; -1.301 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.334      ;
+; -1.299 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.332      ;
+; -1.299 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.332      ;
+; -1.297 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.330      ;
+; -1.295 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.328      ;
+; -1.210 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.243      ;
+; -1.208 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.241      ;
+; -1.206 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.239      ;
+; -1.203 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.236      ;
+; -1.201 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.234      ;
+; -1.199 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.232      ;
+; -1.186 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.218      ;
+; -1.184 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.217      ;
+; -1.184 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.216      ;
+; -1.182 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.215      ;
+; -1.182 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.214      ;
+; -1.180 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.213      ;
+; -1.175 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.208      ;
+; -1.173 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.206      ;
+; -1.171 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.204      ;
+; -1.134 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.166      ;
+; -1.132 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.164      ;
+; -1.130 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.162      ;
+; -1.096 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.128      ;
+; -1.096 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.128      ;
+; -1.095 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 2.127      ;
+; -1.076 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.109      ;
+; -1.074 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.107      ;
+; -1.072 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.105      ;
+; -1.063 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.096      ;
+; -1.061 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.094      ;
+; -1.059 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.092      ;
+; -1.051 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.084      ;
+; -1.049 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.082      ;
+; -1.047 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.080      ;
+; -1.019 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.052      ;
+; -1.019 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.052      ;
+; -1.018 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.051      ;
+; -1.014 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.047      ;
+; -1.014 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.047      ;
+; -1.013 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.046      ;
+; -0.994 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.027      ;
+; -0.994 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.027      ;
+; -0.993 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.001      ; 2.026      ;
+; -0.342 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.374      ;
+; -0.317 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.349      ;
+; -0.317 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.349      ;
+; -0.316 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.348      ;
+; -0.276 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.308      ;
+; -0.274 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.306      ;
+; -0.239 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.271      ;
+; -0.237 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.269      ;
+; -0.235 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.267      ;
+; -0.207 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.239      ;
+; -0.205 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.237      ;
+; -0.203 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.235      ;
+; 0.191  ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.841      ;
+; 0.191  ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.841      ;
+; 0.191  ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.841      ;
+; 0.191  ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.841      ;
+; 0.275  ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.756      ;
+; 0.275  ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.756      ;
+; 0.340  ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.691      ;
+; 0.341  ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.690      ;
+; 0.346  ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.686      ;
+; 0.357  ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.674      ;
+; 0.364  ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.668      ;
+; 0.441  ; Controladora:instance_controladora|estado.s3          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.590      ;
+; 0.451  ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.581      ;
+; 0.454  ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.578      ;
+; 0.460  ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.572      ;
+; 0.464  ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.567      ;
+; 0.467  ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.565      ;
+; 0.469  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.563      ;
+; 0.479  ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.553      ;
+; 0.498  ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.534      ;
+; 0.498  ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.534      ;
+; 0.544  ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.488      ;
+; 0.545  ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.486      ;
+; 0.547  ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.484      ;
+; 0.550  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.482      ;
+; 0.550  ; Controladora:instance_controladora|estado.s2          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.481      ;
+; 0.553  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.479      ;
+; 0.634  ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.398      ;
+; 0.665  ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.367      ;
++--------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Clock'                                                                                                                                                                    ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                             ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.246 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.398      ;
+; 0.327 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.479      ;
+; 0.330 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.482      ;
+; 0.330 ; Controladora:instance_controladora|estado.s2          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.481      ;
+; 0.333 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.484      ;
+; 0.335 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.486      ;
+; 0.336 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.488      ;
+; 0.382 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.534      ;
+; 0.382 ; Controladora:instance_controladora|estado.s1          ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.534      ;
+; 0.401 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.553      ;
+; 0.411 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.563      ;
+; 0.413 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.565      ;
+; 0.416 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.567      ;
+; 0.420 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.572      ;
+; 0.426 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.578      ;
+; 0.429 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.581      ;
+; 0.439 ; Controladora:instance_controladora|estado.s3          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.590      ;
+; 0.516 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.668      ;
+; 0.523 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.674      ;
+; 0.534 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.686      ;
+; 0.539 ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.690      ;
+; 0.540 ; Controladora:instance_controladora|estado.s0          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.691      ;
+; 0.605 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.756      ;
+; 0.605 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.756      ;
+; 0.618 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.770      ;
+; 0.621 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.773      ;
+; 0.689 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.841      ;
+; 0.689 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.841      ;
+; 0.689 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.841      ;
+; 0.689 ; Controladora:instance_controladora|estado.s1          ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.841      ;
+; 0.764 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.916      ;
+; 0.854 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.006      ;
+; 0.857 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.009      ;
+; 0.899 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.051      ;
+; 0.900 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.052      ;
+; 0.900 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.052      ;
+; 0.962 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.114      ;
+; 0.964 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.116      ;
+; 0.966 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.118      ;
+; 0.969 ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.121      ;
+; 1.431 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.584      ;
+; 1.434 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.587      ;
+; 1.439 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.592      ;
+; 1.442 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.595      ;
+; 1.443 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.596      ;
+; 1.446 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.599      ;
+; 1.446 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.599      ;
+; 1.449 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.602      ;
+; 1.479 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.632      ;
+; 1.482 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.635      ;
+; 1.495 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.648      ;
+; 1.498 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.651      ;
+; 1.502 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.655      ;
+; 1.504 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.657      ;
+; 1.505 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.658      ;
+; 1.507 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.660      ;
+; 1.510 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.663      ;
+; 1.512 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.664      ;
+; 1.515 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.667      ;
+; 1.518 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.671      ;
+; 1.528 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.681      ;
+; 1.531 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.683      ;
+; 1.531 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.684      ;
+; 1.534 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.686      ;
+; 1.553 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.706      ;
+; 1.556 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.709      ;
+; 1.571 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.724      ;
+; 1.583 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.735      ;
+; 1.592 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.744      ;
+; 1.594 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.747      ;
+; 1.595 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.747      ;
+; 1.609 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.762      ;
+; 1.612 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.765      ;
+; 1.613 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.766      ;
+; 1.614 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.767      ;
+; 1.616 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.769      ;
+; 1.618 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.770      ;
+; 1.621 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.774      ;
+; 1.629 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.781      ;
+; 1.632 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.784      ;
+; 1.642 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s3          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.795      ;
+; 1.645 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s2          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.798      ;
+; 1.699 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.852      ;
+; 1.722 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.874      ;
+; 1.732 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.885      ;
+; 1.739 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.892      ;
+; 1.748 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.900      ;
+; 1.788 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Controladora:instance_controladora|estado.s1          ; Clock        ; Clock       ; 0.000        ; 0.001      ; 1.941      ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'Clock'                                                                                                                                                       ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 1.000        ; -0.001     ; 0.817      ;
+; 0.288 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.744      ;
+; 0.288 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.744      ;
+; 0.288 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.744      ;
+; 0.288 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.744      ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'Clock'                                                                                                                                                        ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.592 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.744      ;
+; 0.592 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.744      ;
+; 0.592 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.744      ;
+; 0.592 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.744      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; Controladora:instance_controladora|estado.s0 ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ; Clock        ; Clock       ; 0.000        ; -0.001     ; 0.817      ;
++-------+----------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Clock'                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Clock ; Rise       ; Clock                                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s1          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s1          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s2          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s2          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Controladora:instance_controladora|estado.s3          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Controladora:instance_controladora|estado.s3          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Desce|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Reg_E|Q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|RegW:instance_Sobe|Q[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Datapath:instance_datapath|Reg_MA:instance_MA|var4[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; Clock|combout                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; Clock|combout                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; Clock~clkctrl|inclk[0]                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; Clock~clkctrl|inclk[0]                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; Clock~clkctrl|outclk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; Clock~clkctrl|outclk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s0|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s0|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s1|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s1|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s2|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s2|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_controladora|estado.s3|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_controladora|estado.s3|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_Desce|Q[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_Desce|Q[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var1[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var1[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var2[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var2[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var3[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var3[3]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var4[0]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var4[1]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Clock ; Rise       ; instance_datapath|instance_MA|var4[2]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Clock ; Rise       ; instance_datapath|instance_MA|var4[3]|clk             ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; Clock      ; 1.689  ; 1.689  ; Rise       ; Clock           ;
+;  E[0]     ; Clock      ; 1.689  ; 1.689  ; Rise       ; Clock           ;
+;  E[1]     ; Clock      ; -0.656 ; -0.656 ; Rise       ; Clock           ;
+;  E[2]     ; Clock      ; -0.646 ; -0.646 ; Rise       ; Clock           ;
+;  E[3]     ; Clock      ; 1.685  ; 1.685  ; Rise       ; Clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; Clock      ; 0.776  ; 0.776  ; Rise       ; Clock           ;
+;  E[0]     ; Clock      ; -1.569 ; -1.569 ; Rise       ; Clock           ;
+;  E[1]     ; Clock      ; 0.776  ; 0.776  ; Rise       ; Clock           ;
+;  E[2]     ; Clock      ; 0.766  ; 0.766  ; Rise       ; Clock           ;
+;  E[3]     ; Clock      ; -1.565 ; -1.565 ; Rise       ; Clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Descendo    ; Clock      ; 3.749 ; 3.749 ; Rise       ; Clock           ;
+; Display[*]  ; Clock      ; 5.511 ; 5.511 ; Rise       ; Clock           ;
+;  Display[0] ; Clock      ; 5.485 ; 5.485 ; Rise       ; Clock           ;
+;  Display[1] ; Clock      ; 5.466 ; 5.466 ; Rise       ; Clock           ;
+;  Display[2] ; Clock      ; 5.395 ; 5.395 ; Rise       ; Clock           ;
+;  Display[3] ; Clock      ; 5.511 ; 5.511 ; Rise       ; Clock           ;
+;  Display[4] ; Clock      ; 5.422 ; 5.422 ; Rise       ; Clock           ;
+;  Display[5] ; Clock      ; 5.399 ; 5.399 ; Rise       ; Clock           ;
+;  Display[6] ; Clock      ; 5.424 ; 5.424 ; Rise       ; Clock           ;
+; Subindo     ; Clock      ; 3.751 ; 3.751 ; Rise       ; Clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Descendo    ; Clock      ; 3.749 ; 3.749 ; Rise       ; Clock           ;
+; Display[*]  ; Clock      ; 4.783 ; 4.783 ; Rise       ; Clock           ;
+;  Display[0] ; Clock      ; 4.875 ; 4.875 ; Rise       ; Clock           ;
+;  Display[1] ; Clock      ; 4.847 ; 4.847 ; Rise       ; Clock           ;
+;  Display[2] ; Clock      ; 4.783 ; 4.783 ; Rise       ; Clock           ;
+;  Display[3] ; Clock      ; 4.899 ; 4.899 ; Rise       ; Clock           ;
+;  Display[4] ; Clock      ; 4.816 ; 4.816 ; Rise       ; Clock           ;
+;  Display[5] ; Clock      ; 4.791 ; 4.791 ; Rise       ; Clock           ;
+;  Display[6] ; Clock      ; 4.806 ; 4.806 ; Rise       ; Clock           ;
+; Subindo     ; Clock      ; 3.751 ; 3.751 ; Rise       ; Clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.400  ; 0.215 ; -0.435   ; 0.592   ; -1.380              ;
+;  Clock           ; -4.400  ; 0.215 ; -0.435   ; 0.592   ; -1.380              ;
+; Design-wide TNS  ; -17.864 ; 0.0   ; -6.352   ; 0.0     ; -27.38              ;
+;  Clock           ; -17.864 ; 0.000 ; -6.352   ; 0.000   ; -27.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; Clock      ; 3.137  ; 3.137  ; Rise       ; Clock           ;
+;  E[0]     ; Clock      ; 3.137  ; 3.137  ; Rise       ; Clock           ;
+;  E[1]     ; Clock      ; -0.648 ; -0.648 ; Rise       ; Clock           ;
+;  E[2]     ; Clock      ; -0.631 ; -0.631 ; Rise       ; Clock           ;
+;  E[3]     ; Clock      ; 3.131  ; 3.131  ; Rise       ; Clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; Clock      ; 0.878  ; 0.878  ; Rise       ; Clock           ;
+;  E[0]     ; Clock      ; -1.569 ; -1.569 ; Rise       ; Clock           ;
+;  E[1]     ; Clock      ; 0.878  ; 0.878  ; Rise       ; Clock           ;
+;  E[2]     ; Clock      ; 0.861  ; 0.861  ; Rise       ; Clock           ;
+;  E[3]     ; Clock      ; -1.565 ; -1.565 ; Rise       ; Clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; Descendo    ; Clock      ; 6.592  ; 6.592  ; Rise       ; Clock           ;
+; Display[*]  ; Clock      ; 10.715 ; 10.715 ; Rise       ; Clock           ;
+;  Display[0] ; Clock      ; 10.711 ; 10.711 ; Rise       ; Clock           ;
+;  Display[1] ; Clock      ; 10.693 ; 10.693 ; Rise       ; Clock           ;
+;  Display[2] ; Clock      ; 10.495 ; 10.495 ; Rise       ; Clock           ;
+;  Display[3] ; Clock      ; 10.715 ; 10.715 ; Rise       ; Clock           ;
+;  Display[4] ; Clock      ; 10.521 ; 10.521 ; Rise       ; Clock           ;
+;  Display[5] ; Clock      ; 10.500 ; 10.500 ; Rise       ; Clock           ;
+;  Display[6] ; Clock      ; 10.526 ; 10.526 ; Rise       ; Clock           ;
+; Subindo     ; Clock      ; 6.595  ; 6.595  ; Rise       ; Clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Descendo    ; Clock      ; 3.749 ; 3.749 ; Rise       ; Clock           ;
+; Display[*]  ; Clock      ; 4.783 ; 4.783 ; Rise       ; Clock           ;
+;  Display[0] ; Clock      ; 4.875 ; 4.875 ; Rise       ; Clock           ;
+;  Display[1] ; Clock      ; 4.847 ; 4.847 ; Rise       ; Clock           ;
+;  Display[2] ; Clock      ; 4.783 ; 4.783 ; Rise       ; Clock           ;
+;  Display[3] ; Clock      ; 4.899 ; 4.899 ; Rise       ; Clock           ;
+;  Display[4] ; Clock      ; 4.816 ; 4.816 ; Rise       ; Clock           ;
+;  Display[5] ; Clock      ; 4.791 ; 4.791 ; Rise       ; Clock           ;
+;  Display[6] ; Clock      ; 4.806 ; 4.806 ; Rise       ; Clock           ;
+; Subindo     ; Clock      ; 3.751 ; 3.751 ; Rise       ; Clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 2333     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 2333     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clock      ; Clock    ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -194,10 +1164,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 114   ; 114  ;
 +---------------------------------+-------+------+
 
 
@@ -207,7 +1177,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 22 15:26:19 2023
+    Info: Processing started: Fri Oct 27 12:50:51 2023
 Info: Command: quartus_sta Sinalizador -c Sinalizador
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -215,34 +1185,61 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Sinalizador.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Clock Clock
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.400
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.400       -17.864 Clock 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 Clock 
+Info (332146): Worst-case recovery slack is -0.435
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.435        -6.352 Clock 
+Info (332146): Worst-case removal slack is 1.053
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.053         0.000 Clock 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -27.380 Clock 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.314
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.314        -3.936 Clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 Clock 
+Info (332146): Worst-case recovery slack is 0.214
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.214         0.000 Clock 
+Info (332146): Worst-case removal slack is 0.592
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.592         0.000 Clock 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -27.380 Clock 
 Info (332001): The selected device family is not supported by the report_metastability command.
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4531 megabytes
-    Info: Processing ended: Sun Oct 22 15:26:22 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Fri Oct 27 12:50:52 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
