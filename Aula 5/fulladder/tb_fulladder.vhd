@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity tb_fulladder is
+end tb_fulladder;
+
+architecture teste of tb_fulladder is
+
+component fulladder is 
+port (	  Cin : in std_logic;
+           x   : in std_logic;
+           y   : in std_logic;
+           s   : out std_logic;
+           Cout: out std_logic);
+end component;
+
+signal fio_x, fio_y, fio_s, fio_cin, fio_cout: std_logic;
+begin
+instancia_fulladder: fulladder port map(x=>fio_x,y=>fio_y,s=>fio_s,cin=>fio_cin,cout=>fio_cout); 
+-- x nas próximas linhas: os vetores de bits estão expressos em base hexadecimal
+fio_x <= '0', '1' after 20 ns, 	'0' after 40 ns, 	'1' after 60 ns,
+			'0' after 80 ns, '1' after 100 ns, 	'0' after 120 ns, 	'1' after 140 ns;
+fio_y <= '0', '0' after 20 ns, 	'1' after 40 ns, 	'1' after 60 ns,
+			'0' after 80 ns, '0' after 100 ns, 	'1' after 120 ns, 	'1' after 140 ns;
+fio_cin <= '0', '0' after 20 ns, 	'0' after 40 ns, 	'0' after 60 ns,
+			  '1' after 80 ns, '1' after 100 ns, 	'1' after 120 ns, 	'1' after 140 ns;
+end teste;

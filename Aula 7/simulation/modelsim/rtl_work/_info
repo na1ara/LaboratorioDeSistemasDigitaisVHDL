@@ -1,0 +1,114 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Desktop\Hermes PN1\Bernardo - Luiz - Naiara\Aula 7\simulation\modelsim
+Edivisorclock
+Z1 w1465424834
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Aluno\Desktop\Hermes PN1\Bernardo - Luiz - Naiara\Aula 7\simulation\modelsim
+Z6 8C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/divisorclock.vhd
+Z7 FC:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/divisorclock.vhd
+l0
+L5
+V8JlXTB:QhH<:7g5z4XAgA0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1696633869.350000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/divisorclock.vhd|
+Z11 !s107 C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/divisorclock.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 8FVKAXY:_`jfR7o9:2U3F0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 12 divisorclock 0 22 8JlXTB:QhH<:7g5z4XAgA0
+l17
+L15
+Vo;_1bA?JJm@[Ri5T`cdgF0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 @YZD9XLIZjHfZe8B`a0@_3
+!i10b 1
+Epseudo_mux
+Z14 w1696633847
+R3
+R4
+R5
+Z15 8C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/pseudo_mux.vhd
+Z16 FC:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/pseudo_mux.vhd
+l0
+L21
+VzYe9D4kkhV^lDK2I6j>V61
+R8
+31
+Z17 !s108 1696633869.303000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/pseudo_mux.vhd|
+Z19 !s107 C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/pseudo_mux.vhd|
+R12
+R13
+!s100 d:`JKK1ozOKd^da8OoE6Q2
+!i10b 1
+Aarch
+R3
+R4
+DEx4 work 10 pseudo_mux 0 22 zYe9D4kkhV^lDK2I6j>V61
+l45
+L31
+VUV?l?:G1GAPhLAEC5kHEn1
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 =G=RkS@XD:S^n4f@BDoWA2
+!i10b 1
+Etb_pseudo_mux
+Z20 w1696630584
+R2
+R3
+R4
+R5
+Z21 8C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/tb_pseudo_mux.vhd
+Z22 FC:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/tb_pseudo_mux.vhd
+l0
+L5
+V5jWCEF7b3^S[NPjF85EHX1
+!s100 Bace5FO3Ni7zaD744G_QR0
+R8
+31
+!i10b 1
+Z23 !s108 1696633869.397000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/tb_pseudo_mux.vhd|
+Z25 !s107 C:/Users/Aluno/Desktop/Hermes PN1/Bernardo - Luiz - Naiara/Aula 7/tb_pseudo_mux.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 13 tb_pseudo_mux 0 22 5jWCEF7b3^S[NPjF85EHX1
+l24
+L8
+VC=Kaji8BMI]YZ`RmPN1R=1
+!s100 4INQ?PM8SL>P]`Y6TWISd0
+R8
+31
+!i10b 1
+R23
+R24
+R25
+R12
+R13

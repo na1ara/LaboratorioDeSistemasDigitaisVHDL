@@ -1,0 +1,30 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity tb_flipflop is
+end tb_flipflop;
+
+architecture teste of tb_flipflop is
+
+component FlipFlopD is 
+
+	port( clock: in std_logic;
+		  D: in std_logic;
+		  R: in std_logic;
+	     Q: out std_logic
+	    );
+
+end component;
+
+signal fio_clock, fio_D, fio_R, fio_Q: std_logic;
+
+begin
+
+	instancia_flipflop: FlipFlopD port 
+	map(clock=>fio_clock,D=>fio_D,R=>fio_R,Q=>fio_Q);
+	
+	fio_clock <= x"0", x"1" after 10 ns, x"0" after 20 ns, x"1" after 30 ns, x"0" after 40 ns, x"1" after 50 ns, x"0" after 60 ns, x"1" after 70 ns, x"0" after 80 ns;
+	fio_D <= x"0", x"1" after 20 ns, x"0" after 40 ns, x"0" after 60 ns, x"1" after 80 ns;
+	fio_R <= x"1", x"1" after 20 ns, x"1" after 40 ns, x"0" after 60 ns, x"0" after 80 ns;
+
+end teste;
