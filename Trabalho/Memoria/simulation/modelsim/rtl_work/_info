@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\Memoria\simulation\modelsim
+Emem
+Z1 w1699900862
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\Memoria\simulation\modelsim
+Z6 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/Mem.vhd
+Z7 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/Mem.vhd
+l0
+L5
+VIO24;IQj5nSbfYkK?@[Q20
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1699901094.706000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/Mem.vhd|
+Z11 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/Mem.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 A68z26o::]=lF9]?L11fF0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 3 mem 0 22 IO24;IQj5nSbfYkK?@[Q20
+l87
+L15
+VmEGca5bTGa2eE2gUX4W`_1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 Xla8Hac`?Y:z>?WV;YS090
+!i10b 1
+Etb_mem
+Z14 w1699901039
+R2
+R3
+R4
+R5
+Z15 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/tb_Mem.vhd
+Z16 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/tb_Mem.vhd
+l0
+L5
+VRZ9Aeede8I=1RbP3?N1OO2
+!s100 8hcWF?^39J?kDQl8l1IbK1
+R8
+31
+!i10b 1
+Z17 !s108 1699901095.081000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/tb_Mem.vhd|
+Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Memoria/tb_Mem.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 6 tb_mem 0 22 RZ9Aeede8I=1RbP3?N1OO2
+l27
+L8
+V7NPT=;YUc1@_nR[aCe4EK2
+!s100 1TTHk>]HjUi<TjGjJbbW_2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
