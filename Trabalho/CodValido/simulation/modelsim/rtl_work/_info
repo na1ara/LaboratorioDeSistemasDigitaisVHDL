@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\CodValido\simulation\modelsim
+Ecodvalido
+Z1 w1699991344
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\CodValido\simulation\modelsim
+Z6 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd
+Z7 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd
+l0
+L5
+VS4Zk24D2HOc2D=9DnKcAD1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1700056886.977000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd|
+Z11 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 h8ZP9MgHEU@cNc@n3JJo10
+!i10b 1
+Acodvalid
+R2
+R3
+R4
+DEx4 work 9 codvalido 0 22 S4Zk24D2HOc2D=9DnKcAD1
+l16
+L15
+VaS[oMmRg7HkSCC0UjdmA92
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 dFjM9K]JH`Rjll0z5bn4b3
+!i10b 1
+Etb_codvalido
+Z14 w1700056729
+R2
+R3
+R4
+R5
+Z15 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/tb_CodValido.vhd
+Z16 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/tb_CodValido.vhd
+l0
+L5
+VEPZ7oQ6ZR=h?GLHnSmGDJ1
+!s100 9oW;no4z`0oCbQH@CmI620
+R8
+31
+!i10b 1
+Z17 !s108 1700056887.961000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/tb_CodValido.vhd|
+Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/tb_CodValido.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 12 tb_codvalido 0 22 EPZ7oQ6ZR=h?GLHnSmGDJ1
+l21
+L8
+V4dJbKP7jgPATJFWKoJ<6Y0
+!s100 zG>o;L_>I`jIE;T1DY:a<1
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

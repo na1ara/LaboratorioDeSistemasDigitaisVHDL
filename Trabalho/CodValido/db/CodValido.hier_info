@@ -1,0 +1,36 @@
+|CodValido
+cod[0] => LessThan0.IN62
+cod[1] => LessThan0.IN61
+cod[2] => LessThan0.IN60
+cod[3] => LessThan0.IN59
+cod[4] => LessThan0.IN58
+cod[5] => LessThan0.IN57
+cod[6] => LessThan0.IN56
+cod[7] => LessThan0.IN55
+cod[8] => LessThan0.IN54
+cod[9] => LessThan0.IN53
+cod[10] => LessThan0.IN52
+cod[11] => LessThan0.IN51
+cod[12] => LessThan0.IN50
+cod[13] => LessThan0.IN49
+cod[14] => LessThan0.IN48
+cod[15] => LessThan0.IN47
+cod[16] => LessThan0.IN46
+cod[17] => LessThan0.IN45
+cod[18] => LessThan0.IN44
+cod[19] => LessThan0.IN43
+cod[20] => LessThan0.IN42
+cod[21] => LessThan0.IN41
+cod[22] => LessThan0.IN40
+cod[23] => LessThan0.IN39
+cod[24] => LessThan0.IN38
+cod[25] => LessThan0.IN37
+cod[26] => LessThan0.IN36
+cod[27] => LessThan0.IN35
+cod[28] => LessThan0.IN34
+cod[29] => LessThan0.IN33
+cod[30] => LessThan0.IN32
+cod[31] => ~NO_FANOUT~
+valido <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
