@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\Multiplicador\simulation\modelsim
+Emultiplicador
+Z1 w1700248638
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\Multiplicador\simulation\modelsim
+Z6 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd
+Z7 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd
+l0
+L5
+V0cOa;ZTJAFJW<n3nKkcT73
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1700248892.144000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd|
+Z11 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 Teh@>;Fe^cSk9MVDObH5f0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 13 multiplicador 0 22 0cOa;ZTJAFJW<n3nKkcT73
+l13
+L12
+Ve52IVojjBYoC]^@eQSIN]1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 UaXLI6BZ17g3aOcS@JY]J0
+!i10b 1
+Etb_multiplicador
+Z14 w1700248850
+R2
+R3
+R4
+R5
+Z15 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/tb_multiplicador.vhd
+Z16 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/tb_multiplicador.vhd
+l0
+L5
+Vco59X7k:8Xf=amF`>k29j3
+!s100 `5GB][ioiNznB1B6]Rnag2
+R8
+31
+!i10b 1
+Z17 !s108 1700248893.525000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/tb_multiplicador.vhd|
+Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/tb_multiplicador.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 16 tb_multiplicador 0 22 co59X7k:8Xf=amF`>k29j3
+l21
+L8
+V^jkZ`[DFLPP7PC1=PD?k>1
+!s100 RgnIMY?9RdaX=n5W0ol1V0
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
