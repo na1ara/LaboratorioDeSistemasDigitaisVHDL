@@ -1,0 +1,114 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity CaminhoDados is
+  port
+	(
+		Sensor_de_cor :  in  std_logic_vector(31 DOWNTO 0);
+		Codigo_de_cor :  in  std_logic_vector(31 DOWNTO 0);
+		Clock : in std_logic;
+		Reset : in std_logic;
+		Habilita_leitura : in std_logic;
+		Habilita_pigmento : in std_logic;
+		
+		Misturando :  out  std_logic;
+		Pigmento_adicionado :  out  std_logic;
+		Codigo_valido :  out  std_logic;
+		Cor_valida :  out  std_logic;
+	);
+end CaminhoDados;
+
+architecture dados of CaminhoDados is
+
+	component CodValido
+	
+		port 
+		(
+			cod	: in std_logic_vector	(31 downto 0);
+			valido	: out std_logic
+		);
+	
+	end component;
+
+
+	component Reg
+		generic
+		(
+			DATA_WIDTH : integer:= 16
+		);
+		port
+		( 
+			clock: in std_logic;
+			reset: in std_logic;
+			load: in std_logic;
+			D: in std_logic_vector ((W-1) downto 0);
+			Q: out std_logic_vector ((W-1) downto 0)
+		 );
+	end component;
+	
+	component Comp
+	
+		generic
+		(
+			DATA_WIDTH: natural := 16
+		);
+		
+		port
+		(
+			a: in std_logic_vector ((DATA_WIDTH-1) downto 0);
+			b: in std_logic_vector ((DATA_WIDTH-1) downto 0);
+			maior: out std_logic;
+			menor: out std_logic;
+			igual: out std_logic
+		);
+	
+	end component;
+	
+	component Cont
+	
+		port
+		(
+			Clock, Resetn, E : IN STD_LOGIC;
+			Q : OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		);
+	
+	end component;
+	
+	component Mult
+	
+		Port (
+        A : in  STD_LOGIC_VECTOR (15 downto 0);  
+        Produto : out  STD_LOGIC_VECTOR (31 downto 0)  
+		);
+	
+	end component;
+	
+	
+	
+	begin
+		
+	--Ciano
+		instance_RegC: Reg generic map (DATA_WIDTH => 16) port map (clock => Clock, reset => Reset, load => Habilita_leitura, D => Codigo_de_cor(31 downto 24), Q => fioC);
+		instance_MultC: Mult port map (A => fioC, Produto => fioCMult);
+		instance_ContC: Cont port map (Clock => Clock, Resetn => Reset, E => Habilita_pigmento, Q => fioContC);
+		instance_CompC: Comp port map (a => fioCMult, b => fioContC, menor => fioCPronto);
+	--Magenta
+		instance_RegM: Reg generic map (DATA_WIDTH => 16) port map (clock => Clock, reset => Reset, load => Habilita_leitura, D => Codigo_de_cor(23 downto 16), Q => fioM);
+		instance_MultM: Mult port map (A => fioM, Produto => fioMMult);
+		instance_ContM: Cont port map (Clock => Clock, Resetn => Reset, E => Habilita_pigmento, Q => fioContM);
+		instance_CompM: Comp port map (a => fioMMult, b => fioContM, menor => fioMPronto);
+	--Amarelo
+		instance_RegY: Reg generic map (DATA_WIDTH => 16) port map (clock => Clock, reset => Reset, load => Habilita_leitura, D => Codigo_de_cor(15 downto 8), Q => fioY);
+		instance_MultY: Mult port map (A => fioY, Produto => fioYMult);
+		instance_ContY: Cont port map (Clock => Clock, Resetn => Reset, E => Habilita_pigmento, Q => fioContY);
+		instance_CompY: Comp port map (a => fioYMult, b => fioContY, menor => fioYPronto);
+	--Preto
+		instance_RegK: Reg generic map (DATA_WIDTH => 16) port map (clock => Clock, reset => Reset, load => Habilita_leitura, D => Codigo_de_cor(7 downto 0), Q => fioK);
+		instance_MulTK: Mult port map (A => fioK, Produto => fioKMult);
+		instance_ContK: Cont port map (Clock => Clock, Resetn => Reset, E => Habilita_pigmento, Q => fioContK);
+		instance_CompK: Comp port map (a => fioKMult, b => fioContK, menor => fioKPronto);
+	--CodValido
+		instance_CodValid: CodValido port map (cod => Codigo_de_cor, valido => Codigo_valido);
+
+end dados;

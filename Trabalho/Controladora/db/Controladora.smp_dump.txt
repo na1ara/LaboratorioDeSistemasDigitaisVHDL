@@ -1,0 +1,11 @@
+
+State Machine - |Controladora|estado
+Name estado.erro estado.pronto estado.valida estado.mistura estado.pigmento estado.verifica estado.espera estado.inicio 
+estado.inicio 0 0 0 0 0 0 0 0 
+estado.espera 0 0 0 0 0 0 1 1 
+estado.verifica 0 0 0 0 0 1 0 1 
+estado.pigmento 0 0 0 0 1 0 0 1 
+estado.mistura 0 0 0 1 0 0 0 1 
+estado.valida 0 0 1 0 0 0 0 1 
+estado.pronto 0 1 0 0 0 0 0 1 
+estado.erro 1 0 0 0 0 0 0 1 

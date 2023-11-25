@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\Contador\simulation\modelsim
+Econtador
+Z1 w1700934755
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\Contador\simulation\modelsim
+Z7 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd
+Z8 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd
+l0
+L5
+V>UWzQf`AEd>l;[cG4m2fK0
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1700935007.099000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd|
+Z12 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 `6S:2][dfE0KjD]UQb1Sf2
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 8 contador 0 22 >UWzQf`AEd>l;[cG4m2fK0
+l14
+L12
+V_ebW]4c1_a3h6njG2eRc?3
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 KX_Q<2hnY4WO[k6Qa:;g43
+!i10b 1
+Etb_contador
+Z15 w1700934961
+R4
+R5
+R6
+Z16 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/tb_contador.vhd
+Z17 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/tb_contador.vhd
+l0
+L4
+VWlE3`YTP1JVY?nM5g5=_]1
+!s100 H3WfJ@obKO:Oo4C_ho9PE0
+R9
+31
+!i10b 1
+Z18 !s108 1700935007.853000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/tb_contador.vhd|
+Z20 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/tb_contador.vhd|
+R13
+R14
+Abehavior
+R4
+R5
+DEx4 work 11 tb_contador 0 22 WlE3`YTP1JVY?nM5g5=_]1
+l24
+L7
+V1<M[beQM83l`;4^PfEXZ83
+!s100 fXPSd[i`GKF^Q>ha^fSCG0
+R9
+31
+!i10b 1
+R18
+R19
+R20
+R13
+R14

@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\CompMist\simulation\modelsim
+Ecompmist
+Z1 w1700924519
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\lhenr\OneDrive\Documentos\UFMG\LSD\Trabalho\CompMist\simulation\modelsim
+Z6 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd
+Z7 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd
+l0
+L5
+V2SU2gej?naU]Y]6984zI^0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1700924934.915000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd|
+Z11 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 jBldh^G1bCC0`JQfb13K92
+!i10b 1
+Acomp
+R2
+R3
+R4
+DEx4 work 8 compmist 0 22 2SU2gej?naU]Y]6984zI^0
+l17
+L16
+V>CeI:5T>M1h>C;c0Ef@Cn2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 0B?5MmhA_mVFSzLLFLcg51
+!i10b 1
+Etb_compmist
+Z14 w1700924663
+R2
+R3
+R4
+R5
+Z15 8C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/tb_compmist.vhd
+Z16 FC:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/tb_compmist.vhd
+l0
+L5
+V]XM0GQ1_llL]?6UKG?J5O1
+!s100 3Ja:Z<WGf0_cJY<b=CKHM3
+R8
+31
+!i10b 1
+Z17 !s108 1700924935.607000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/tb_compmist.vhd|
+Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/tb_compmist.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 11 tb_compmist 0 22 ]XM0GQ1_llL]?6UKG?J5O1
+l23
+L8
+V<KNzkDDf<6KRjK]e?SFOD2
+!s100 lJKzaAJ3;0dR^WVI[58QS0
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

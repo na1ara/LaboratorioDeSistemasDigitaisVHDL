@@ -1,0 +1,69 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY tb_contador IS
+END tb_contador;
+
+ARCHITECTURE behavior OF tb_contador IS 
+
+    -- Component Declaration for the Unit Under Test (UUT)
+    COMPONENT contador
+    PORT(
+        Clock : IN  std_logic;
+        Resetn : IN  std_logic;
+        E : IN  std_logic;
+        Q : OUT  std_logic_vector(15 downto 0)
+        );
+    END COMPONENT;
+   
+    --Inputs
+    signal Clock : std_logic := '0';
+    signal Resetn : std_logic := '1';
+    signal E : std_logic := '0';
+
+    --Outputs
+    signal Q : std_logic_vector(15 downto 0);
+
+    -- Clock period definitions
+    constant Clock_period : time := 10 ns;
+
+BEGIN 
+
+    -- Instantiate the Unit Under Test (UUT)
+    uut: contador PORT MAP (
+          Clock => Clock,
+          Resetn => Resetn,
+          E => E,
+          Q => Q
+        );
+
+    -- Clock process definitions
+    Clock_process :process
+    begin
+        Clock <= '0';
+        wait for Clock_period/2;
+        Clock <= '1';
+        wait for Clock_period/2;
+    end process;
+
+    -- Testbench statements
+    stim_proc: process
+    begin		
+        -- hold reset state for 100 ns.
+        wait for 100 ns;	
+        Resetn <= '0'; -- activate reset
+        wait for 100 ns;
+        Resetn <= '1'; -- release reset
+        wait for 10 ns;
+        E <= '1'; -- enable counting
+
+        -- insert other test actions here
+
+        wait for 500 ns;
+        E <= '0'; -- disable counting
+
+        -- Finish the simulation
+        wait;
+    end process;
+
+END;
