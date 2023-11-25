@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CaminhoDados
-Sat Nov 25 15:02:07 2023
+Sat Nov 25 16:09:53 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -61,7 +61,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 25 15:02:07 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 25 16:09:53 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CaminhoDados                                    ;
 ; Top-level Entity Name              ; CaminhoDados                                    ;
@@ -70,7 +70,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 213                                             ;
 ;     Dedicated logic registers      ; 64                                              ;
 ; Total registers                    ; 64                                              ;
-; Total pins                         ; 105                                             ;
+; Total pins                         ; 108                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -220,24 +220,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;       ;
 ; Total combinational functions               ; 213   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 67    ;
-;     -- 3 input functions                    ; 81    ;
+;     -- 4 input functions                    ; 63    ;
+;     -- 3 input functions                    ; 85    ;
 ;     -- <=2 input functions                  ; 65    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 101   ;
-;     -- arithmetic mode                      ; 112   ;
+;     -- normal mode                          ; 105   ;
+;     -- arithmetic mode                      ; 108   ;
 ;                                             ;       ;
 ; Total registers                             ; 64    ;
 ;     -- Dedicated logic registers            ; 64    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 105   ;
+; I/O pins                                    ; 108   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; Reset ;
 ; Maximum fan-out                             ; 65    ;
-; Total fan-out                               ; 893   ;
-; Average fan-out                             ; 2.34  ;
+; Total fan-out                               ; 892   ;
+; Average fan-out                             ; 2.32  ;
 +---------------------------------------------+-------+
 
 
@@ -246,14 +246,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                          ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |CaminhoDados                                  ; 213 (2)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 105  ; 0            ; |CaminhoDados                                                                                                                                ; work         ;
-;    |CodValido:instance_CodValid|               ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CodValido:instance_CodValid                                                                                                    ; work         ;
+; |CaminhoDados                                  ; 213 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 108  ; 0            ; |CaminhoDados                                                                                                                                ; work         ;
+;    |CodValido:instance_CodValid|               ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CodValido:instance_CodValid                                                                                                    ; work         ;
 ;    |CompMist:instance_compmist|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CompMist:instance_compmist                                                                                                     ; work         ;
 ;    |Reg:instance_RegC|                         ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegC                                                                                                              ; work         ;
 ;    |Reg:instance_RegK|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegK                                                                                                              ; work         ;
 ;    |Reg:instance_RegM|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegM                                                                                                              ; work         ;
 ;    |Reg:instance_RegY|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegY                                                                                                              ; work         ;
-;    |comparador:instance_CompC|                 ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompC                                                                                                      ; work         ;
+;    |comparador:instance_CompC|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompC                                                                                                      ; work         ;
 ;    |comparador:instance_CompK|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompK                                                                                                      ; work         ;
 ;    |comparador:instance_CompM|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompM                                                                                                      ; work         ;
 ;    |comparador:instance_CompY|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompY                                                                                                      ; work         ;
@@ -658,7 +658,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -668,7 +668,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -678,7 +678,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -688,7 +688,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -698,7 +698,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -708,7 +708,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 25 15:01:59 2023
+    Info: Processing started: Sat Nov 25 16:09:47 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CaminhoDados -c CaminhoDados
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/trabalho/contador/contador.vhd
@@ -797,14 +797,14 @@ Warning (21074): Design contains 32 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Codigo_cor_misturada[29]"
     Warning (15610): No output dependent on input pin "Codigo_cor_misturada[30]"
     Warning (15610): No output dependent on input pin "Codigo_cor_misturada[31]"
-Info (21057): Implemented 350 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 353 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 101 input pins
-    Info (21059): Implemented 4 output pins
+    Info (21059): Implemented 7 output pins
     Info (21061): Implemented 245 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4648 megabytes
-    Info: Processing ended: Sat Nov 25 15:02:07 2023
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Sat Nov 25 16:09:53 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:04
 
 

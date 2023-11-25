@@ -80,29 +80,29 @@ GND*                         : A10       :        :                   :         
 VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
 GND                          : A12       : gnd    :                   :         :           :                
 GND+                         : A13       :        :                   :         : 4         :                
-GND*                         : A14       :        :                   :         : 4         :                
+Sensor_de_cor[4]             : A14       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
-Sensor_de_cor[22]            : A17       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[20]            : A18       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[26]            : A19       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[29]            : A20       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[28]            : A21       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[24]            : A22       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[25]            : A23       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[0]             : A17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[12]            : A18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Amarelo                      : A19       : output : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[26]            : A20       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[27]            : A21       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[17]            : A22       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[18]            : A23       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : A24       : power  :                   : 3.3V    : 4         :                
 GND                          : A25       : gnd    :                   :         :           :                
-GND*                         : AA1       :        :                   :         : 1         :                
+Codigo_cor_misturada[31]     : AA1       : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : AA2       :        :                   :         : 1         :                
 GND*                         : AA3       :        :                   :         : 1         :                
 GND*                         : AA4       :        :                   :         : 1         :                
 GND*                         : AA5       :        :                   :         : 1         :                
 GND*                         : AA6       :        :                   :         : 1         :                
-GND*                         : AA7       :        :                   :         : 1         :                
+Codigo_cor_misturada[14]     : AA7       : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCA_PLL1                    : AA8       : power  :                   : 1.2V    :           :                
 GND*                         : AA9       :        :                   :         : 8         :                
 GND*                         : AA10      :        :                   :         : 8         :                
-Codigo_cor_misturada[3]      : AA11      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AA11      :        :                   :         : 8         :                
 GND*                         : AA12      :        :                   :         : 8         :                
 GND*                         : AA13      :        :                   :         : 7         :                
 GND*                         : AA14      :        :                   :         : 7         :                
@@ -127,7 +127,7 @@ VCCIO8                       : AB6       : power  :                   : 3.3V    
 GND                          : AB7       : gnd    :                   :         :           :                
 GND*                         : AB8       :        :                   :         : 8         :                
 VCCIO8                       : AB9       : power  :                   : 3.3V    : 8         :                
-Codigo_cor_misturada[27]     : AB10      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AB10      :        :                   :         : 8         :                
 GND                          : AB11      : gnd    :                   :         :           :                
 GND*                         : AB12      :        :                   :         : 8         :                
 VCCIO8                       : AB13      : power  :                   : 3.3V    : 8         :                
@@ -135,7 +135,7 @@ VCCIO7                       : AB14      : power  :                   : 3.3V    
 GND*                         : AB15      :        :                   :         : 7         :                
 GND                          : AB16      : gnd    :                   :         :           :                
 VCCIO7                       : AB17      : power  :                   : 3.3V    : 7         :                
-GND*                         : AB18      :        :                   :         : 7         :                
+Codigo_cor_misturada[28]     : AB18      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AB19      : gnd    :                   :         :           :                
 GND*                         : AB20      :        :                   :         : 7         :                
 GND*                         : AB21      :        :                   :         : 7         :                
@@ -144,16 +144,16 @@ GND*                         : AB23      :        :                   :         
 GND*                         : AB24      :        :                   :         : 6         :                
 GND*                         : AB25      :        :                   :         : 6         :                
 GND*                         : AB26      :        :                   :         : 6         :                
-GND*                         : AC1       :        :                   :         : 1         :                
+Codigo_cor_misturada[20]     : AC1       : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : AC2       :        :                   :         : 1         :                
 GND*                         : AC3       :        :                   :         : 1         :                
 GND                          : AC4       : gnd    :                   :         :           :                
 Misturando                   : AC5       : output : 3.3-V LVTTL       :         : 8         : N              
-Codigo_cor_misturada[5]      : AC6       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AC6       :        :                   :         : 8         :                
 GND*                         : AC7       :        :                   :         : 8         :                
 GND*                         : AC8       :        :                   :         : 8         :                
 GND*                         : AC9       :        :                   :         : 8         :                
-Codigo_cor_misturada[19]     : AC10      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AC10      :        :                   :         : 8         :                
 GND*                         : AC11      :        :                   :         : 8         :                
 GND*                         : AC12      :        :                   :         : 8         :                
 GND+                         : AC13      :        :                   :         : 8         :                
@@ -190,7 +190,7 @@ GND*                         : AD17      :        :                   :         
 GND                          : AD18      : gnd    :                   :         :           :                
 GND*                         : AD19      :        :                   :         : 7         :                
 VCCIO7                       : AD20      : power  :                   : 3.3V    : 7         :                
-Codigo_cor_misturada[15]     : AD21      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AD21      :        :                   :         : 7         :                
 GND*                         : AD22      :        :                   :         : 7         :                
 GND*                         : AD23      :        :                   :         : 7         :                
 GND*                         : AD24      :        :                   :         : 6         :                
@@ -199,19 +199,19 @@ VCCIO6                       : AD26      : power  :                   : 3.3V    
 GND                          : AE1       : gnd    :                   :         :           :                
 GND*                         : AE2       :        :                   :         : 1         :                
 GND*                         : AE3       :        :                   :         : 1         :                
-GND*                         : AE4       :        :                   :         : 8         :                
+Habilita_mistura             : AE4       : input  : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AE5       :        :                   :         : 8         :                
 GND*                         : AE6       :        :                   :         : 8         :                
 GND*                         : AE7       :        :                   :         : 8         :                
 GND*                         : AE8       :        :                   :         : 8         :                
 GND*                         : AE9       :        :                   :         : 8         :                
-GND*                         : AE10      :        :                   :         : 8         :                
+Codigo_cor_misturada[13]     : AE10      : input  : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AE11      :        :                   :         : 8         :                
-GND*                         : AE12      :        :                   :         : 8         :                
+Codigo_cor_misturada[4]      : AE12      : input  : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AE13      :        :                   :         : 8         :                
 GND+                         : AE14      :        :                   :         : 7         :                
 GND*                         : AE15      :        :                   :         : 7         :                
-GND*                         : AE16      :        :                   :         : 7         :                
+Codigo_cor_misturada[19]     : AE16      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AE17      :        :                   :         : 7         :                
 GND*                         : AE18      :        :                   :         : 7         :                
 GND*                         : AE19      :        :                   :         : 7         :                
@@ -225,25 +225,25 @@ GND                          : AE26      : gnd    :                   :         
 GND                          : AF2       : gnd    :                   :         :           :                
 VCCIO8                       : AF3       : power  :                   : 3.3V    : 8         :                
 GND*                         : AF4       :        :                   :         : 8         :                
-Habilita_mistura             : AF5       : input  : 3.3-V LVTTL       :         : 8         : N              
-GND*                         : AF6       :        :                   :         : 8         :                
+GND*                         : AF5       :        :                   :         : 8         :                
+Codigo_cor_misturada[9]      : AF6       : input  : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AF7       :        :                   :         : 8         :                
-Codigo_cor_misturada[7]      : AF8       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AF8       :        :                   :         : 8         :                
 GND*                         : AF9       :        :                   :         : 8         :                
 GND*                         : AF10      :        :                   :         : 8         :                
 VCCIO8                       : AF11      : power  :                   : 3.3V    : 8         :                
 GND                          : AF12      : gnd    :                   :         :           :                
-GND*                         : AF13      :        :                   :         : 8         :                
+Codigo_cor_misturada[6]      : AF13      : input  : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AF14      :        :                   :         : 7         :                
 GND                          : AF15      : gnd    :                   :         :           :                
 VCCIO7                       : AF16      : power  :                   : 3.3V    : 7         :                
-Codigo_cor_misturada[28]     : AF17      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AF17      :        :                   :         : 7         :                
 GND*                         : AF18      :        :                   :         : 7         :                
 GND*                         : AF19      :        :                   :         : 7         :                
 GND*                         : AF20      :        :                   :         : 7         :                
-GND*                         : AF21      :        :                   :         : 7         :                
+Codigo_cor_misturada[29]     : AF21      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AF22      :        :                   :         : 7         :                
-GND*                         : AF23      :        :                   :         : 7         :                
+Codigo_cor_misturada[11]     : AF23      : input  : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                
 GND                          : B1        : gnd    :                   :         :           :                
@@ -252,25 +252,25 @@ GND*                         : B3        :        :                   :         
 GND*                         : B4        :        :                   :         : 3         :                
 GND*                         : B5        :        :                   :         : 3         :                
 GND*                         : B6        :        :                   :         : 3         :                
-GND*                         : B7        :        :                   :         : 3         :                
-GND*                         : B8        :        :                   :         : 3         :                
+Codigo_cor_misturada[8]      : B7        : input  : 3.3-V LVTTL       :         : 3         : N              
+Codigo_cor_misturada[5]      : B8        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : B9        :        :                   :         : 3         :                
 GND*                         : B10       :        :                   :         : 3         :                
-GND*                         : B11       :        :                   :         : 3         :                
+Codigo_de_cor[18]            : B11       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : B12       :        :                   :         : 3         :                
 GND+                         : B13       :        :                   :         : 4         :                
-GND*                         : B14       :        :                   :         : 4         :                
+Sensor_de_cor[11]            : B14       : input  : 3.3-V LVTTL       :         : 4         : N              
 Sensor_de_cor[3]             : B15       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[5]             : B16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[16]            : B17       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[19]            : B18       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[22]            : B19       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[28]            : B20       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[29]            : B21       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_valido                : B22       : output : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[26]            : B23       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[8]             : B24       : input  : 3.3-V LVTTL       :         : 5         : N              
-Codigo_de_cor[4]             : B25       : input  : 3.3-V LVTTL       :         : 5         : N              
+Sensor_de_cor[2]             : B16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[11]            : B17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[5]             : B18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[19]            : B19       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[25]            : B20       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[30]            : B21       : input  : 3.3-V LVTTL       :         : 4         : N              
+Cor_valida                   : B22       : output : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[30]            : B23       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[21]            : B24       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_de_cor[26]            : B25       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND                          : B26       : gnd    :                   :         :           :                
 VCCIO2                       : C1        : power  :                   : 3.3V    : 2         :                
 GND*                         : C2        :        :                   :         : 2         :                
@@ -281,22 +281,22 @@ GND*                         : C6        :        :                   :         
 GND*                         : C7        :        :                   :         : 3         :                
 GND*                         : C8        :        :                   :         : 3         :                
 GND*                         : C9        :        :                   :         : 3         :                
-Codigo_cor_misturada[23]     : C10       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : C10       :        :                   :         : 3         :                
 GND*                         : C11       :        :                   :         : 3         :                
 GND*                         : C12       :        :                   :         : 3         :                
 Codigo_cor_misturada[0]      : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : C14       : gnd    :                   :         :           :                
-GND*                         : C15       :        :                   :         : 4         :                
-Sensor_de_cor[0]             : C16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[21]            : C17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[5]             : C15       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[7]             : C16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[12]            : C17       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : C18       : gnd    :                   :         :           :                
-Codigo_de_cor[18]            : C19       : input  : 3.3-V LVTTL       :         : 4         : N              
+Habilita_pigmento            : C19       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 Sensor_de_cor[31]            : C21       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[27]            : C22       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[25]            : C23       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[7]             : C24       : input  : 3.3-V LVTTL       :         : 5         : N              
-Sensor_de_cor[27]            : C25       : input  : 3.3-V LVTTL       :         : 5         : N              
+Sensor_de_cor[29]            : C22       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[28]            : C23       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[24]            : C24       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_de_cor[22]            : C25       : input  : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : C26       : power  :                   : 3.3V    : 5         :                
 GND*                         : D1        :        :                   :         : 2         :                
 GND*                         : D2        :        :                   :         : 2         :                
@@ -306,24 +306,24 @@ GND*                         : D5        :        :                   :         
 GND*                         : D6        :        :                   :         : 3         :                
 GND*                         : D7        :        :                   :         : 3         :                
 GND*                         : D8        :        :                   :         : 3         :                
-Codigo_cor_misturada[17]     : D9        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : D9        :        :                   :         : 3         :                
 GND*                         : D10       :        :                   :         : 3         :                
 GND*                         : D11       :        :                   :         : 3         :                
-GND*                         : D12       :        :                   :         : 3         :                
+Codigo_cor_misturada[10]     : D12       : input  : 3.3-V LVTTL       :         : 3         : N              
 Codigo_cor_misturada[1]      : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : D14       :        :                   :         : 4         :                
-Sensor_de_cor[1]             : D15       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[4]             : D16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[7]             : D17       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[3]             : D18       : input  : 3.3-V LVTTL       :         : 4         : N              
-Habilita_escrita             : D19       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[23]            : D20       : input  : 3.3-V LVTTL       :         : 4         : N              
-Cor_valida                   : D21       : output : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[13]            : D14       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[8]             : D15       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[9]             : D16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[14]            : D17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Habilita_escrita             : D18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[20]            : D19       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[16]            : D20       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[22]            : D21       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
-Sensor_de_cor[9]             : D23       : input  : 3.3-V LVTTL       :         : 5         : N              
+Magenta                      : D23       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : D24       : gnd    :                   :         :           :                
-Codigo_de_cor[5]             : D25       : input  : 3.3-V LVTTL       :         : 5         : N              
-Codigo_de_cor[12]            : D26       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_de_cor[31]            : D25       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_cor_misturada[17]     : D26       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : E1        :        :                   :         : 2         :                
 GND*                         : E2        :        :                   :         : 2         :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E3        : input  : 3.3-V LVTTL       :         : 2         : N              
@@ -338,18 +338,18 @@ GND                          : E11       : gnd    :                   :         
 GND*                         : E12       :        :                   :         : 3         :                
 VCCIO3                       : E13       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : E14       : power  :                   : 3.3V    : 4         :                
-Sensor_de_cor[2]             : E15       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[6]             : E15       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E16       : gnd    :                   :         :           :                
 VCCIO4                       : E17       : power  :                   : 3.3V    : 4         :                
-Codigo_de_cor[0]             : E18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[16]            : E18       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E19       : gnd    :                   :         :           :                
-Codigo_de_cor[31]            : E20       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[21]            : E20       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND_PLL2                     : E21       : gnd    :                   :         :           :                
-Codigo_de_cor[10]            : E22       : input  : 3.3-V LVTTL       :         : 5         : N              
-Codigo_de_cor[9]             : E23       : input  : 3.3-V LVTTL       :         : 5         : N              
-Codigo_de_cor[14]            : E24       : input  : 3.3-V LVTTL       :         : 5         : N              
-Codigo_de_cor[11]            : E25       : input  : 3.3-V LVTTL       :         : 5         : N              
-Sensor_de_cor[10]            : E26       : input  : 3.3-V LVTTL       :         : 5         : N              
+Preto                        : E22       : output : 3.3-V LVTTL       :         : 5         : N              
+Codigo_de_cor[27]            : E23       : input  : 3.3-V LVTTL       :         : 5         : N              
+Sensor_de_cor[24]            : E24       : input  : 3.3-V LVTTL       :         : 5         : N              
+Sensor_de_cor[23]            : E25       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : E26       :        :                   :         : 5         :                
 GND*                         : F1        :        :                   :         : 2         :                
 GND*                         : F2        :        :                   :         : 2         :                
 GND*                         : F3        :        :                   :         : 2         :                
@@ -362,18 +362,18 @@ GND*                         : F9        :        :                   :         
 GND*                         : F10       :        :                   :         : 3         :                
 GND*                         : F11       :        :                   :         : 3         :                
 GND*                         : F12       :        :                   :         : 3         :                
-GND*                         : F13       :        :                   :         : 4         :                
-GND*                         : F14       :        :                   :         : 4         :                
-Codigo_de_cor[17]            : F15       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[16]            : F16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[18]            : F17       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[21]            : F18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[14]            : F13       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[15]            : F14       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[0]             : F15       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[4]             : F16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[1]             : F17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[17]            : F18       : input  : 3.3-V LVTTL       :         : 4         : N              
 GNDA_PLL2                    : F19       : gnd    :                   :         :           :                
-Sensor_de_cor[11]            : F20       : input  : 3.3-V LVTTL       :         : 5         : N              
-Habilita_pigmento            : F21       : input  : 3.3-V LVTTL       :         : 5         : N              
+Ciano                        : F20       : output : 3.3-V LVTTL       :         : 5         : N              
+Codigo_de_cor[2]             : F21       : input  : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
-Codigo_de_cor[6]             : F23       : input  : 3.3-V LVTTL       :         : 5         : N              
-Sensor_de_cor[13]            : F24       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : F23       :        :                   :         : 5         :                
+Codigo_cor_misturada[2]      : F24       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : F25       :        :                   :         : 5         :                
 GND*                         : F26       :        :                   :         : 5         :                
 GND*                         : G1        :        :                   :         : 2         :                
@@ -388,16 +388,16 @@ GND*                         : G9        :        :                   :         
 GND*                         : G10       :        :                   :         : 3         :                
 GND*                         : G11       :        :                   :         : 3         :                
 GND*                         : G12       :        :                   :         : 3         :                
-Codigo_cor_misturada[29]     : G13       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : G14       :        :                   :         : 4         :                
-Codigo_de_cor[1]             : G15       : input  : 3.3-V LVTTL       :         : 4         : N              
-Pigmento_adicionado          : G16       : output : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[17]            : G17       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[2]             : G18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[10]            : G13       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[13]            : G14       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[10]            : G15       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[7]             : G16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[9]             : G17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[15]            : G18       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
-Sensor_de_cor[12]            : G21       : input  : 3.3-V LVTTL       :         : 5         : N              
-Codigo_de_cor[13]            : G22       : input  : 3.3-V LVTTL       :         : 5         : N              
+Sensor_de_cor[25]            : G21       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_de_cor[29]            : G22       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : G23       :        :                   :         : 5         :                
 GND*                         : G24       :        :                   :         : 5         :                
 GND*                         : G25       :        :                   :         : 5         :                
@@ -409,20 +409,20 @@ GND*                         : H4        :        :                   :         
 GND                          : H5        : gnd    :                   :         :           :                
 GND*                         : H6        :        :                   :         : 2         :                
 VCCD_PLL3                    : H7        : power  :                   : 1.2V    :           :                
-GND*                         : H8        :        :                   :         : 3         :                
+Codigo_cor_misturada[3]      : H8        : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : H9        : power  :                   : 3.3V    : 3         :                
 GND*                         : H10       :        :                   :         : 3         :                
-Codigo_cor_misturada[16]     : H11       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : H11       :        :                   :         : 3         :                
 GND*                         : H12       :        :                   :         : 3         :                
 GND                          : H13       : gnd    :                   :         :           :                
 GND                          : H14       : gnd    :                   :         :           :                
-Sensor_de_cor[20]            : H15       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[23]            : H16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[6]             : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[6]             : H15       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[1]             : H16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[3]             : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : H18       : power  :                   : 3.3V    : 4         :                
 GND*                         : H19       :        :                   :         : 5         :                
 VCCD_PLL2                    : H20       : power  :                   : 1.2V    :           :                
-Sensor_de_cor[15]            : H21       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_valido                : H21       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : H22       : gnd    :                   :         :           :                
 GND*                         : H23       :        :                   :         : 5         :                
 GND*                         : H24       :        :                   :         : 5         :                
@@ -437,31 +437,31 @@ GND*                         : J6        :        :                   :         
 GND*                         : J7        :        :                   :         : 2         :                
 GND*                         : J8        :        :                   :         : 2         :                
 GND*                         : J9        :        :                   :         : 3         :                
-Codigo_cor_misturada[11]     : J10       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : J10       :        :                   :         : 3         :                
 GND*                         : J11       :        :                   :         : 3         :                
 VCCIO3                       : J12       : power  :                   : 3.3V    : 3         :                
 GND*                         : J13       :        :                   :         : 3         :                
-Codigo_cor_misturada[24]     : J14       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : J14       :        :                   :         : 3         :                
 VCCIO4                       : J15       : power  :                   : 3.3V    : 4         :                
-Sensor_de_cor[30]            : J16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Sensor_de_cor[19]            : J17       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[15]            : J18       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[20]            : J16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[8]             : J17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[28]            : J18       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO5                       : J19       : power  :                   : 3.3V    : 5         :                
-Sensor_de_cor[8]             : J20       : input  : 3.3-V LVTTL       :         : 5         : N              
+Codigo_cor_misturada[18]     : J20       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : J21       :        :                   :         : 5         :                
-Sensor_de_cor[14]            : J22       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : J22       :        :                   :         : 5         :                
 GND*                         : J23       :        :                   :         : 5         :                
 GND*                         : J24       :        :                   :         : 5         :                
-GND*                         : J25       :        :                   :         : 5         :                
+Codigo_cor_misturada[23]     : J25       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : J26       :        :                   :         : 5         :                
 GND*                         : K1        :        :                   :         : 2         :                
-Codigo_cor_misturada[20]     : K2        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : K2        :        :                   :         : 2         :                
 GND*                         : K3        :        :                   :         : 2         :                
-GND*                         : K4        :        :                   :         : 2         :                
+Codigo_cor_misturada[24]     : K4        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : K5        :        :                   :         : 2         :                
 GND*                         : K6        :        :                   :         : 2         :                
 GND*                         : K7        :        :                   :         : 2         :                
-Codigo_cor_misturada[12]     : K8        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : K8        :        :                   :         : 2         :                
 GND*                         : K9        :        :                   :         : 3         :                
 VCCINT                       : K10       : power  :                   : 1.2V    :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
@@ -469,13 +469,13 @@ VCCINT                       : K12       : power  :                   : 1.2V    
 VCCINT                       : K13       : power  :                   : 1.2V    :           :                
 VCCINT                       : K14       : power  :                   : 1.2V    :           :                
 VCCINT                       : K15       : power  :                   : 1.2V    :           :                
-Codigo_de_cor[24]            : K16       : input  : 3.3-V LVTTL       :         : 4         : N              
-Codigo_de_cor[30]            : K17       : input  : 3.3-V LVTTL       :         : 4         : N              
+Sensor_de_cor[19]            : K16       : input  : 3.3-V LVTTL       :         : 4         : N              
+Codigo_de_cor[23]            : K17       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : K18       :        :                   :         : 5         :                
-Codigo_cor_misturada[13]     : K19       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : K19       :        :                   :         : 5         :                
 GND                          : K20       : gnd    :                   :         :           :                
 GND*                         : K21       :        :                   :         : 5         :                
-Codigo_cor_misturada[25]     : K22       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : K22       :        :                   :         : 5         :                
 GND*                         : K23       :        :                   :         : 5         :                
 GND*                         : K24       :        :                   :         : 5         :                
 GND*                         : K25       :        :                   :         : 5         :                
@@ -509,7 +509,7 @@ VCCIO5                       : L26       : power  :                   : 3.3V    
 GND                          : M1        : gnd    :                   :         :           :                
 GND*                         : M2        :        :                   :         : 2         :                
 GND*                         : M3        :        :                   :         : 2         :                
-GND*                         : M4        :        :                   :         : 2         :                
+Codigo_cor_misturada[16]     : M4        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : M5        :        :                   :         : 2         :                
 TCK                          : M6        : input  :                   :         : 2         :                
 TDO                          : M7        : output :                   :         : 2         :                
@@ -530,7 +530,7 @@ GND*                         : M21       :        :                   :         
 GND*                         : M22       :        :                   :         : 5         :                
 GND*                         : M23       :        :                   :         : 5         :                
 GND*                         : M24       :        :                   :         : 5         :                
-GND*                         : M25       :        :                   :         : 5         :                
+Codigo_cor_misturada[22]     : M25       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND                          : M26       : gnd    :                   :         :           :                
 GND+                         : N1        :        :                   :         : 2         :                
 GND+                         : N2        :        :                   :         : 2         :                
@@ -561,7 +561,7 @@ GND+                         : N26       :        :                   :         
 Reset                        : P1        : input  : 3.3-V LVTTL       :         : 1         : N              
 Clock                        : P2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : P3        :        :                   :         : 1         :                
-GND*                         : P4        :        :                   :         : 1         :                
+Codigo_cor_misturada[26]     : P4        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : P5        : power  :                   : 3.3V    : 1         :                
 GND*                         : P6        :        :                   :         : 1         :                
 GND*                         : P7        :        :                   :         : 1         :                
@@ -602,22 +602,22 @@ GND                          : R15       : gnd    :                   :         
 VCCINT                       : R16       : power  :                   : 1.2V    :           :                
 GND*                         : R17       :        :                   :         : 6         :                
 VCCIO6                       : R18       : power  :                   : 3.3V    : 6         :                
-GND*                         : R19       :        :                   :         : 6         :                
+Codigo_cor_misturada[21]     : R19       : input  : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : R20       :        :                   :         : 6         :                
 GND                          : R21       : gnd    :                   :         :           :                
 nSTATUS                      : R22       :        :                   :         : 6         :                
 CONF_DONE                    : R23       :        :                   :         : 6         :                
-Codigo_cor_misturada[2]      : R24       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : R24       :        :                   :         : 6         :                
 GND*                         : R25       :        :                   :         : 6         :                
 GND                          : R26       : gnd    :                   :         :           :                
 VCCIO1                       : T1        : power  :                   : 3.3V    : 1         :                
 GND*                         : T2        :        :                   :         : 1         :                
 GND*                         : T3        :        :                   :         : 1         :                
-GND*                         : T4        :        :                   :         : 1         :                
+Codigo_cor_misturada[27]     : T4        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : T5        : gnd    :                   :         :           :                
 GND*                         : T6        :        :                   :         : 1         :                
 GND*                         : T7        :        :                   :         : 1         :                
-GND*                         : T8        :        :                   :         : 1         :                
+Codigo_cor_misturada[25]     : T8        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : T9        :        :                   :         : 1         :                
 GND*                         : T10       :        :                   :         : 1         :                
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
@@ -653,16 +653,16 @@ VCCINT                       : U14       : power  :                   : 1.2V    
 VCCINT                       : U15       : power  :                   : 1.2V    :           :                
 VCCINT                       : U16       : power  :                   : 1.2V    :           :                
 GND*                         : U17       :        :                   :         : 7         :                
-Codigo_cor_misturada[9]      : U18       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : U18       :        :                   :         : 7         :                
 GND                          : U19       : gnd    :                   :         :           :                
-Codigo_cor_misturada[6]      : U20       : input  : 3.3-V LVTTL       :         : 6         : N              
-Codigo_cor_misturada[10]     : U21       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : U20       :        :                   :         : 6         :                
+GND*                         : U21       :        :                   :         : 6         :                
 GND*                         : U22       :        :                   :         : 6         :                
 GND*                         : U23       :        :                   :         : 6         :                
 GND*                         : U24       :        :                   :         : 6         :                
 GND*                         : U25       :        :                   :         : 6         :                
 GND*                         : U26       :        :                   :         : 6         :                
-GND*                         : V1        :        :                   :         : 1         :                
+Codigo_cor_misturada[30]     : V1        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : V2        :        :                   :         : 1         :                
 GND*                         : V3        :        :                   :         : 1         :                
 GND*                         : V4        :        :                   :         : 1         :                
@@ -671,18 +671,18 @@ GND*                         : V6        :        :                   :         
 GND*                         : V7        :        :                   :         : 1         :                
 VCCIO1                       : V8        : power  :                   : 3.3V    : 1         :                
 GND*                         : V9        :        :                   :         : 8         :                
-Codigo_cor_misturada[26]     : V10       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : V10       :        :                   :         : 8         :                
 GND*                         : V11       :        :                   :         : 8         :                
 VCCIO8                       : V12       : power  :                   : 3.3V    : 8         :                
-GND*                         : V13       :        :                   :         : 8         :                
+Codigo_cor_misturada[15]     : V13       : input  : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : V14       :        :                   :         : 8         :                
 VCCIO7                       : V15       : power  :                   : 3.3V    : 7         :                
 VCCINT                       : V16       : power  :                   : 1.2V    :           :                
 GND*                         : V17       :        :                   :         : 7         :                
-Codigo_cor_misturada[30]     : V18       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : V18       :        :                   :         : 7         :                
 VCCIO6                       : V19       : power  :                   : 3.3V    : 6         :                
 GND*                         : V20       :        :                   :         : 6         :                
-Codigo_cor_misturada[21]     : V21       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : V21       :        :                   :         : 6         :                
 GND*                         : V22       :        :                   :         : 6         :                
 GND*                         : V23       :        :                   :         : 6         :                
 GND*                         : V24       :        :                   :         : 6         :                
@@ -697,16 +697,16 @@ GND*                         : W6        :        :                   :         
 GND_PLL1                     : W7        : gnd    :                   :         :           :                
 GND*                         : W8        :        :                   :         : 8         :                
 VCCIO8                       : W9        : power  :                   : 3.3V    : 8         :                
-Codigo_cor_misturada[14]     : W10       : input  : 3.3-V LVTTL       :         : 8         : N              
-GND*                         : W11       :        :                   :         : 8         :                
+GND*                         : W10       :        :                   :         : 8         :                
+Codigo_cor_misturada[7]      : W11       : input  : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : W12       :        :                   :         : 8         :                
 GND                          : W13       : gnd    :                   :         :           :                
 GND                          : W14       : gnd    :                   :         :           :                
 GND*                         : W15       :        :                   :         : 7         :                
 GND*                         : W16       :        :                   :         : 7         :                
-Codigo_cor_misturada[8]      : W17       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : W17       :        :                   :         : 7         :                
 VCCIO7                       : W18       : power  :                   : 3.3V    : 7         :                
-Codigo_cor_misturada[18]     : W19       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : W19       :        :                   :         : 7         :                
 GND_PLL4                     : W20       : gnd    :                   :         :           :                
 GND*                         : W21       :        :                   :         : 6         :                
 GND                          : W22       : gnd    :                   :         :           :                
@@ -714,7 +714,7 @@ GND*                         : W23       :        :                   :         
 GND*                         : W24       :        :                   :         : 6         :                
 GND*                         : W25       :        :                   :         : 6         :                
 GND*                         : W26       :        :                   :         : 6         :                
-Codigo_cor_misturada[31]     : Y1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : Y1        :        :                   :         : 1         :                
 NC                           : Y2        :        :                   :         :           :                
 GND*                         : Y3        :        :                   :         : 1         :                
 GND*                         : Y4        :        :                   :         : 1         :                
@@ -728,8 +728,8 @@ GND*                         : Y11       :        :                   :         
 GND*                         : Y12       :        :                   :         : 8         :                
 GND*                         : Y13       :        :                   :         : 7         :                
 GND*                         : Y14       :        :                   :         : 7         :                
-Codigo_cor_misturada[22]     : Y15       : input  : 3.3-V LVTTL       :         : 7         : N              
-Codigo_cor_misturada[4]      : Y16       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : Y15       :        :                   :         : 7         :                
+GND*                         : Y16       :        :                   :         : 7         :                
 GND                          : Y17       : gnd    :                   :         :           :                
 GND*                         : Y18       :        :                   :         : 7         :                
 GNDA_PLL4                    : Y19       : gnd    :                   :         :           :                
@@ -738,5 +738,5 @@ GND*                         : Y21       :        :                   :         
 GND*                         : Y22       :        :                   :         : 6         :                
 GND*                         : Y23       :        :                   :         : 6         :                
 GND*                         : Y24       :        :                   :         : 6         :                
-GND*                         : Y25       :        :                   :         : 6         :                
+Codigo_cor_misturada[12]     : Y25       : input  : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : Y26       :        :                   :         : 6         :                

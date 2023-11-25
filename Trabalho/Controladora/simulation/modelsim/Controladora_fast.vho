@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "11/25/2023 14:16:03"
+-- DATE "11/25/2023 16:16:30"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -404,11 +404,11 @@ PORT MAP (
 -- Location: LCCOMB_X1_Y16_N10
 \Selector3~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \Selector3~0_combout\ = (\Preto~combout\ & (\Amarelo~combout\ & (\Magenta~combout\ & \Ciano~combout\)))
+-- \Selector3~0_combout\ = (!\Preto~combout\ & (!\Amarelo~combout\ & (!\Magenta~combout\ & !\Ciano~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000000000000000",
+	lut_mask => "0000000000000001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (

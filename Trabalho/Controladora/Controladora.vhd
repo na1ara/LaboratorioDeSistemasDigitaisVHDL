@@ -61,10 +61,10 @@ begin
 						end if;
 					end if;
 				when pigmento =>
-					if(Ciano = '1' and Magenta = '1' and Amarelo = '1' and Preto = '1') then
-						estado <= mistura;
-					else 
+					if(Ciano = '1' or Magenta = '1' or Amarelo = '1' or Preto = '1') then
 						estado <= pigmento;
+					else 
+						estado <= mistura;
 					end if;
 				when mistura =>
 					if (Misturando = '1') then

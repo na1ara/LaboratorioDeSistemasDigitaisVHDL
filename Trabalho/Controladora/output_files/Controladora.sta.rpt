@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Controladora
-Sat Nov 25 14:16:01 2023
+Sat Nov 25 16:16:28 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -256,14 +256,14 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; Amarelo       ; Clock      ; 4.554 ; 4.554 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; 4.532 ; 4.532 ; Rise       ; Clock           ;
 ; Ciano         ; Clock      ; 1.913 ; 1.913 ; Rise       ; Clock           ;
 ; Codigo_valido ; Clock      ; 3.896 ; 3.896 ; Rise       ; Clock           ;
 ; Cor_valida    ; Clock      ; 3.856 ; 3.856 ; Rise       ; Clock           ;
 ; Iniciar       ; Clock      ; 3.105 ; 3.105 ; Rise       ; Clock           ;
 ; Magenta       ; Clock      ; 4.406 ; 4.406 ; Rise       ; Clock           ;
 ; Misturando    ; Clock      ; 3.481 ; 3.481 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; 4.292 ; 4.292 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; 4.280 ; 4.280 ; Rise       ; Clock           ;
 ; Recipiente    ; Clock      ; 3.151 ; 3.151 ; Rise       ; Clock           ;
 ; Reset         ; Clock      ; 3.854 ; 3.854 ; Rise       ; Clock           ;
 +---------------+------------+-------+-------+------------+-----------------+
@@ -274,14 +274,14 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; Amarelo       ; Clock      ; -4.296 ; -4.296 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; -4.274 ; -4.274 ; Rise       ; Clock           ;
 ; Ciano         ; Clock      ; -1.655 ; -1.655 ; Rise       ; Clock           ;
 ; Codigo_valido ; Clock      ; -3.242 ; -3.242 ; Rise       ; Clock           ;
 ; Cor_valida    ; Clock      ; -3.398 ; -3.398 ; Rise       ; Clock           ;
 ; Iniciar       ; Clock      ; -2.845 ; -2.845 ; Rise       ; Clock           ;
 ; Magenta       ; Clock      ; -4.148 ; -4.148 ; Rise       ; Clock           ;
 ; Misturando    ; Clock      ; -3.173 ; -3.173 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; -4.034 ; -4.034 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; -4.022 ; -4.022 ; Rise       ; Clock           ;
 ; Recipiente    ; Clock      ; -2.611 ; -2.611 ; Rise       ; Clock           ;
 ; Reset         ; Clock      ; -3.470 ; -3.470 ; Rise       ; Clock           ;
 +---------------+------------+--------+--------+------------+-----------------+
@@ -505,7 +505,7 @@ No paths to report.
 ; Codigo_valido ; Clock      ; 2.064 ; 2.064 ; Rise       ; Clock           ;
 ; Cor_valida    ; Clock      ; 2.032 ; 2.032 ; Rise       ; Clock           ;
 ; Iniciar       ; Clock      ; 1.696 ; 1.696 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; 2.296 ; 2.296 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; 2.273 ; 2.273 ; Rise       ; Clock           ;
 ; Misturando    ; Clock      ; 1.890 ; 1.890 ; Rise       ; Clock           ;
 ; Preto         ; Clock      ; 2.246 ; 2.246 ; Rise       ; Clock           ;
 ; Recipiente    ; Clock      ; 1.737 ; 1.737 ; Rise       ; Clock           ;
@@ -523,7 +523,7 @@ No paths to report.
 ; Codigo_valido ; Clock      ; -1.772 ; -1.772 ; Rise       ; Clock           ;
 ; Cor_valida    ; Clock      ; -1.824 ; -1.824 ; Rise       ; Clock           ;
 ; Iniciar       ; Clock      ; -1.574 ; -1.574 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; -2.172 ; -2.172 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; -2.149 ; -2.149 ; Rise       ; Clock           ;
 ; Misturando    ; Clock      ; -1.755 ; -1.755 ; Rise       ; Clock           ;
 ; Preto         ; Clock      ; -2.122 ; -2.122 ; Rise       ; Clock           ;
 ; Recipiente    ; Clock      ; -1.478 ; -1.478 ; Rise       ; Clock           ;
@@ -622,14 +622,14 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; Amarelo       ; Clock      ; 4.554 ; 4.554 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; 4.532 ; 4.532 ; Rise       ; Clock           ;
 ; Ciano         ; Clock      ; 1.913 ; 1.913 ; Rise       ; Clock           ;
 ; Codigo_valido ; Clock      ; 3.896 ; 3.896 ; Rise       ; Clock           ;
 ; Cor_valida    ; Clock      ; 3.856 ; 3.856 ; Rise       ; Clock           ;
 ; Iniciar       ; Clock      ; 3.105 ; 3.105 ; Rise       ; Clock           ;
 ; Magenta       ; Clock      ; 4.406 ; 4.406 ; Rise       ; Clock           ;
 ; Misturando    ; Clock      ; 3.481 ; 3.481 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; 4.292 ; 4.292 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; 4.280 ; 4.280 ; Rise       ; Clock           ;
 ; Recipiente    ; Clock      ; 3.151 ; 3.151 ; Rise       ; Clock           ;
 ; Reset         ; Clock      ; 3.854 ; 3.854 ; Rise       ; Clock           ;
 +---------------+------------+-------+-------+------------+-----------------+
@@ -645,7 +645,7 @@ No paths to report.
 ; Codigo_valido ; Clock      ; -1.772 ; -1.772 ; Rise       ; Clock           ;
 ; Cor_valida    ; Clock      ; -1.824 ; -1.824 ; Rise       ; Clock           ;
 ; Iniciar       ; Clock      ; -1.574 ; -1.574 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; -2.172 ; -2.172 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; -2.149 ; -2.149 ; Rise       ; Clock           ;
 ; Misturando    ; Clock      ; -1.755 ; -1.755 ; Rise       ; Clock           ;
 ; Preto         ; Clock      ; -2.122 ; -2.122 ; Rise       ; Clock           ;
 ; Recipiente    ; Clock      ; -1.478 ; -1.478 ; Rise       ; Clock           ;
@@ -779,7 +779,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 25 14:15:58 2023
+    Info: Processing started: Sat Nov 25 16:16:26 2023
 Info: Command: quartus_sta Controladora -c Controladora
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -828,8 +828,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4531 megabytes
-    Info: Processing ended: Sat Nov 25 14:16:01 2023
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Sat Nov 25 16:16:28 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

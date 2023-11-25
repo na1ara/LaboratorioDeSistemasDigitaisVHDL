@@ -14,7 +14,10 @@ entity CaminhoDados is
 		Habilita_mistura : in std_logic;
 		
 		Misturando :  out  std_logic;
-		Pigmento_adicionado :  out  std_logic;
+		Ciano :  out  std_logic;
+		Magenta :  out  std_logic;
+		Amarelo :  out  std_logic;
+		Preto :  out  std_logic;
 		Codigo_valido :  out  std_logic;
 		Cor_valida :  out  std_logic;
 		Codigo_cor_misturada :  in  std_logic_vector(31 DOWNTO 0)
@@ -110,22 +113,22 @@ architecture dados of CaminhoDados is
 		instance_RegC: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(31 downto 24), Q => fioC);
 		instance_MultC: multiplicador port map (A => fioC, Produto => fioCMult);
 		instance_ContC: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContC);
-		instance_CompC: comparador port map (a => fioCMult, b => fioContC, menor => fioCPronto);
+		instance_CompC: comparador port map (a => fioCMult, b => fioContC, maior => Ciano);
 	--Magenta
 		instance_RegM: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(23 downto 16), Q => fioM);
 		instance_MultM: multiplicador port map (A => fioM, Produto => fioMMult);
 		instance_ContM: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContM);
-		instance_CompM: comparador port map (a => fioMMult, b => fioContM, menor => fioMPronto);
+		instance_CompM: comparador port map (a => fioMMult, b => fioContM, maior => Magenta);
 	--Amarelo
 		instance_RegY: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(15 downto 8), Q => fioY);
 		instance_MultY: multiplicador port map (A => fioY, Produto => fioYMult);
 		instance_ContY: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContY);
-		instance_CompY: comparador port map (a => fioYMult, b => fioContY, menor => fioYPronto);
+		instance_CompY: comparador port map (a => fioYMult, b => fioContY, maior => Amarelo);
 	--Preto
 		instance_RegK: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(7 downto 0), Q => fioK);
 		instance_MulTK: multiplicador port map (A => fioK, Produto => fioKMult);
 		instance_ContK: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContK);
-		instance_CompK: comparador port map (a => fioKMult, b => fioContK, menor => fioKPronto);
+		instance_CompK: comparador port map (a => fioKMult, b => fioContK, maior => Preto);
 	--CodValido
 		instance_CodValid: CodValido port map (cod => Codigo_de_cor, valido => Codigo_valido);
 	--Comparador
@@ -133,6 +136,5 @@ architecture dados of CaminhoDados is
 	--Misturador
 		instance_compmist: CompMist port map (b => fioContMist, menor => Misturando);
 		instance_contmist: contador port map (Clock => Clock, Reset => Reset, E => Habilita_mistura, Q => fioContMist);
-	--Pigmento adicionado
-		Pigmento_adicionado <= fioCPronto and fioMPronto and fioYPronto and fioKPronto;
+
 end dados;
