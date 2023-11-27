@@ -9,7 +9,6 @@ entity Controladora is
 		Iniciar :  in  std_logic;
 		Recipiente :  in  std_logic;
 		Misturando :  in  std_logic;
-		Pigmento_adicionado :  in  std_logic;
 		Codigo_valido :  in  std_logic;
 		Cor_valida :  in  std_logic;
 		Ciano :  in  std_logic;

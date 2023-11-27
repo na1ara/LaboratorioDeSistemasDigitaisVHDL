@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {MisturadorTinta.vho MisturadorTinta_vhd.sdo}}
+	{{"Fast Model"} {MisturadorTinta_fast.vho MisturadorTinta_vhd_fast.sdo}}
+}

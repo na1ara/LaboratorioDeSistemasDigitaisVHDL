@@ -20,7 +20,7 @@ entity CaminhoDados is
 		Preto :  out  std_logic;
 		Codigo_valido :  out  std_logic;
 		Cor_valida :  out  std_logic;
-		Codigo_cor_misturada :  in  std_logic_vector(31 DOWNTO 0)
+		Codigo_cor_misturada :  out  std_logic_vector(31 DOWNTO 0)
 	);
 end CaminhoDados;
 
