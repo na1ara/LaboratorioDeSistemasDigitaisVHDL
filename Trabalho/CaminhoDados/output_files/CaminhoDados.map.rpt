@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CaminhoDados
-Sat Nov 25 16:09:53 2023
+Fri Dec 01 15:07:45 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -24,18 +24,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  16. Parameter Settings for User Entity Instance: Reg:instance_RegK
  17. Parameter Settings for User Entity Instance: comparador:instance_CompK
  18. Parameter Settings for User Entity Instance: comparador:instance_Compcor
- 19. Parameter Settings for Inferred Entity Instance: multiplicador:instance_MultC|lpm_mult:Mult0
- 20. Parameter Settings for Inferred Entity Instance: multiplicador:instance_MultM|lpm_mult:Mult0
- 21. Parameter Settings for Inferred Entity Instance: multiplicador:instance_MultY|lpm_mult:Mult0
- 22. Parameter Settings for Inferred Entity Instance: multiplicador:instance_MulTK|lpm_mult:Mult0
- 23. lpm_mult Parameter Settings by Entity Instance
- 24. Port Connectivity Checks: "comparador:instance_Compcor"
- 25. Port Connectivity Checks: "comparador:instance_CompK"
- 26. Port Connectivity Checks: "comparador:instance_CompY"
- 27. Port Connectivity Checks: "comparador:instance_CompM"
- 28. Port Connectivity Checks: "comparador:instance_CompC"
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 19. Port Connectivity Checks: "comparador:instance_Compcor"
+ 20. Port Connectivity Checks: "comparador:instance_CompK"
+ 21. Port Connectivity Checks: "comparador:instance_CompY"
+ 22. Port Connectivity Checks: "comparador:instance_CompM"
+ 23. Port Connectivity Checks: "comparador:instance_CompC"
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -61,13 +56,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 25 16:09:53 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 01 15:07:45 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CaminhoDados                                    ;
 ; Top-level Entity Name              ; CaminhoDados                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 245                                             ;
-;     Total combinational functions  ; 213                                             ;
+; Total logic elements               ; 142                                             ;
+;     Total combinational functions  ; 110                                             ;
 ;     Dedicated logic registers      ; 64                                              ;
 ; Total registers                    ; 64                                              ;
 ; Total pins                         ; 108                                             ;
@@ -174,41 +169,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                         ; Library ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; ../Contador/contador.vhd           ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd           ;         ;
-; ../CompMist/CompMist.vhd           ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd           ;         ;
-; ../Registrador/Reg.vhd             ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Registrador/Reg.vhd             ;         ;
-; ../Multiplicador/multiplicador.vhd ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd ;         ;
-; ../Comparador/comparador.vhd       ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Comparador/comparador.vhd       ;         ;
-; ../CodValido/CodValido.vhd         ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd         ;         ;
-; CaminhoDados.vhd                   ; yes             ; User VHDL File               ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CaminhoDados/CaminhoDados.vhd   ;         ;
-; lpm_mult.tdf                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf                       ;         ;
-; aglobal130.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                     ;         ;
-; lpm_add_sub.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                    ;         ;
-; multcore.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                       ;         ;
-; bypassff.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                       ;         ;
-; altshift.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                       ;         ;
-; multcore.tdf                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.tdf                       ;         ;
-; csa_add.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/csa_add.inc                        ;         ;
-; mpar_add.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.inc                       ;         ;
-; muleabz.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muleabz.inc                        ;         ;
-; mul_lfrg.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_lfrg.inc                       ;         ;
-; mul_boothc.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_boothc.inc                     ;         ;
-; alt_ded_mult.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult.inc                   ;         ;
-; alt_ded_mult_y.inc                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                 ;         ;
-; dffpipe.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                        ;         ;
-; mpar_add.tdf                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.tdf                       ;         ;
-; lpm_add_sub.tdf                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                    ;         ;
-; addcore.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc                        ;         ;
-; look_add.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc                       ;         ;
-; alt_stratix_add_sub.inc            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc            ;         ;
-; db/add_sub_2ch.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CaminhoDados/db/add_sub_2ch.tdf ;         ;
-; altshift.tdf                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.tdf                       ;         ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; ../Contador/contador.vhd           ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd           ;         ;
+; ../CompMist/CompMist.vhd           ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd           ;         ;
+; ../Registrador/Reg.vhd             ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Registrador/Reg.vhd             ;         ;
+; ../Multiplicador/multiplicador.vhd ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd ;         ;
+; ../Comparador/comparador.vhd       ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Comparador/comparador.vhd       ;         ;
+; ../CodValido/CodValido.vhd         ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd         ;         ;
+; CaminhoDados.vhd                   ; yes             ; User VHDL File  ; C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CaminhoDados/CaminhoDados.vhd   ;         ;
++------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -216,17 +189,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 245   ;
+; Estimated Total logic elements              ; 142   ;
 ;                                             ;       ;
-; Total combinational functions               ; 213   ;
+; Total combinational functions               ; 110   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 63    ;
-;     -- 3 input functions                    ; 85    ;
-;     -- <=2 input functions                  ; 65    ;
+;     -- 4 input functions                    ; 37    ;
+;     -- 3 input functions                    ; 37    ;
+;     -- <=2 input functions                  ; 36    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 105   ;
-;     -- arithmetic mode                      ; 108   ;
+;     -- normal mode                          ; 54    ;
+;     -- arithmetic mode                      ; 56    ;
 ;                                             ;       ;
 ; Total registers                             ; 64    ;
 ;     -- Dedicated logic registers            ; 64    ;
@@ -236,55 +209,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; Reset ;
 ; Maximum fan-out                             ; 65    ;
-; Total fan-out                               ; 892   ;
-; Average fan-out                             ; 2.32  ;
+; Total fan-out                               ; 622   ;
+; Average fan-out                             ; 2.21  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
-+------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                          ; Library Name ;
-+------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |CaminhoDados                                  ; 213 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 108  ; 0            ; |CaminhoDados                                                                                                                                ; work         ;
-;    |CodValido:instance_CodValid|               ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CodValido:instance_CodValid                                                                                                    ; work         ;
-;    |CompMist:instance_compmist|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CompMist:instance_compmist                                                                                                     ; work         ;
-;    |Reg:instance_RegC|                         ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegC                                                                                                              ; work         ;
-;    |Reg:instance_RegK|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegK                                                                                                              ; work         ;
-;    |Reg:instance_RegM|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegM                                                                                                              ; work         ;
-;    |Reg:instance_RegY|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegY                                                                                                              ; work         ;
-;    |comparador:instance_CompC|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompC                                                                                                      ; work         ;
-;    |comparador:instance_CompK|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompK                                                                                                      ; work         ;
-;    |comparador:instance_CompM|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompM                                                                                                      ; work         ;
-;    |comparador:instance_CompY|                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompY                                                                                                      ; work         ;
-;    |comparador:instance_Compcor|               ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_Compcor                                                                                                    ; work         ;
-;    |contador:instance_ContC|                   ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|contador:instance_ContC                                                                                                        ; work         ;
-;    |contador:instance_contmist|                ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|contador:instance_contmist                                                                                                     ; work         ;
-;    |multiplicador:instance_MulTK|              ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MulTK                                                                                                   ; work         ;
-;       |lpm_mult:Mult0|                         ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MulTK|lpm_mult:Mult0                                                                                    ; work         ;
-;          |multcore:mult_core|                  ; 21 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MulTK|lpm_mult:Mult0|multcore:mult_core                                                                 ; work         ;
-;             |mpar_add:padder|                  ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MulTK|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MulTK|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; work         ;
-;                   |add_sub_2ch:auto_generated| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MulTK|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2ch:auto_generated ; work         ;
-;    |multiplicador:instance_MultC|              ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultC                                                                                                   ; work         ;
-;       |lpm_mult:Mult0|                         ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultC|lpm_mult:Mult0                                                                                    ; work         ;
-;          |multcore:mult_core|                  ; 21 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core                                                                 ; work         ;
-;             |mpar_add:padder|                  ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; work         ;
-;                   |add_sub_2ch:auto_generated| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2ch:auto_generated ; work         ;
-;    |multiplicador:instance_MultM|              ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultM                                                                                                   ; work         ;
-;       |lpm_mult:Mult0|                         ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultM|lpm_mult:Mult0                                                                                    ; work         ;
-;          |multcore:mult_core|                  ; 21 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultM|lpm_mult:Mult0|multcore:mult_core                                                                 ; work         ;
-;             |mpar_add:padder|                  ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; work         ;
-;                   |add_sub_2ch:auto_generated| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2ch:auto_generated ; work         ;
-;    |multiplicador:instance_MultY|              ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultY                                                                                                   ; work         ;
-;       |lpm_mult:Mult0|                         ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultY|lpm_mult:Mult0                                                                                    ; work         ;
-;          |multcore:mult_core|                  ; 21 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultY|lpm_mult:Mult0|multcore:mult_core                                                                 ; work         ;
-;             |mpar_add:padder|                  ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultY|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultY|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; work         ;
-;                   |add_sub_2ch:auto_generated| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|multiplicador:instance_MultY|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2ch:auto_generated ; work         ;
-+------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; |CaminhoDados                    ; 110 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 108  ; 0            ; |CaminhoDados                             ; work         ;
+;    |CodValido:instance_CodValid| ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CodValido:instance_CodValid ; work         ;
+;    |CompMist:instance_compmist|  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|CompMist:instance_compmist  ; work         ;
+;    |Reg:instance_RegC|           ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegC           ; work         ;
+;    |Reg:instance_RegK|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegK           ; work         ;
+;    |Reg:instance_RegM|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegM           ; work         ;
+;    |Reg:instance_RegY|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|Reg:instance_RegY           ; work         ;
+;    |comparador:instance_CompC|   ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompC   ; work         ;
+;    |comparador:instance_CompK|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompK   ; work         ;
+;    |comparador:instance_CompM|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompM   ; work         ;
+;    |comparador:instance_CompY|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_CompY   ; work         ;
+;    |comparador:instance_Compcor| ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|comparador:instance_Compcor ; work         ;
+;    |contador:instance_ContC|     ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|contador:instance_ContC     ; work         ;
+;    |contador:instance_contmist|  ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CaminhoDados|contador:instance_contmist  ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -450,199 +399,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: multiplicador:instance_MultC|lpm_mult:Mult0 ;
-+------------------------------------------------+------------+--------------------------------+
-; Parameter Name                                 ; Value      ; Type                           ;
-+------------------------------------------------+------------+--------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                 ;
-; LPM_WIDTHA                                     ; 8          ; Untyped                        ;
-; LPM_WIDTHB                                     ; 7          ; Untyped                        ;
-; LPM_WIDTHP                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHR                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                        ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                        ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                        ;
-; LATENCY                                        ; 0          ; Untyped                        ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                        ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                        ;
-; USE_EAB                                        ; OFF        ; Untyped                        ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                        ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                        ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                        ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K            ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                        ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                        ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                        ;
-+------------------------------------------------+------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: multiplicador:instance_MultM|lpm_mult:Mult0 ;
-+------------------------------------------------+------------+--------------------------------+
-; Parameter Name                                 ; Value      ; Type                           ;
-+------------------------------------------------+------------+--------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                 ;
-; LPM_WIDTHA                                     ; 8          ; Untyped                        ;
-; LPM_WIDTHB                                     ; 7          ; Untyped                        ;
-; LPM_WIDTHP                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHR                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                        ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                        ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                        ;
-; LATENCY                                        ; 0          ; Untyped                        ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                        ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                        ;
-; USE_EAB                                        ; OFF        ; Untyped                        ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                        ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                        ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                        ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K            ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                        ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                        ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                        ;
-+------------------------------------------------+------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: multiplicador:instance_MultY|lpm_mult:Mult0 ;
-+------------------------------------------------+------------+--------------------------------+
-; Parameter Name                                 ; Value      ; Type                           ;
-+------------------------------------------------+------------+--------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                 ;
-; LPM_WIDTHA                                     ; 8          ; Untyped                        ;
-; LPM_WIDTHB                                     ; 7          ; Untyped                        ;
-; LPM_WIDTHP                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHR                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                        ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                        ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                        ;
-; LATENCY                                        ; 0          ; Untyped                        ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                        ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                        ;
-; USE_EAB                                        ; OFF        ; Untyped                        ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                        ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                        ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                        ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K            ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                        ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                        ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                        ;
-+------------------------------------------------+------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: multiplicador:instance_MulTK|lpm_mult:Mult0 ;
-+------------------------------------------------+------------+--------------------------------+
-; Parameter Name                                 ; Value      ; Type                           ;
-+------------------------------------------------+------------+--------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                 ;
-; LPM_WIDTHA                                     ; 8          ; Untyped                        ;
-; LPM_WIDTHB                                     ; 7          ; Untyped                        ;
-; LPM_WIDTHP                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHR                                     ; 15         ; Untyped                        ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                        ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                        ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                        ;
-; LATENCY                                        ; 0          ; Untyped                        ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                        ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                        ;
-; USE_EAB                                        ; OFF        ; Untyped                        ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                        ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                        ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                        ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K            ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                        ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                        ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                        ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                        ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                        ;
-+------------------------------------------------+------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                      ;
-+---------------------------------------+---------------------------------------------+
-; Name                                  ; Value                                       ;
-+---------------------------------------+---------------------------------------------+
-; Number of entity instances            ; 4                                           ;
-; Entity Instance                       ; multiplicador:instance_MultC|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8                                           ;
-;     -- LPM_WIDTHB                     ; 7                                           ;
-;     -- LPM_WIDTHP                     ; 15                                          ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                    ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                          ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                         ;
-;     -- USE_EAB                        ; OFF                                         ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                        ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                          ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                          ;
-; Entity Instance                       ; multiplicador:instance_MultM|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8                                           ;
-;     -- LPM_WIDTHB                     ; 7                                           ;
-;     -- LPM_WIDTHP                     ; 15                                          ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                    ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                          ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                         ;
-;     -- USE_EAB                        ; OFF                                         ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                        ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                          ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                          ;
-; Entity Instance                       ; multiplicador:instance_MultY|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8                                           ;
-;     -- LPM_WIDTHB                     ; 7                                           ;
-;     -- LPM_WIDTHP                     ; 15                                          ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                    ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                          ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                         ;
-;     -- USE_EAB                        ; OFF                                         ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                        ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                          ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                          ;
-; Entity Instance                       ; multiplicador:instance_MulTK|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8                                           ;
-;     -- LPM_WIDTHB                     ; 7                                           ;
-;     -- LPM_WIDTHP                     ; 15                                          ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                    ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                          ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                         ;
-;     -- USE_EAB                        ; OFF                                         ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                        ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                          ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                          ;
-+---------------------------------------+---------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "comparador:instance_Compcor"                                                         ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -658,7 +414,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -668,7 +424,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -678,7 +434,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -688,7 +444,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
-; menor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; maior ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; igual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -698,7 +454,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -708,7 +464,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 25 16:09:47 2023
+    Info: Processing started: Fri Dec 01 15:07:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CaminhoDados -c CaminhoDados
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/lhenr/onedrive/documentos/ufmg/lsd/trabalho/contador/contador.vhd
@@ -732,6 +488,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file caminhodados.vhd
     Info (12022): Found design unit 1: CaminhoDados-dados
     Info (12023): Found entity 1: CaminhoDados
+Info (12021): Found 2 design units, including 1 entities, in source file tb_dados.vhd
+    Info (12022): Found design unit 1: tb_dados-teste
+    Info (12023): Found entity 1: tb_dados
 Info (12127): Elaborating entity "CaminhoDados" for the top level hierarchy
 Info (12128): Elaborating entity "Reg" for hierarchy "Reg:instance_RegC"
 Info (12128): Elaborating entity "multiplicador" for hierarchy "multiplicador:instance_MultC"
@@ -740,71 +499,16 @@ Info (12128): Elaborating entity "comparador" for hierarchy "comparador:instance
 Info (12128): Elaborating entity "CodValido" for hierarchy "CodValido:instance_CodValid"
 Info (12128): Elaborating entity "comparador" for hierarchy "comparador:instance_Compcor"
 Info (12128): Elaborating entity "CompMist" for hierarchy "CompMist:instance_compmist"
-Info (278001): Inferred 4 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "multiplicador:instance_MultC|Mult0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "multiplicador:instance_MultM|Mult0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "multiplicador:instance_MultY|Mult0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "multiplicador:instance_MulTK|Mult0"
-Info (12130): Elaborated megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0"
-Info (12133): Instantiated megafunction "multiplicador:instance_MultC|lpm_mult:Mult0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "8"
-    Info (12134): Parameter "LPM_WIDTHB" = "7"
-    Info (12134): Parameter "LPM_WIDTHP" = "15"
-    Info (12134): Parameter "LPM_WIDTHR" = "15"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_2ch.tdf
-    Info (12023): Found entity 1: add_sub_2ch
-Info (12131): Elaborated megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "multiplicador:instance_MultC|lpm_mult:Mult0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 32 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[0]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[1]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[2]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[3]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[4]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[5]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[6]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[7]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[8]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[9]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[10]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[11]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[12]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[13]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[14]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[15]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[16]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[17]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[18]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[19]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[20]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[21]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[22]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[23]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[24]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[25]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[26]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[27]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[28]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[29]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[30]"
-    Warning (15610): No output dependent on input pin "Codigo_cor_misturada[31]"
-Info (21057): Implemented 353 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 101 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 245 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Sat Nov 25 16:09:53 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+Info (21057): Implemented 250 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 142 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Fri Dec 01 15:07:45 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

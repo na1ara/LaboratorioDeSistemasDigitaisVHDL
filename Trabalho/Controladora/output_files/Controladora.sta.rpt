@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Controladora
-Sat Nov 25 16:16:28 2023
+Fri Dec 01 15:42:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -107,13 +107,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Slow Model Fmax Summary                                                                                  ;
-+-----------+-----------------+------------+---------------------------------------------------------------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+-----------+-----------------+------------+---------------------------------------------------------------+
-; 772.8 MHz ; 420.17 MHz      ; Clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
-+-----------+-----------------+------------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 765.11 MHz ; 420.17 MHz      ; Clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -122,7 +122,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; Clock ; -0.294 ; -0.752        ;
+; Clock ; -0.307 ; -0.774        ;
 +-------+--------+---------------+
 
 
@@ -161,18 +161,18 @@ No paths to report.
 +--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
-; -0.294 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.330      ;
-; -0.292 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.328      ;
-; -0.168 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.307 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.343      ;
+; -0.301 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.337      ;
 ; -0.166 ; estado.verifica ; estado.pigmento ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.202      ;
-; -0.151 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.187      ;
-; -0.064 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.100      ;
-; 0.107  ; estado.mistura  ; estado.valida   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.929      ;
-; 0.108  ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.928      ;
-; 0.110  ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.926      ;
-; 0.238  ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.798      ;
-; 0.241  ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.795      ;
-; 0.249  ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.787      ;
+; -0.166 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.202      ;
+; -0.160 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.196      ;
+; -0.096 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 1.132      ;
+; 0.108  ; estado.mistura  ; estado.valida   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.928      ;
+; 0.109  ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.927      ;
+; 0.229  ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.807      ;
+; 0.236  ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.800      ;
+; 0.238  ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.798      ;
+; 0.238  ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.798      ;
 ; 0.379  ; estado.pigmento ; estado.pigmento ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.657      ;
 ; 0.379  ; estado.mistura  ; estado.mistura  ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.657      ;
 ; 0.379  ; estado.pronto   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.657      ;
@@ -189,18 +189,18 @@ No paths to report.
 ; 0.391 ; estado.mistura  ; estado.mistura  ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; estado.pronto   ; estado.pronto   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; estado.espera   ; estado.espera   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.657      ;
-; 0.521 ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.787      ;
-; 0.529 ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.795      ;
-; 0.532 ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.798      ;
-; 0.660 ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.926      ;
-; 0.662 ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.928      ;
-; 0.663 ; estado.mistura  ; estado.valida   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.929      ;
-; 0.834 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.100      ;
-; 0.921 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.187      ;
+; 0.532 ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.798      ;
+; 0.532 ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.798      ;
+; 0.534 ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.800      ;
+; 0.541 ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.807      ;
+; 0.661 ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.927      ;
+; 0.662 ; estado.mistura  ; estado.valida   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.928      ;
+; 0.866 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.132      ;
+; 0.930 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.196      ;
 ; 0.936 ; estado.verifica ; estado.pigmento ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.202      ;
-; 0.938 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.204      ;
-; 1.062 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.328      ;
-; 1.064 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.330      ;
+; 0.936 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.202      ;
+; 1.071 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.337      ;
+; 1.077 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 1.343      ;
 +-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -256,16 +256,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; Amarelo       ; Clock      ; 4.532 ; 4.532 ; Rise       ; Clock           ;
-; Ciano         ; Clock      ; 1.913 ; 1.913 ; Rise       ; Clock           ;
-; Codigo_valido ; Clock      ; 3.896 ; 3.896 ; Rise       ; Clock           ;
-; Cor_valida    ; Clock      ; 3.856 ; 3.856 ; Rise       ; Clock           ;
-; Iniciar       ; Clock      ; 3.105 ; 3.105 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; 4.406 ; 4.406 ; Rise       ; Clock           ;
-; Misturando    ; Clock      ; 3.481 ; 3.481 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; 4.280 ; 4.280 ; Rise       ; Clock           ;
-; Recipiente    ; Clock      ; 3.151 ; 3.151 ; Rise       ; Clock           ;
-; Reset         ; Clock      ; 3.854 ; 3.854 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; 4.085 ; 4.085 ; Rise       ; Clock           ;
+; Ciano         ; Clock      ; 0.980 ; 0.980 ; Rise       ; Clock           ;
+; Codigo_valido ; Clock      ; 3.815 ; 3.815 ; Rise       ; Clock           ;
+; Cor_valida    ; Clock      ; 3.551 ; 3.551 ; Rise       ; Clock           ;
+; Iniciar       ; Clock      ; 3.157 ; 3.157 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; 1.239 ; 1.239 ; Rise       ; Clock           ;
+; Misturando    ; Clock      ; 3.443 ; 3.443 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; 3.959 ; 3.959 ; Rise       ; Clock           ;
+; Recipiente    ; Clock      ; 3.182 ; 3.182 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; 3.917 ; 3.917 ; Rise       ; Clock           ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -274,16 +274,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; Amarelo       ; Clock      ; -4.274 ; -4.274 ; Rise       ; Clock           ;
-; Ciano         ; Clock      ; -1.655 ; -1.655 ; Rise       ; Clock           ;
-; Codigo_valido ; Clock      ; -3.242 ; -3.242 ; Rise       ; Clock           ;
-; Cor_valida    ; Clock      ; -3.398 ; -3.398 ; Rise       ; Clock           ;
-; Iniciar       ; Clock      ; -2.845 ; -2.845 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; -4.148 ; -4.148 ; Rise       ; Clock           ;
-; Misturando    ; Clock      ; -3.173 ; -3.173 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; -4.022 ; -4.022 ; Rise       ; Clock           ;
-; Recipiente    ; Clock      ; -2.611 ; -2.611 ; Rise       ; Clock           ;
-; Reset         ; Clock      ; -3.470 ; -3.470 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; -3.828 ; -3.828 ; Rise       ; Clock           ;
+; Ciano         ; Clock      ; -0.723 ; -0.723 ; Rise       ; Clock           ;
+; Codigo_valido ; Clock      ; -3.155 ; -3.155 ; Rise       ; Clock           ;
+; Cor_valida    ; Clock      ; -2.918 ; -2.918 ; Rise       ; Clock           ;
+; Iniciar       ; Clock      ; -2.897 ; -2.897 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; -0.982 ; -0.982 ; Rise       ; Clock           ;
+; Misturando    ; Clock      ; -3.169 ; -3.169 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; -3.702 ; -3.702 ; Rise       ; Clock           ;
+; Recipiente    ; Clock      ; -2.774 ; -2.774 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; -3.634 ; -3.634 ; Rise       ; Clock           ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -292,19 +292,19 @@ No paths to report.
 +--------------------+------------+-------+-------+------------+-----------------+
 ; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------------+------------+-------+-------+------------+-----------------+
-; Codigo_de_erro[*]  ; Clock      ; 7.271 ; 7.271 ; Rise       ; Clock           ;
-;  Codigo_de_erro[0] ; Clock      ; 6.990 ; 6.990 ; Rise       ; Clock           ;
-;  Codigo_de_erro[1] ; Clock      ; 7.271 ; 7.271 ; Rise       ; Clock           ;
-; Fim                ; Clock      ; 6.555 ; 6.555 ; Rise       ; Clock           ;
-; Habilita_escrita   ; Clock      ; 6.264 ; 6.264 ; Rise       ; Clock           ;
-; Habilita_mistura   ; Clock      ; 6.381 ; 6.381 ; Rise       ; Clock           ;
-; Habilita_pigmento  ; Clock      ; 6.401 ; 6.401 ; Rise       ; Clock           ;
-; Saida_amarelo      ; Clock      ; 6.969 ; 6.969 ; Rise       ; Clock           ;
-; Saida_ciano        ; Clock      ; 7.240 ; 7.240 ; Rise       ; Clock           ;
-; Saida_magenta      ; Clock      ; 7.309 ; 7.309 ; Rise       ; Clock           ;
-; Saida_misturando   ; Clock      ; 6.381 ; 6.381 ; Rise       ; Clock           ;
-; Saida_preto        ; Clock      ; 6.976 ; 6.976 ; Rise       ; Clock           ;
-; Saida_reset        ; Clock      ; 6.349 ; 6.349 ; Rise       ; Clock           ;
+; Codigo_de_erro[*]  ; Clock      ; 7.414 ; 7.414 ; Rise       ; Clock           ;
+;  Codigo_de_erro[0] ; Clock      ; 7.166 ; 7.166 ; Rise       ; Clock           ;
+;  Codigo_de_erro[1] ; Clock      ; 7.414 ; 7.414 ; Rise       ; Clock           ;
+; Fim                ; Clock      ; 6.366 ; 6.366 ; Rise       ; Clock           ;
+; Habilita_escrita   ; Clock      ; 6.432 ; 6.432 ; Rise       ; Clock           ;
+; Habilita_mistura   ; Clock      ; 6.372 ; 6.372 ; Rise       ; Clock           ;
+; Habilita_pigmento  ; Clock      ; 6.398 ; 6.398 ; Rise       ; Clock           ;
+; Saida_amarelo      ; Clock      ; 7.095 ; 7.095 ; Rise       ; Clock           ;
+; Saida_ciano        ; Clock      ; 7.072 ; 7.072 ; Rise       ; Clock           ;
+; Saida_magenta      ; Clock      ; 7.021 ; 7.021 ; Rise       ; Clock           ;
+; Saida_misturando   ; Clock      ; 6.362 ; 6.362 ; Rise       ; Clock           ;
+; Saida_preto        ; Clock      ; 7.096 ; 7.096 ; Rise       ; Clock           ;
+; Saida_reset        ; Clock      ; 6.245 ; 6.245 ; Rise       ; Clock           ;
 +--------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -313,19 +313,19 @@ No paths to report.
 +--------------------+------------+-------+-------+------------+-----------------+
 ; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------------+------------+-------+-------+------------+-----------------+
-; Codigo_de_erro[*]  ; Clock      ; 6.990 ; 6.990 ; Rise       ; Clock           ;
-;  Codigo_de_erro[0] ; Clock      ; 6.990 ; 6.990 ; Rise       ; Clock           ;
-;  Codigo_de_erro[1] ; Clock      ; 7.271 ; 7.271 ; Rise       ; Clock           ;
-; Fim                ; Clock      ; 6.555 ; 6.555 ; Rise       ; Clock           ;
-; Habilita_escrita   ; Clock      ; 6.264 ; 6.264 ; Rise       ; Clock           ;
-; Habilita_mistura   ; Clock      ; 6.381 ; 6.381 ; Rise       ; Clock           ;
-; Habilita_pigmento  ; Clock      ; 6.401 ; 6.401 ; Rise       ; Clock           ;
-; Saida_amarelo      ; Clock      ; 6.969 ; 6.969 ; Rise       ; Clock           ;
-; Saida_ciano        ; Clock      ; 7.240 ; 7.240 ; Rise       ; Clock           ;
-; Saida_magenta      ; Clock      ; 7.309 ; 7.309 ; Rise       ; Clock           ;
-; Saida_misturando   ; Clock      ; 6.381 ; 6.381 ; Rise       ; Clock           ;
-; Saida_preto        ; Clock      ; 6.976 ; 6.976 ; Rise       ; Clock           ;
-; Saida_reset        ; Clock      ; 6.349 ; 6.349 ; Rise       ; Clock           ;
+; Codigo_de_erro[*]  ; Clock      ; 7.166 ; 7.166 ; Rise       ; Clock           ;
+;  Codigo_de_erro[0] ; Clock      ; 7.166 ; 7.166 ; Rise       ; Clock           ;
+;  Codigo_de_erro[1] ; Clock      ; 7.414 ; 7.414 ; Rise       ; Clock           ;
+; Fim                ; Clock      ; 6.366 ; 6.366 ; Rise       ; Clock           ;
+; Habilita_escrita   ; Clock      ; 6.432 ; 6.432 ; Rise       ; Clock           ;
+; Habilita_mistura   ; Clock      ; 6.372 ; 6.372 ; Rise       ; Clock           ;
+; Habilita_pigmento  ; Clock      ; 6.398 ; 6.398 ; Rise       ; Clock           ;
+; Saida_amarelo      ; Clock      ; 7.095 ; 7.095 ; Rise       ; Clock           ;
+; Saida_ciano        ; Clock      ; 7.072 ; 7.072 ; Rise       ; Clock           ;
+; Saida_magenta      ; Clock      ; 7.021 ; 7.021 ; Rise       ; Clock           ;
+; Saida_misturando   ; Clock      ; 6.362 ; 6.362 ; Rise       ; Clock           ;
+; Saida_preto        ; Clock      ; 7.096 ; 7.096 ; Rise       ; Clock           ;
+; Saida_reset        ; Clock      ; 6.245 ; 6.245 ; Rise       ; Clock           ;
 +--------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -334,14 +334,14 @@ No paths to report.
 +---------------+-------------------+-------+-------+-------+-------+
 ; Input Port    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
 +---------------+-------------------+-------+-------+-------+-------+
-; Amarelo       ; Saida_amarelo     ; 9.128 ;       ;       ; 9.128 ;
-; Ciano         ; Saida_ciano       ; 6.473 ;       ;       ; 6.473 ;
-; Codigo_valido ; Codigo_de_erro[0] ;       ; 8.923 ; 8.923 ;       ;
-; Codigo_valido ; Codigo_de_erro[1] ; 9.208 ;       ;       ; 9.208 ;
-; Cor_valida    ; Codigo_de_erro[0] ; 9.191 ;       ;       ; 9.191 ;
-; Cor_valida    ; Codigo_de_erro[1] ;       ; 9.452 ; 9.452 ;       ;
-; Magenta       ; Saida_magenta     ; 8.826 ;       ;       ; 8.826 ;
-; Preto         ; Saida_preto       ; 8.721 ;       ;       ; 8.721 ;
+; Amarelo       ; Saida_amarelo     ;       ; 8.880 ; 8.880 ;       ;
+; Ciano         ; Saida_ciano       ;       ; 6.351 ; 6.351 ;       ;
+; Codigo_valido ; Codigo_de_erro[0] ;       ; 8.981 ; 8.981 ;       ;
+; Codigo_valido ; Codigo_de_erro[1] ; 9.235 ;       ;       ; 9.235 ;
+; Cor_valida    ; Codigo_de_erro[0] ; 8.630 ;       ;       ; 8.630 ;
+; Cor_valida    ; Codigo_de_erro[1] ;       ; 8.875 ; 8.875 ;       ;
+; Magenta       ; Saida_magenta     ;       ; 6.308 ; 6.308 ;       ;
+; Preto         ; Saida_preto       ;       ; 8.870 ; 8.870 ;       ;
 +---------------+-------------------+-------+-------+-------+-------+
 
 
@@ -350,14 +350,14 @@ No paths to report.
 +---------------+-------------------+-------+-------+-------+-------+
 ; Input Port    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
 +---------------+-------------------+-------+-------+-------+-------+
-; Amarelo       ; Saida_amarelo     ; 9.128 ;       ;       ; 9.128 ;
-; Ciano         ; Saida_ciano       ; 6.473 ;       ;       ; 6.473 ;
-; Codigo_valido ; Codigo_de_erro[0] ;       ; 8.923 ; 8.923 ;       ;
-; Codigo_valido ; Codigo_de_erro[1] ; 9.208 ;       ;       ; 9.208 ;
-; Cor_valida    ; Codigo_de_erro[0] ; 9.191 ;       ;       ; 9.191 ;
-; Cor_valida    ; Codigo_de_erro[1] ;       ; 9.452 ; 9.452 ;       ;
-; Magenta       ; Saida_magenta     ; 8.826 ;       ;       ; 8.826 ;
-; Preto         ; Saida_preto       ; 8.721 ;       ;       ; 8.721 ;
+; Amarelo       ; Saida_amarelo     ;       ; 8.880 ; 8.880 ;       ;
+; Ciano         ; Saida_ciano       ;       ; 6.351 ; 6.351 ;       ;
+; Codigo_valido ; Codigo_de_erro[0] ;       ; 8.981 ; 8.981 ;       ;
+; Codigo_valido ; Codigo_de_erro[1] ; 9.235 ;       ;       ; 9.235 ;
+; Cor_valida    ; Codigo_de_erro[0] ; 8.630 ;       ;       ; 8.630 ;
+; Cor_valida    ; Codigo_de_erro[1] ;       ; 8.875 ; 8.875 ;       ;
+; Magenta       ; Saida_magenta     ;       ; 6.308 ; 6.308 ;       ;
+; Preto         ; Saida_preto       ;       ; 8.870 ; 8.870 ;       ;
 +---------------+-------------------+-------+-------+-------+-------+
 
 
@@ -366,7 +366,7 @@ No paths to report.
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; Clock ; 0.418 ; 0.000         ;
+; Clock ; 0.411 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -405,22 +405,22 @@ No paths to report.
 +-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
-; 0.418 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.614      ;
-; 0.420 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.612      ;
-; 0.464 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.568      ;
-; 0.465 ; estado.verifica ; estado.pigmento ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.567      ;
-; 0.472 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.560      ;
-; 0.510 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.522      ;
-; 0.561 ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.471      ;
+; 0.411 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.621      ;
+; 0.414 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.618      ;
+; 0.463 ; estado.verifica ; estado.pigmento ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.569      ;
+; 0.466 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.566      ;
+; 0.467 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.565      ;
+; 0.489 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.543      ;
 ; 0.561 ; estado.mistura  ; estado.valida   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.471      ;
-; 0.587 ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.445      ;
-; 0.622 ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.410      ;
-; 0.635 ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.397      ;
-; 0.636 ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.396      ;
+; 0.585 ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.447      ;
+; 0.615 ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.417      ;
+; 0.631 ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.401      ;
+; 0.633 ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.399      ;
+; 0.634 ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.398      ;
 ; 0.665 ; estado.pigmento ; estado.pigmento ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.367      ;
 ; 0.665 ; estado.espera   ; estado.espera   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.367      ;
-; 0.665 ; estado.pronto   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.367      ;
 ; 0.665 ; estado.mistura  ; estado.mistura  ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; estado.pronto   ; estado.pronto   ; Clock        ; Clock       ; 1.000        ; 0.000      ; 0.367      ;
 +-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -433,18 +433,18 @@ No paths to report.
 ; 0.215 ; estado.mistura  ; estado.mistura  ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; estado.pronto   ; estado.pronto   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; estado.espera   ; estado.espera   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.367      ;
-; 0.244 ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.396      ;
-; 0.245 ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.397      ;
-; 0.258 ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.410      ;
-; 0.293 ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.445      ;
-; 0.319 ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.471      ;
+; 0.246 ; estado.espera   ; estado.verifica ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247 ; estado.valida   ; estado.pronto   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.399      ;
+; 0.249 ; estado.pigmento ; estado.mistura  ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.401      ;
+; 0.265 ; estado.inicio   ; estado.espera   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.417      ;
+; 0.295 ; estado.pronto   ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.447      ;
 ; 0.319 ; estado.mistura  ; estado.valida   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.471      ;
-; 0.370 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.522      ;
-; 0.408 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.560      ;
-; 0.415 ; estado.verifica ; estado.pigmento ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.567      ;
-; 0.416 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.568      ;
-; 0.460 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.612      ;
-; 0.462 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.614      ;
+; 0.391 ; estado.verifica ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.543      ;
+; 0.413 ; estado.valida   ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.565      ;
+; 0.414 ; estado.verifica ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.566      ;
+; 0.417 ; estado.verifica ; estado.pigmento ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.569      ;
+; 0.466 ; estado.erro     ; estado.erro     ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.618      ;
+; 0.469 ; estado.erro     ; estado.inicio   ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.621      ;
 +-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -500,16 +500,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; Amarelo       ; Clock      ; 2.368 ; 2.368 ; Rise       ; Clock           ;
-; Ciano         ; Clock      ; 0.644 ; 0.644 ; Rise       ; Clock           ;
-; Codigo_valido ; Clock      ; 2.064 ; 2.064 ; Rise       ; Clock           ;
-; Cor_valida    ; Clock      ; 2.032 ; 2.032 ; Rise       ; Clock           ;
-; Iniciar       ; Clock      ; 1.696 ; 1.696 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; 2.273 ; 2.273 ; Rise       ; Clock           ;
-; Misturando    ; Clock      ; 1.890 ; 1.890 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; 2.246 ; 2.246 ; Rise       ; Clock           ;
-; Recipiente    ; Clock      ; 1.737 ; 1.737 ; Rise       ; Clock           ;
-; Reset         ; Clock      ; 2.053 ; 2.053 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; 2.151 ; 2.151 ; Rise       ; Clock           ;
+; Ciano         ; Clock      ; 0.136 ; 0.136 ; Rise       ; Clock           ;
+; Codigo_valido ; Clock      ; 2.012 ; 2.012 ; Rise       ; Clock           ;
+; Cor_valida    ; Clock      ; 1.899 ; 1.899 ; Rise       ; Clock           ;
+; Iniciar       ; Clock      ; 1.747 ; 1.747 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; 0.265 ; 0.265 ; Rise       ; Clock           ;
+; Misturando    ; Clock      ; 1.877 ; 1.877 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; 2.114 ; 2.114 ; Rise       ; Clock           ;
+; Recipiente    ; Clock      ; 1.746 ; 1.746 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; 2.071 ; 2.071 ; Rise       ; Clock           ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -518,16 +518,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; Amarelo       ; Clock      ; -2.244 ; -2.244 ; Rise       ; Clock           ;
-; Ciano         ; Clock      ; -0.520 ; -0.520 ; Rise       ; Clock           ;
-; Codigo_valido ; Clock      ; -1.772 ; -1.772 ; Rise       ; Clock           ;
-; Cor_valida    ; Clock      ; -1.824 ; -1.824 ; Rise       ; Clock           ;
-; Iniciar       ; Clock      ; -1.574 ; -1.574 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; -2.149 ; -2.149 ; Rise       ; Clock           ;
-; Misturando    ; Clock      ; -1.755 ; -1.755 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; -2.122 ; -2.122 ; Rise       ; Clock           ;
-; Recipiente    ; Clock      ; -1.478 ; -1.478 ; Rise       ; Clock           ;
-; Reset         ; Clock      ; -1.855 ; -1.855 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; -2.027 ; -2.027 ; Rise       ; Clock           ;
+; Ciano         ; Clock      ; -0.012 ; -0.012 ; Rise       ; Clock           ;
+; Codigo_valido ; Clock      ; -1.720 ; -1.720 ; Rise       ; Clock           ;
+; Cor_valida    ; Clock      ; -1.607 ; -1.607 ; Rise       ; Clock           ;
+; Iniciar       ; Clock      ; -1.623 ; -1.623 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; -0.141 ; -0.141 ; Rise       ; Clock           ;
+; Misturando    ; Clock      ; -1.754 ; -1.754 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; -1.990 ; -1.990 ; Rise       ; Clock           ;
+; Recipiente    ; Clock      ; -1.565 ; -1.565 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; -1.943 ; -1.943 ; Rise       ; Clock           ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -536,19 +536,19 @@ No paths to report.
 +--------------------+------------+-------+-------+------------+-----------------+
 ; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------------+------------+-------+-------+------------+-----------------+
-; Codigo_de_erro[*]  ; Clock      ; 4.010 ; 4.010 ; Rise       ; Clock           ;
-;  Codigo_de_erro[0] ; Clock      ; 3.884 ; 3.884 ; Rise       ; Clock           ;
-;  Codigo_de_erro[1] ; Clock      ; 4.010 ; 4.010 ; Rise       ; Clock           ;
-; Fim                ; Clock      ; 3.679 ; 3.679 ; Rise       ; Clock           ;
-; Habilita_escrita   ; Clock      ; 3.548 ; 3.548 ; Rise       ; Clock           ;
-; Habilita_mistura   ; Clock      ; 3.604 ; 3.604 ; Rise       ; Clock           ;
-; Habilita_pigmento  ; Clock      ; 3.606 ; 3.606 ; Rise       ; Clock           ;
-; Saida_amarelo      ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-; Saida_ciano        ; Clock      ; 3.972 ; 3.972 ; Rise       ; Clock           ;
-; Saida_magenta      ; Clock      ; 4.019 ; 4.019 ; Rise       ; Clock           ;
-; Saida_misturando   ; Clock      ; 3.604 ; 3.604 ; Rise       ; Clock           ;
-; Saida_preto        ; Clock      ; 3.858 ; 3.858 ; Rise       ; Clock           ;
-; Saida_reset        ; Clock      ; 3.575 ; 3.575 ; Rise       ; Clock           ;
+; Codigo_de_erro[*]  ; Clock      ; 4.044 ; 4.044 ; Rise       ; Clock           ;
+;  Codigo_de_erro[0] ; Clock      ; 3.958 ; 3.958 ; Rise       ; Clock           ;
+;  Codigo_de_erro[1] ; Clock      ; 4.044 ; 4.044 ; Rise       ; Clock           ;
+; Fim                ; Clock      ; 3.582 ; 3.582 ; Rise       ; Clock           ;
+; Habilita_escrita   ; Clock      ; 3.650 ; 3.650 ; Rise       ; Clock           ;
+; Habilita_mistura   ; Clock      ; 3.591 ; 3.591 ; Rise       ; Clock           ;
+; Habilita_pigmento  ; Clock      ; 3.620 ; 3.620 ; Rise       ; Clock           ;
+; Saida_amarelo      ; Clock      ; 3.902 ; 3.902 ; Rise       ; Clock           ;
+; Saida_ciano        ; Clock      ; 3.969 ; 3.969 ; Rise       ; Clock           ;
+; Saida_magenta      ; Clock      ; 3.900 ; 3.900 ; Rise       ; Clock           ;
+; Saida_misturando   ; Clock      ; 3.581 ; 3.581 ; Rise       ; Clock           ;
+; Saida_preto        ; Clock      ; 3.894 ; 3.894 ; Rise       ; Clock           ;
+; Saida_reset        ; Clock      ; 3.585 ; 3.585 ; Rise       ; Clock           ;
 +--------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -557,19 +557,19 @@ No paths to report.
 +--------------------+------------+-------+-------+------------+-----------------+
 ; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------------+------------+-------+-------+------------+-----------------+
-; Codigo_de_erro[*]  ; Clock      ; 3.884 ; 3.884 ; Rise       ; Clock           ;
-;  Codigo_de_erro[0] ; Clock      ; 3.884 ; 3.884 ; Rise       ; Clock           ;
-;  Codigo_de_erro[1] ; Clock      ; 4.010 ; 4.010 ; Rise       ; Clock           ;
-; Fim                ; Clock      ; 3.679 ; 3.679 ; Rise       ; Clock           ;
-; Habilita_escrita   ; Clock      ; 3.548 ; 3.548 ; Rise       ; Clock           ;
-; Habilita_mistura   ; Clock      ; 3.604 ; 3.604 ; Rise       ; Clock           ;
-; Habilita_pigmento  ; Clock      ; 3.606 ; 3.606 ; Rise       ; Clock           ;
-; Saida_amarelo      ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-; Saida_ciano        ; Clock      ; 3.972 ; 3.972 ; Rise       ; Clock           ;
-; Saida_magenta      ; Clock      ; 4.019 ; 4.019 ; Rise       ; Clock           ;
-; Saida_misturando   ; Clock      ; 3.604 ; 3.604 ; Rise       ; Clock           ;
-; Saida_preto        ; Clock      ; 3.858 ; 3.858 ; Rise       ; Clock           ;
-; Saida_reset        ; Clock      ; 3.575 ; 3.575 ; Rise       ; Clock           ;
+; Codigo_de_erro[*]  ; Clock      ; 3.958 ; 3.958 ; Rise       ; Clock           ;
+;  Codigo_de_erro[0] ; Clock      ; 3.958 ; 3.958 ; Rise       ; Clock           ;
+;  Codigo_de_erro[1] ; Clock      ; 4.044 ; 4.044 ; Rise       ; Clock           ;
+; Fim                ; Clock      ; 3.582 ; 3.582 ; Rise       ; Clock           ;
+; Habilita_escrita   ; Clock      ; 3.650 ; 3.650 ; Rise       ; Clock           ;
+; Habilita_mistura   ; Clock      ; 3.591 ; 3.591 ; Rise       ; Clock           ;
+; Habilita_pigmento  ; Clock      ; 3.620 ; 3.620 ; Rise       ; Clock           ;
+; Saida_amarelo      ; Clock      ; 3.902 ; 3.902 ; Rise       ; Clock           ;
+; Saida_ciano        ; Clock      ; 3.969 ; 3.969 ; Rise       ; Clock           ;
+; Saida_magenta      ; Clock      ; 3.900 ; 3.900 ; Rise       ; Clock           ;
+; Saida_misturando   ; Clock      ; 3.581 ; 3.581 ; Rise       ; Clock           ;
+; Saida_preto        ; Clock      ; 3.894 ; 3.894 ; Rise       ; Clock           ;
+; Saida_reset        ; Clock      ; 3.585 ; 3.585 ; Rise       ; Clock           ;
 +--------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -578,14 +578,14 @@ No paths to report.
 +---------------+-------------------+-------+-------+-------+-------+
 ; Input Port    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
 +---------------+-------------------+-------+-------+-------+-------+
-; Amarelo       ; Saida_amarelo     ; 5.128 ;       ;       ; 5.128 ;
-; Ciano         ; Saida_ciano       ; 3.400 ;       ;       ; 3.400 ;
-; Codigo_valido ; Codigo_de_erro[0] ;       ; 5.038 ; 5.038 ;       ;
-; Codigo_valido ; Codigo_de_erro[1] ; 5.164 ;       ;       ; 5.164 ;
-; Cor_valida    ; Codigo_de_erro[0] ; 5.149 ;       ;       ; 5.149 ;
-; Cor_valida    ; Codigo_de_erro[1] ;       ; 5.268 ; 5.268 ;       ;
-; Magenta       ; Saida_magenta     ; 4.975 ;       ;       ; 4.975 ;
-; Preto         ; Saida_preto       ; 4.962 ;       ;       ; 4.962 ;
+; Amarelo       ; Saida_amarelo     ;       ; 5.002 ; 5.002 ;       ;
+; Ciano         ; Saida_ciano       ;       ; 3.324 ; 3.324 ;       ;
+; Codigo_valido ; Codigo_de_erro[0] ;       ; 5.052 ; 5.052 ;       ;
+; Codigo_valido ; Codigo_de_erro[1] ; 5.147 ;       ;       ; 5.147 ;
+; Cor_valida    ; Codigo_de_erro[0] ; 4.907 ;       ;       ; 4.907 ;
+; Cor_valida    ; Codigo_de_erro[1] ;       ; 4.991 ; 4.991 ;       ;
+; Magenta       ; Saida_magenta     ;       ; 3.257 ; 3.257 ;       ;
+; Preto         ; Saida_preto       ;       ; 5.004 ; 5.004 ;       ;
 +---------------+-------------------+-------+-------+-------+-------+
 
 
@@ -594,14 +594,14 @@ No paths to report.
 +---------------+-------------------+-------+-------+-------+-------+
 ; Input Port    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
 +---------------+-------------------+-------+-------+-------+-------+
-; Amarelo       ; Saida_amarelo     ; 5.128 ;       ;       ; 5.128 ;
-; Ciano         ; Saida_ciano       ; 3.400 ;       ;       ; 3.400 ;
-; Codigo_valido ; Codigo_de_erro[0] ;       ; 5.038 ; 5.038 ;       ;
-; Codigo_valido ; Codigo_de_erro[1] ; 5.164 ;       ;       ; 5.164 ;
-; Cor_valida    ; Codigo_de_erro[0] ; 5.149 ;       ;       ; 5.149 ;
-; Cor_valida    ; Codigo_de_erro[1] ;       ; 5.268 ; 5.268 ;       ;
-; Magenta       ; Saida_magenta     ; 4.975 ;       ;       ; 4.975 ;
-; Preto         ; Saida_preto       ; 4.962 ;       ;       ; 4.962 ;
+; Amarelo       ; Saida_amarelo     ;       ; 5.002 ; 5.002 ;       ;
+; Ciano         ; Saida_ciano       ;       ; 3.324 ; 3.324 ;       ;
+; Codigo_valido ; Codigo_de_erro[0] ;       ; 5.052 ; 5.052 ;       ;
+; Codigo_valido ; Codigo_de_erro[1] ; 5.147 ;       ;       ; 5.147 ;
+; Cor_valida    ; Codigo_de_erro[0] ; 4.907 ;       ;       ; 4.907 ;
+; Cor_valida    ; Codigo_de_erro[1] ;       ; 4.991 ; 4.991 ;       ;
+; Magenta       ; Saida_magenta     ;       ; 3.257 ; 3.257 ;       ;
+; Preto         ; Saida_preto       ;       ; 5.004 ; 5.004 ;       ;
 +---------------+-------------------+-------+-------+-------+-------+
 
 
@@ -610,10 +610,10 @@ No paths to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.294 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
-;  Clock           ; -0.294 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
-; Design-wide TNS  ; -0.752 ; 0.0   ; 0.0      ; 0.0     ; -9.38               ;
-;  Clock           ; -0.752 ; 0.000 ; N/A      ; N/A     ; -9.380              ;
+; Worst-case Slack ; -0.307 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  Clock           ; -0.307 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -0.774 ; 0.0   ; 0.0      ; 0.0     ; -9.38               ;
+;  Clock           ; -0.774 ; 0.000 ; N/A      ; N/A     ; -9.380              ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -622,16 +622,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; Amarelo       ; Clock      ; 4.532 ; 4.532 ; Rise       ; Clock           ;
-; Ciano         ; Clock      ; 1.913 ; 1.913 ; Rise       ; Clock           ;
-; Codigo_valido ; Clock      ; 3.896 ; 3.896 ; Rise       ; Clock           ;
-; Cor_valida    ; Clock      ; 3.856 ; 3.856 ; Rise       ; Clock           ;
-; Iniciar       ; Clock      ; 3.105 ; 3.105 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; 4.406 ; 4.406 ; Rise       ; Clock           ;
-; Misturando    ; Clock      ; 3.481 ; 3.481 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; 4.280 ; 4.280 ; Rise       ; Clock           ;
-; Recipiente    ; Clock      ; 3.151 ; 3.151 ; Rise       ; Clock           ;
-; Reset         ; Clock      ; 3.854 ; 3.854 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; 4.085 ; 4.085 ; Rise       ; Clock           ;
+; Ciano         ; Clock      ; 0.980 ; 0.980 ; Rise       ; Clock           ;
+; Codigo_valido ; Clock      ; 3.815 ; 3.815 ; Rise       ; Clock           ;
+; Cor_valida    ; Clock      ; 3.551 ; 3.551 ; Rise       ; Clock           ;
+; Iniciar       ; Clock      ; 3.157 ; 3.157 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; 1.239 ; 1.239 ; Rise       ; Clock           ;
+; Misturando    ; Clock      ; 3.443 ; 3.443 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; 3.959 ; 3.959 ; Rise       ; Clock           ;
+; Recipiente    ; Clock      ; 3.182 ; 3.182 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; 3.917 ; 3.917 ; Rise       ; Clock           ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -640,16 +640,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; Amarelo       ; Clock      ; -2.244 ; -2.244 ; Rise       ; Clock           ;
-; Ciano         ; Clock      ; -0.520 ; -0.520 ; Rise       ; Clock           ;
-; Codigo_valido ; Clock      ; -1.772 ; -1.772 ; Rise       ; Clock           ;
-; Cor_valida    ; Clock      ; -1.824 ; -1.824 ; Rise       ; Clock           ;
-; Iniciar       ; Clock      ; -1.574 ; -1.574 ; Rise       ; Clock           ;
-; Magenta       ; Clock      ; -2.149 ; -2.149 ; Rise       ; Clock           ;
-; Misturando    ; Clock      ; -1.755 ; -1.755 ; Rise       ; Clock           ;
-; Preto         ; Clock      ; -2.122 ; -2.122 ; Rise       ; Clock           ;
-; Recipiente    ; Clock      ; -1.478 ; -1.478 ; Rise       ; Clock           ;
-; Reset         ; Clock      ; -1.855 ; -1.855 ; Rise       ; Clock           ;
+; Amarelo       ; Clock      ; -2.027 ; -2.027 ; Rise       ; Clock           ;
+; Ciano         ; Clock      ; -0.012 ; -0.012 ; Rise       ; Clock           ;
+; Codigo_valido ; Clock      ; -1.720 ; -1.720 ; Rise       ; Clock           ;
+; Cor_valida    ; Clock      ; -1.607 ; -1.607 ; Rise       ; Clock           ;
+; Iniciar       ; Clock      ; -1.623 ; -1.623 ; Rise       ; Clock           ;
+; Magenta       ; Clock      ; -0.141 ; -0.141 ; Rise       ; Clock           ;
+; Misturando    ; Clock      ; -1.754 ; -1.754 ; Rise       ; Clock           ;
+; Preto         ; Clock      ; -1.990 ; -1.990 ; Rise       ; Clock           ;
+; Recipiente    ; Clock      ; -1.565 ; -1.565 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; -1.943 ; -1.943 ; Rise       ; Clock           ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -658,19 +658,19 @@ No paths to report.
 +--------------------+------------+-------+-------+------------+-----------------+
 ; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------------+------------+-------+-------+------------+-----------------+
-; Codigo_de_erro[*]  ; Clock      ; 7.271 ; 7.271 ; Rise       ; Clock           ;
-;  Codigo_de_erro[0] ; Clock      ; 6.990 ; 6.990 ; Rise       ; Clock           ;
-;  Codigo_de_erro[1] ; Clock      ; 7.271 ; 7.271 ; Rise       ; Clock           ;
-; Fim                ; Clock      ; 6.555 ; 6.555 ; Rise       ; Clock           ;
-; Habilita_escrita   ; Clock      ; 6.264 ; 6.264 ; Rise       ; Clock           ;
-; Habilita_mistura   ; Clock      ; 6.381 ; 6.381 ; Rise       ; Clock           ;
-; Habilita_pigmento  ; Clock      ; 6.401 ; 6.401 ; Rise       ; Clock           ;
-; Saida_amarelo      ; Clock      ; 6.969 ; 6.969 ; Rise       ; Clock           ;
-; Saida_ciano        ; Clock      ; 7.240 ; 7.240 ; Rise       ; Clock           ;
-; Saida_magenta      ; Clock      ; 7.309 ; 7.309 ; Rise       ; Clock           ;
-; Saida_misturando   ; Clock      ; 6.381 ; 6.381 ; Rise       ; Clock           ;
-; Saida_preto        ; Clock      ; 6.976 ; 6.976 ; Rise       ; Clock           ;
-; Saida_reset        ; Clock      ; 6.349 ; 6.349 ; Rise       ; Clock           ;
+; Codigo_de_erro[*]  ; Clock      ; 7.414 ; 7.414 ; Rise       ; Clock           ;
+;  Codigo_de_erro[0] ; Clock      ; 7.166 ; 7.166 ; Rise       ; Clock           ;
+;  Codigo_de_erro[1] ; Clock      ; 7.414 ; 7.414 ; Rise       ; Clock           ;
+; Fim                ; Clock      ; 6.366 ; 6.366 ; Rise       ; Clock           ;
+; Habilita_escrita   ; Clock      ; 6.432 ; 6.432 ; Rise       ; Clock           ;
+; Habilita_mistura   ; Clock      ; 6.372 ; 6.372 ; Rise       ; Clock           ;
+; Habilita_pigmento  ; Clock      ; 6.398 ; 6.398 ; Rise       ; Clock           ;
+; Saida_amarelo      ; Clock      ; 7.095 ; 7.095 ; Rise       ; Clock           ;
+; Saida_ciano        ; Clock      ; 7.072 ; 7.072 ; Rise       ; Clock           ;
+; Saida_magenta      ; Clock      ; 7.021 ; 7.021 ; Rise       ; Clock           ;
+; Saida_misturando   ; Clock      ; 6.362 ; 6.362 ; Rise       ; Clock           ;
+; Saida_preto        ; Clock      ; 7.096 ; 7.096 ; Rise       ; Clock           ;
+; Saida_reset        ; Clock      ; 6.245 ; 6.245 ; Rise       ; Clock           ;
 +--------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -679,19 +679,19 @@ No paths to report.
 +--------------------+------------+-------+-------+------------+-----------------+
 ; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------------+------------+-------+-------+------------+-----------------+
-; Codigo_de_erro[*]  ; Clock      ; 3.884 ; 3.884 ; Rise       ; Clock           ;
-;  Codigo_de_erro[0] ; Clock      ; 3.884 ; 3.884 ; Rise       ; Clock           ;
-;  Codigo_de_erro[1] ; Clock      ; 4.010 ; 4.010 ; Rise       ; Clock           ;
-; Fim                ; Clock      ; 3.679 ; 3.679 ; Rise       ; Clock           ;
-; Habilita_escrita   ; Clock      ; 3.548 ; 3.548 ; Rise       ; Clock           ;
-; Habilita_mistura   ; Clock      ; 3.604 ; 3.604 ; Rise       ; Clock           ;
-; Habilita_pigmento  ; Clock      ; 3.606 ; 3.606 ; Rise       ; Clock           ;
-; Saida_amarelo      ; Clock      ; 3.842 ; 3.842 ; Rise       ; Clock           ;
-; Saida_ciano        ; Clock      ; 3.972 ; 3.972 ; Rise       ; Clock           ;
-; Saida_magenta      ; Clock      ; 4.019 ; 4.019 ; Rise       ; Clock           ;
-; Saida_misturando   ; Clock      ; 3.604 ; 3.604 ; Rise       ; Clock           ;
-; Saida_preto        ; Clock      ; 3.858 ; 3.858 ; Rise       ; Clock           ;
-; Saida_reset        ; Clock      ; 3.575 ; 3.575 ; Rise       ; Clock           ;
+; Codigo_de_erro[*]  ; Clock      ; 3.958 ; 3.958 ; Rise       ; Clock           ;
+;  Codigo_de_erro[0] ; Clock      ; 3.958 ; 3.958 ; Rise       ; Clock           ;
+;  Codigo_de_erro[1] ; Clock      ; 4.044 ; 4.044 ; Rise       ; Clock           ;
+; Fim                ; Clock      ; 3.582 ; 3.582 ; Rise       ; Clock           ;
+; Habilita_escrita   ; Clock      ; 3.650 ; 3.650 ; Rise       ; Clock           ;
+; Habilita_mistura   ; Clock      ; 3.591 ; 3.591 ; Rise       ; Clock           ;
+; Habilita_pigmento  ; Clock      ; 3.620 ; 3.620 ; Rise       ; Clock           ;
+; Saida_amarelo      ; Clock      ; 3.902 ; 3.902 ; Rise       ; Clock           ;
+; Saida_ciano        ; Clock      ; 3.969 ; 3.969 ; Rise       ; Clock           ;
+; Saida_magenta      ; Clock      ; 3.900 ; 3.900 ; Rise       ; Clock           ;
+; Saida_misturando   ; Clock      ; 3.581 ; 3.581 ; Rise       ; Clock           ;
+; Saida_preto        ; Clock      ; 3.894 ; 3.894 ; Rise       ; Clock           ;
+; Saida_reset        ; Clock      ; 3.585 ; 3.585 ; Rise       ; Clock           ;
 +--------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -700,14 +700,14 @@ No paths to report.
 +---------------+-------------------+-------+-------+-------+-------+
 ; Input Port    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
 +---------------+-------------------+-------+-------+-------+-------+
-; Amarelo       ; Saida_amarelo     ; 9.128 ;       ;       ; 9.128 ;
-; Ciano         ; Saida_ciano       ; 6.473 ;       ;       ; 6.473 ;
-; Codigo_valido ; Codigo_de_erro[0] ;       ; 8.923 ; 8.923 ;       ;
-; Codigo_valido ; Codigo_de_erro[1] ; 9.208 ;       ;       ; 9.208 ;
-; Cor_valida    ; Codigo_de_erro[0] ; 9.191 ;       ;       ; 9.191 ;
-; Cor_valida    ; Codigo_de_erro[1] ;       ; 9.452 ; 9.452 ;       ;
-; Magenta       ; Saida_magenta     ; 8.826 ;       ;       ; 8.826 ;
-; Preto         ; Saida_preto       ; 8.721 ;       ;       ; 8.721 ;
+; Amarelo       ; Saida_amarelo     ;       ; 8.880 ; 8.880 ;       ;
+; Ciano         ; Saida_ciano       ;       ; 6.351 ; 6.351 ;       ;
+; Codigo_valido ; Codigo_de_erro[0] ;       ; 8.981 ; 8.981 ;       ;
+; Codigo_valido ; Codigo_de_erro[1] ; 9.235 ;       ;       ; 9.235 ;
+; Cor_valida    ; Codigo_de_erro[0] ; 8.630 ;       ;       ; 8.630 ;
+; Cor_valida    ; Codigo_de_erro[1] ;       ; 8.875 ; 8.875 ;       ;
+; Magenta       ; Saida_magenta     ;       ; 6.308 ; 6.308 ;       ;
+; Preto         ; Saida_preto       ;       ; 8.870 ; 8.870 ;       ;
 +---------------+-------------------+-------+-------+-------+-------+
 
 
@@ -716,14 +716,14 @@ No paths to report.
 +---------------+-------------------+-------+-------+-------+-------+
 ; Input Port    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
 +---------------+-------------------+-------+-------+-------+-------+
-; Amarelo       ; Saida_amarelo     ; 5.128 ;       ;       ; 5.128 ;
-; Ciano         ; Saida_ciano       ; 3.400 ;       ;       ; 3.400 ;
-; Codigo_valido ; Codigo_de_erro[0] ;       ; 5.038 ; 5.038 ;       ;
-; Codigo_valido ; Codigo_de_erro[1] ; 5.164 ;       ;       ; 5.164 ;
-; Cor_valida    ; Codigo_de_erro[0] ; 5.149 ;       ;       ; 5.149 ;
-; Cor_valida    ; Codigo_de_erro[1] ;       ; 5.268 ; 5.268 ;       ;
-; Magenta       ; Saida_magenta     ; 4.975 ;       ;       ; 4.975 ;
-; Preto         ; Saida_preto       ; 4.962 ;       ;       ; 4.962 ;
+; Amarelo       ; Saida_amarelo     ;       ; 5.002 ; 5.002 ;       ;
+; Ciano         ; Saida_ciano       ;       ; 3.324 ; 3.324 ;       ;
+; Codigo_valido ; Codigo_de_erro[0] ;       ; 5.052 ; 5.052 ;       ;
+; Codigo_valido ; Codigo_de_erro[1] ; 5.147 ;       ;       ; 5.147 ;
+; Cor_valida    ; Codigo_de_erro[0] ; 4.907 ;       ;       ; 4.907 ;
+; Cor_valida    ; Codigo_de_erro[1] ;       ; 4.991 ; 4.991 ;       ;
+; Magenta       ; Saida_magenta     ;       ; 3.257 ; 3.257 ;       ;
+; Preto         ; Saida_preto       ;       ; 5.004 ; 5.004 ;       ;
 +---------------+-------------------+-------+-------+-------+-------+
 
 
@@ -779,7 +779,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 25 16:16:26 2023
+    Info: Processing started: Fri Dec 01 15:42:53 2023
 Info: Command: quartus_sta Controladora -c Controladora
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -792,10 +792,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.294
+Info (332146): Worst-case setup slack is -0.307
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.294        -0.752 Clock 
+    Info (332119):    -0.307        -0.774 Clock 
 Info (332146): Worst-case hold slack is 0.391
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -808,10 +808,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):    -1.380        -9.380 Clock 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.418
+Info (332146): Worst-case setup slack is 0.411
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.418         0.000 Clock 
+    Info (332119):     0.411         0.000 Clock 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -828,7 +828,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4531 megabytes
-    Info: Processing ended: Sat Nov 25 16:16:28 2023
+    Info: Processing ended: Fri Dec 01 15:42:55 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

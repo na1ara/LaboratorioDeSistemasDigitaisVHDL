@@ -11,5 +11,5 @@ end multiplicador;
 
 architecture Behavioral of multiplicador is
 begin
-    Produto <= std_logic_vector(unsigned(A) * 100);  
+    Produto <= std_logic_vector(unsigned(A) * 1);  
 end Behavioral;

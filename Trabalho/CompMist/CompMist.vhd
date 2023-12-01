@@ -16,7 +16,7 @@ end CompMist;
 architecture comp of CompMist is
 begin
 
-		menor <= '1' when unsigned(b) < 100 else
+		menor <= '1' when unsigned(b) < 10 else
 		'0';
 
 end comp;

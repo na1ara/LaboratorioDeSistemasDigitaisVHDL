@@ -60,10 +60,10 @@ begin
 						end if;
 					end if;
 				when pigmento =>
-					if(Ciano = '1' or Magenta = '1' or Amarelo = '1' or Preto = '1') then
-						estado <= pigmento;
-					else 
+					if(Ciano = '1' and Magenta = '1' and Amarelo = '1' and Preto = '1') then
 						estado <= mistura;
+					else 
+						estado <= pigmento;
 					end if;
 				when mistura =>
 					if (Misturando = '1') then
@@ -95,7 +95,7 @@ begin
 	
 
 	
-	process (estado)
+	process (estado, Ciano, Magenta, Amarelo, Preto)
 	begin
 		case estado is
 			when inicio =>
@@ -139,10 +139,10 @@ begin
 				Habilita_pigmento <=  '1';
 				Habilita_mistura <=  '0';
 				Saida_reset <=  '0';
-				Saida_ciano <=  Ciano;
-				Saida_magenta <=  Magenta;
-				Saida_amarelo <=  Amarelo;
-				Saida_preto <=  Preto;
+				Saida_ciano <=  not(Ciano);
+				Saida_magenta <=  not(Magenta);
+				Saida_amarelo <=  not(Amarelo);
+				Saida_preto <=  not(Preto);
 				Saida_misturando <=  '0';
 				Fim <=  '0';
 				Codigo_de_erro <=  x"0000";

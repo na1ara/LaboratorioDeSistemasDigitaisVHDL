@@ -1,0 +1,69 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_dados is 
+end tb_dados;
+
+architecture teste of tb_dados is
+
+	component CaminhoDados is
+		 port
+		(
+			Sensor_de_cor :  in  std_logic_vector(31 DOWNTO 0);
+			Codigo_de_cor :  in  std_logic_vector(31 DOWNTO 0);
+			Clock : in std_logic;
+			Reset : in std_logic;
+			Habilita_escrita : in std_logic;
+			Habilita_pigmento : in std_logic;
+			Habilita_mistura : in std_logic;
+			
+			Misturando :  out  std_logic;
+			Ciano :  out  std_logic;
+			Magenta :  out  std_logic;
+			Amarelo :  out  std_logic;
+			Preto :  out  std_logic;
+			Codigo_valido :  out  std_logic;
+			Cor_valida :  out  std_logic;
+			Codigo_cor_misturada :  out  std_logic_vector(31 DOWNTO 0)
+		);
+	end component;
+	
+	signal clk: std_logic := '0';
+	signal fioReset: std_logic := '1';
+	signal fioEscrita, fioPigmento, fioHabMist, fioCiano, fioMagenta, 
+	fioAmarelo, fioPreto, fioMist, fioCodValido, fioCorValida: std_logic;
+	signal fioSensor, fioCod, fioCodMist: std_logic_vector(31 DOWNTO 0);
+	
+begin
+
+		instance_dados: CaminhoDados 
+			port map 
+			(
+				Clock => clk,
+				Reset => fioReset,
+				Habilita_escrita => fioEscrita,
+				Habilita_pigmento => fioPigmento,
+				Habilita_mistura => fioHabMist,
+				Sensor_de_cor => fioSensor,
+				Codigo_de_cor => fioCod,
+				Misturando => fioMist,
+				Codigo_cor_misturada => fioCodMist,
+				Ciano => fioCiano,
+				Magenta => fioMagenta,
+				Amarelo => fioAmarelo,
+				Preto => fioPreto,
+				Codigo_valido => fioCodValido,
+				Cor_valida => fioCorValida,
+				Codigo_cor_misturada => fioCodMist
+			);
+		
+		
+		clk <= not clk after 1 ns;
+		fioReset <= '0' after 2 ns, '1' after 10 ns, '0' after 12 ns;
+		fioEscrita <= '0', '1' after 2 ns, '0' after 4 ns, '1' after '8' ns;
+		fioCod <= x"00000000", x"5f7260f9" after 2 ns, x"02050301" after 8 ns;
+		fioSensor <= x"00000000", x"02050301" after 5 ns;
+		fioPigmento <= '0', '1' after 10 ns;
+		fioHabMist <= '0', '1', after 5 ns;		
+end teste;

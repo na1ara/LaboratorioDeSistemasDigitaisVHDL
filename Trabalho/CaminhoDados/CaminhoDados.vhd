@@ -113,22 +113,22 @@ architecture dados of CaminhoDados is
 		instance_RegC: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(31 downto 24), Q => fioC);
 		instance_MultC: multiplicador port map (A => fioC, Produto => fioCMult);
 		instance_ContC: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContC);
-		instance_CompC: comparador port map (a => fioCMult, b => fioContC, maior => Ciano);
+		instance_CompC: comparador port map (a => fioCMult, b => fioContC, menor => Ciano);
 	--Magenta
 		instance_RegM: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(23 downto 16), Q => fioM);
 		instance_MultM: multiplicador port map (A => fioM, Produto => fioMMult);
 		instance_ContM: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContM);
-		instance_CompM: comparador port map (a => fioMMult, b => fioContM, maior => Magenta);
+		instance_CompM: comparador port map (a => fioMMult, b => fioContM, menor => Magenta);
 	--Amarelo
 		instance_RegY: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(15 downto 8), Q => fioY);
 		instance_MultY: multiplicador port map (A => fioY, Produto => fioYMult);
 		instance_ContY: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContY);
-		instance_CompY: comparador port map (a => fioYMult, b => fioContY, maior => Amarelo);
+		instance_CompY: comparador port map (a => fioYMult, b => fioContY, menor => Amarelo);
 	--Preto
 		instance_RegK: Reg generic map (W => 8) port map (clock => Clock, reset => Reset, load => Habilita_escrita, D => Codigo_de_cor(7 downto 0), Q => fioK);
 		instance_MulTK: multiplicador port map (A => fioK, Produto => fioKMult);
 		instance_ContK: contador port map (Clock => Clock, Reset => Reset, E => Habilita_pigmento, Q => fioContK);
-		instance_CompK: comparador port map (a => fioKMult, b => fioContK, maior => Preto);
+		instance_CompK: comparador port map (a => fioKMult, b => fioContK, menor => Preto);
 	--CodValido
 		instance_CodValid: CodValido port map (cod => Codigo_de_cor, valido => Codigo_valido);
 	--Comparador
@@ -136,5 +136,9 @@ architecture dados of CaminhoDados is
 	--Misturador
 		instance_compmist: CompMist port map (b => fioContMist, menor => Misturando);
 		instance_contmist: contador port map (Clock => Clock, Reset => Reset, E => Habilita_mistura, Q => fioContMist);
-
+		
+		Codigo_cor_misturada(31 downto 24) <= (fioC);
+		Codigo_cor_misturada(23 downto 16) <= (fioM);
+		Codigo_cor_misturada(15 downto 8) <= (fioY); 
+		Codigo_cor_misturada(7 downto 0) <= (fioK);
 end dados;

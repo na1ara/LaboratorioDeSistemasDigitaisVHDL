@@ -1,9 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="CaminhoDados">
-		<CBX_INST_ENTRY INSTANCE_NAME="|CaminhoDados|multiplicador:instance_MulTK|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2ch.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|CaminhoDados|multiplicador:instance_MultC|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2ch.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|CaminhoDados|multiplicador:instance_MultM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2ch.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|CaminhoDados|multiplicador:instance_MultY|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2ch.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

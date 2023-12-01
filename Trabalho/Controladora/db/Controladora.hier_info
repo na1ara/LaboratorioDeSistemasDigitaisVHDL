@@ -10,7 +10,6 @@ Recipiente => Selector4.IN2
 Recipiente => Selector0.IN2
 Misturando => Selector3.IN3
 Misturando => estado.DATAB
-Pigmento_adicionado => ~NO_FANOUT~
 Codigo_valido => process_1.IN0
 Codigo_valido => estado.OUTPUTSELECT
 Codigo_valido => estado.OUTPUTSELECT
