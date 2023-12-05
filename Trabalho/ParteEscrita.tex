@@ -9,9 +9,10 @@
 \usepackage{indentfirst} % identa primeiro parágrafo % 
 \usepackage{graphicx} %incluir figuras
 \usepackage{lastpage} %para obter o número da última página
+\usepackage{float}
 \pagenumbering{arabic} %Numeração de página
 
-\author{Bernardo, Luiz Henrique Gariglio dos Santos, Naiara Barcelos Silveira}
+\author{Bernardo Euclides Faria Gomes, Luiz Henrique Gariglio dos Santos, Naiara Barcelos Silveira}
 \title{PROJETO MISTURADOR DE TINTA} 
 \date{2023}
 \instituicao{UNIVERSIDADE FEDERAL DE MINAS GERAIS\\Escola de Engenharia}
@@ -24,7 +25,7 @@
 		\begin{center}
             \begin{figure}[h]
 				\centering
-				\includegraphics[width=0.4\textwidth]{principal_completa_ufmg}
+				\includegraphics[width=0.4\textwidth]{Imagens/principal_completa_ufmg}
 				\label{fig:principalcompletaufmg}
 			\end{figure}
             \vspace{4cm}
@@ -44,8 +45,7 @@
     	\hspace{.45 \textwidth} % posicionando a minipage
     	\begin{minipage}{.5\textwidth}
     		\imprimirpreambulo \\ \\
-    		\imprimirorientadorRotulo \imprimirorientador \\ \\
-    		\imprimircoorientadorRotulo \imprimircoorientador
+    	  \imprimirorientador \\ \\
     	\end{minipage}
     	\center
     	\vfill
@@ -88,10 +88,10 @@
         
 	\chapter{PROJETO}
         \section{Funcionamento Desejado}
-            A máquina deverá receber do usuário um código referente à cor desejada por ele, e então, por meio da liberação de pigmentos e mistura da tinta, deverá manipular uma lata de tinta inicialmente branca a fim de transformá-la em uma lata de tinta da cor desejada. \par
+            A máquina (figura \ref{fig:geral}) deverá receber do usuário um código referente à cor desejada por ele, e então, por meio da liberação de pigmentos e mistura da tinta, deverá manipular uma lata de tinta inicialmente branca a fim de transformá-la em uma lata de tinta da cor desejada. \par
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=10cm]{diagramaCores.jpg}
+                \includegraphics[width=10cm]{Imagens/diagramaCores.jpg}
                 \caption{Figura 1: Diferença entre CMYK e RGB.}
                 \label{fig:cores}
             \end{figure}
@@ -105,65 +105,187 @@
             Após a adição de pigmento, o processo entra no estado de mistura. A partir da agitação da lata, os pigmentos são misturados na tinta. Esse processo também será representado com um led aceso.\par
             Seguinte à mistura, a máquina deve verificar se o resultado obtido do processo é igual ao resultado desejado pelo usuário, sendo assim, inicia-se o estado de verificação. Na prática, isso seria feito a partir de um sensor de cor e a comparação do código de entrada e o código retornado pelo sensor. Nesse trabalho, usaremos apenas para teste com códigos inseridos manualmente. Caso os códigos batam, a máquina segue para o estado de pronto. No caso de ter sido obtido um resultado indesejado, inicia-se o estado de erro, que dá a mesma tratativa já descrita após o processo de validação.\par
             No último estágio do ciclo, tem-se a tinta pronta. Esse estado aguarda que a lata de tinta seja retirada do local reservado, para que o ciclo possa ser reiniciado.\par
-            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = 1\textwidth]{Imagens/Geral.png}
+                \caption{Diagrama do misturador de tinta}
+                \label{fig:geral}
+            \end{figure}
+
+        
+        \section{Máquina de Estados Finitos}
+            A FSM (figura\ref{fig:FSM}) foi projetada com 8 estados:
+            \begin{itemize}
+                \item Início - Responsável por enviar o sinal de "reset" aos registradores e contadores;
+                \item Espera - Neste estado, é realizada a leitura do código digitado pelo usuário. O máquina permanece em espera até que receba um sinal de que há um recipiente no local e o botão de iniciar seja pressionado;
+                \item Verifica - Ocorre a verificação se o código é válido. Caso o código seja válido, a máquina segue para o estado de pigmentação. Caso contrário, vai para o estado de erro;
+                \item Pigmento - É enviado o sinal para a adição dos respectivos pigmentos de acordo com o código digitado pelo usuário. Uma vez terminado o tempo, a máquina segue para o estado de mistura;
+                \item Mistura - É enviado o sinal para que a mistura da tinta seja realizada. Após o tempo determinado , a máquina segue para o próximo estado;
+                \item Valida - Neste estado ocorre a validação da cor produzida. É comparado o código digitado pelo usuário com o sinal vindo de um sensor de cor. Caso a cor produzida esteja de acordo com a solicitada, segue para o estado de pronto. Se não, segue para o estado de erro;
+                \item Pronto - Indica que a tinta está pronta e espera que o recipiente seja retirado para que uma nova cor possa ser produzida. O estado seguinte é o de início;
+                \item Erro - Envia um sinal de erro e espera que a máquina seja reiniciada.
+            \end{itemize}
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width = .8\textwidth]{Imagens/FSM.png}
+                \caption{Máquina de  Estados Finitos de Alto Nível}
+                \label{fig:FSM}
+            \end{figure}
+            \newpage
+        \section{Caminho de dados}  
+            A imagem abaixo (figura \ref{fig:CaminhoDados}) mostra o caminho de dados projetado para essa aplicação. Os componentes utilizados no projeto são detalhados da seção "Componentes".
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width = 1\textwidth]{Imagens/CaminhoDados.png}
+                \caption{Diagrama de ligação do caminho de dados}
+                \label{fig:CaminhoDados}
+            \end{figure}
         \section{Componentes}
             \subsection{Registrador}
                 O registrador possui uma entrada load, que habilita que o dado seja salvo, uma entrada de reset, uma entrada de dados e uma saída de dados. O tamanho da entrada e da saída foi definido como "generic" para possibilitar o uso do componente em instâncias com tamanhos diferentes.
 
-                \begin{figure}[h!]
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width = .9 \textwidth]{Reg/Reg.png}
+                    \includegraphics[width = 1 \textwidth]{Imagens/Reg/Reg.png}
                     \caption{Código VHDL do registrador}
                     \label{fig:Reg}
                 \end{figure}
 
-                \begin{figure}[h!]
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width = .9 \textwidth]{Reg/tb_Reg.png}
+                    \includegraphics[width = .9 \textwidth]{Imagens/Reg/tb_Reg.png}
                     \caption{Código VHDL do testbench do registrador}
                     \label{fig:tb_Reg}
                 \end{figure}
 
-                \begin{figure}[h!]
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width = .9 \textwidth]{Reg/sim_Reg.png}
+                    \includegraphics[width = .9 \textwidth]{Imagens/Reg/sim_Reg.png}
                     \caption{Resultado da simulação do registrador}
                     \label{fig:sim_Reg}
                 \end{figure}
-                
+
             \subsection{Comparador}
                 O projeto do comparador, possui duas entradas de dados e três saídas, igual, maior e menor. As saídas são mantidas em nível lógico baixo e somente são alteradas caso o resultado da respectiva comparação seja verdadeiro. Do mesmo modo do registrador, o tamanhos da entrada de dados foi definido como "generic".
 
-                \begin{figure}[h!]
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width = .9 \textwidth]{Comp/Comp.png}
+                    \includegraphics[width = .9 \textwidth]{Imagens/Comp/Comp.png}
                     \caption{Código VHDL do comparador}
                     \label{fig:Comp}
                 \end{figure}
 
-                \begin{figure}[h!]
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width = .9 \textwidth]{Comp/tb_Comp.png}
+                    \includegraphics[width = .9 \textwidth]{Imagens/Comp/tb_Comp.png}
                     \caption{Código VHDL do testbench do comparador}
                     \label{fig:tb_Comp}
                 \end{figure}
 
-                \begin{figure}[h!]
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width = .9 \textwidth]{Comp/sim_Comp.png}
+                    \includegraphics[width = .9 \textwidth]{Imagens/Comp/sim_Comp.png}
                     \caption{Resultado da simulação do comparador}
                     \label{fig:sim_Comp}
                 \end{figure}
+
             \subsection{CodValido}
                 Este componente é o responsável por verificar a validade do código. Possui uma entrada de 32 bits referente ao código da cor e uma saída que indica a validade. O código é no formato da escala CMYK, desse modo cada posição corresponde a uma cor e deve estar no intervalo de $0\approx100$, em decimal. Como a entrada do código é em hexadecimal, o valor deve ir de $0\approx64$. O componente então, verifica se a entrada encontra-se nesse intervalo.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/CodValido/CodValido.png}
+                    \caption{Código VHDL do CodValido}
+                    \label{fig:CodValido}
+                \end{figure}
 
- \chapter{CONCLUSÃO}
-	
-	\begin{thebibliography}{1}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/CodValido/tb_CodValido.png}
+                    \caption{Código VHDL do testbench do CodValido}
+                    \label{fig:tb_CodValido}
+                \end{figure}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/CodValido/sim_CodValido.png}
+                    \caption{Resultado da simulação do CodValido}
+                    \label{fig:sim_CodValido}
+                \end{figure}
+                
+            \subsection{Multiplicador}
+                O multiplicador é responsável por realizar operações de multiplicação de valores,  para calcular a quantidade necessária de tempo de cada válvula de cor no processo de mistura da tinta. O funcionamento do multiplicador é baseado no princípio de que cada 1 gota de cor primária equivale ao volume de 0,05 (que é o incremento padrão de pigmento da máquina) de cor primária que é obtida pela abertura da válvula solenóide correspondente a 100 milissegundos.
+        
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/Mult/Multiplicador.png}
+                    \caption{Código VHDL do multiplicador}
+                    \label{fig:Multiplicador}
+                \end{figure}
+               \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/Mult/tb_Mult.png}
+                    \caption{Código VHDL do testbench do multiplicador}
+                    \label{fig:tb_Multiplicador}
+                \end{figure}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/Mult/sim_Mult.png}
+                    \caption{Resultado da simulação do multiplicador}
+                    \label{fig:sim_Multiplicador}
+                \end{figure}
+        
+            \subsection{Contador}
+                O contador é utilizado para rastrear a quantidade de ciclos. No contexto do nosso misturador de tinta, ele é necessário para controlar a duração da abertura das válvulas durante o processo de pigmentação, garantindo precisão na mistura das cores. 
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .7 \textwidth]{Imagens/Count/count.png}
+                    \caption{Código VHDL do contador}
+                    \label{fig:Contador}
+                \end{figure}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .7 \textwidth]{Imagens/Count/tb_count.png}
+                    \caption{Código VHDL do testbench do contador}
+                    \label{fig:tb_Contador}
+                \end{figure}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/Count/sim_Count.png}
+                    \caption{Resultado da simulação do contador}
+                    \label{fig:sim_Contador}
+                \end{figure}
+
+            
+            \subsection{CompMist}
+                Este componente é uma adaptação do comparador, responsável por garantir que a máquina misture a tinta produzida por um tempo determinado, neste caso, 100s. O comparador recebe um sinal de entrada b e emite '1' em sua saída enquanto o sinal é menor que 100. 
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/CompMist/CompMist.png}
+                    \caption{Código VHDL do CompMist}
+                    \label{fig:CompMist}
+                \end{figure}
+               \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/CompMist/tb_CompMist.png}
+                    \caption{Código VHDL do testbench do CompMist}
+                    \label{fig:tb_CompMist}
+                \end{figure}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = .9 \textwidth]{Imagens/CompMist/sim_CompMist.png}
+                    \caption{Resultado da simulação do CompMist}
+                    \label{fig:sim_CompMist}
+                \end{figure}
+
+        \chapter{SIMULAÇÃO}
+            Após a realização do projeto, a fase de testes foi iniciada. 
+
+    \begin{thebibliography}{1}
 		%\bibitem{ref1}  $\ll$ endereço do site $\gg$
             \bibitem{ref1}  $\ll$ https://www.printi.com.br/blog/cores-cmyk-no-sistema-de-impressao $\gg$
             \bibitem{ref2}  $\ll$ https://tecnoblog.net/responde/o-que-sao-os-padroes-de-cores-rgb-e-cmyk/ $\gg$
             \bibitem{ref3} $\ll$ https://www.people.com.br/noticias/design/qual-a-diferenca-entre-cmyk-e-rgb $\gg$
 	\end{thebibliography}
-
+ 
 \end{document}
