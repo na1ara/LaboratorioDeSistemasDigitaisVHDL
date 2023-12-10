@@ -16,7 +16,7 @@ L5
 V0VGWM^iZjMXlD?hh:aaFi3
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1701456366.727000
+Z9 !s108 1701541598.344000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CaminhoDados/CaminhoDados.vhd|
 Z11 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CaminhoDados/CaminhoDados.vhd|
 Z12 o-93 -work work -O0
@@ -53,7 +53,7 @@ L5
 VS4Zk24D2HOc2D=9DnKcAD1
 R8
 31
-Z17 !s108 1701456365.377000
+Z17 !s108 1701541597.516000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd|
 Z19 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CodValido/CodValido.vhd|
 R12
@@ -90,7 +90,7 @@ L5
 V2SVz;cgSKcI93>7[N_mN83
 R8
 31
-Z23 !s108 1701456364.451000
+Z23 !s108 1701541596.954000
 Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Comparador/comparador.vhd|
 Z25 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Comparador/comparador.vhd|
 R12
@@ -127,7 +127,7 @@ L5
 VVMQ:[IdIReZB>8C5DhFCV1
 R8
 31
-Z29 !s108 1701456363.823000
+Z29 !s108 1701541596.547000
 Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd|
 Z31 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/CompMist/CompMist.vhd|
 R12
@@ -165,7 +165,7 @@ L5
 V>UWzQf`AEd>l;[cG4m2fK0
 R8
 31
-Z37 !s108 1701456363.148000
+Z37 !s108 1701541595.795000
 Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd|
 Z39 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd|
 R12
@@ -202,7 +202,7 @@ L4
 V?YC?50dYlLWV5aDb=>@Bd0
 R8
 31
-Z43 !s108 1701456366.146000
+Z43 !s108 1701541597.976000
 Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Controladora/Controladora.vhd|
 Z45 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Controladora/Controladora.vhd|
 R12
@@ -238,7 +238,7 @@ L5
 V7FT0lWCX^nc847TU>>DZB1
 R8
 31
-Z49 !s108 1701456367.010000
+Z49 !s108 1701541599.018000
 Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Projeto/MisturadorTinta.vhd|
 Z51 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Projeto/MisturadorTinta.vhd|
 R12
@@ -275,7 +275,7 @@ L5
 VS=iW=9C<;eE9V]ZD_X8H[0
 R8
 31
-Z55 !s108 1701456362.442000
+Z55 !s108 1701541595.145000
 Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd|
 Z57 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Multiplicador/multiplicador.vhd|
 R12
@@ -311,7 +311,7 @@ L4
 Vd`]LL1kV18^[jXN;UzOnj2
 R8
 31
-Z61 !s108 1701456361.784000
+Z61 !s108 1701541594.309000
 Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Registrador/Reg.vhd|
 Z63 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Registrador/Reg.vhd|
 R12
@@ -349,7 +349,7 @@ V0O1gEG0H2^mU_96Nzmck31
 R8
 31
 !i10b 1
-Z67 !s108 1701456367.323000
+Z67 !s108 1701541599.439000
 Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Projeto/tb_mist.vhd|
 Z69 !s107 C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Projeto/tb_mist.vhd|
 R12

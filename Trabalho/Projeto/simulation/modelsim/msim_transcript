@@ -242,7 +242,6 @@
 #    Time: 0 ps  Iteration: 1  Instance: /tb_mist/instance_mist/instance_datapath/instance_CompC
 add wave -position end  sim:/tb_mist/instance_mist/instance_controladora/estado
 restart -f
-restart -f
 run -all
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /tb_mist/instance_mist/instance_datapath/instance_compmist
@@ -369,4 +368,4 @@ run -all
 # ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 1  Instance: /tb_mist/instance_mist/instance_datapath/instance_CompC
 # Break key hit 
-# Simulation stop requested.
+# Break in Process line__15 at C:/Users/lhenr/OneDrive/Documentos/UFMG/LSD/Trabalho/Contador/contador.vhd line 15

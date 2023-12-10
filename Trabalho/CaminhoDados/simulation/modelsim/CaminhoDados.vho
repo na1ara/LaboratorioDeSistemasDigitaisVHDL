@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "12/01/2023 15:08:08"
+-- DATE "12/02/2023 14:57:14"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -341,6 +341,7 @@ SIGNAL \instance_Compcor|Equal0~20_combout\ : std_logic;
 SIGNAL \Clock~combout\ : std_logic;
 SIGNAL \Clock~clkctrl_outclk\ : std_logic;
 SIGNAL \instance_RegM|Q[1]~feeder_combout\ : std_logic;
+SIGNAL \instance_RegM|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \instance_RegY|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \instance_RegK|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \instance_contmist|Count\ : std_logic_vector(15 DOWNTO 0);
@@ -348,7 +349,6 @@ SIGNAL \instance_RegC|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \instance_ContC|Count\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \Sensor_de_cor~combout\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \Codigo_de_cor~combout\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \instance_RegM|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \instance_CodValid|ALT_INV_LessThan0~12_combout\ : std_logic;
 
 BEGIN

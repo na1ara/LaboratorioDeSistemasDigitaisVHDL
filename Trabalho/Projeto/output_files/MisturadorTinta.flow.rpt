@@ -1,5 +1,5 @@
 Flow report for MisturadorTinta
-Fri Dec 01 15:45:45 2023
+Sat Dec 02 15:23:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 01 15:45:45 2023           ;
+; Flow Status                        ; Successful - Sat Dec 02 15:23:55 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MisturadorTinta                                 ;
 ; Top-level Entity Name              ; MisturadorTinta                                 ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/01/2023 15:45:14 ;
+; Start date & time ; 12/02/2023 15:22:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MisturadorTinta     ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 110073160138264.170145631419920 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 110073160138264.170154137310704 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; tb_mist        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_mist                         ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                            ; --            ; --          ; eda_simulation ;
@@ -99,12 +99,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4629 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:13     ; 1.0                     ; 4874 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4554 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4546 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4506 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 4629 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 4874 MB             ; 00:00:10                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4558 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4553 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4510 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
